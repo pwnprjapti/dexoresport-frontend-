@@ -1,0 +1,220 @@
+.container{
+  background-color: black ;
+  background-repeat: no-repeat;
+  background-position: absolute;
+  color:white;
+  background-attachment: fixed;
+  scrollbar-width: none;
+  overflow-x: hidden;
+}
+
+.top_winners{
+    display:flex;
+    justify-content: center;
+    padding:2vw;
+}
+
+.winner{
+    background-image:linear-gradient(140deg, rgba(177, 174, 25, 0.434), rgba(58, 57, 1, 0.434)) ;
+    text-align: center;
+    width:20vw;
+    height:20vw;
+    border-radius:10px;
+    padding:1vw;
+    margin:1.5vw;
+    border:2px solid rgb(186, 186, 8);
+    box-shadow: 0vw 0vw 1vh rgba(255, 255, 0, 0.758);
+    position:relative;
+}
+
+.winner .rank{
+    /* border:2px solid yellow; */
+    height:26%;
+    width:22%;
+    background-color: rgba(252, 252, 6, 0.977);
+    position:absolute;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    top:-20%;
+    left:39%;
+}
+
+.winner .rank .innr_rank{
+    height:88%;
+    width:80%;
+    margin:8% 10%;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background-image:linear-gradient(45deg, black, blue);
+    position: relative;
+}
+
+.winner .rank .innr_rank p{
+    position:absolute;
+    top:-30%;
+    left:35%;
+    color:yellow;
+    font-size:5vh;
+    font-weight:bold;
+}
+
+.dp{
+    width:40%;
+    height:40%;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 0, 0.365);
+    border:2px solid tomato;
+    box-shadow:0vh 0vh 1vh rgb(255, 39, 1);
+    position:absolute;
+    top:12%;
+    left:30%;
+}
+
+.winner h3{
+    color:white;
+    text-shadow: 0vh 0vh 0.5vh orange;
+    margin-top:60%;
+}
+
+.winner>p{
+    font-weight:bold;
+    margin-top:-15px;
+    color:yellow;
+    text-shadow:0vh 0vh 1vh yellow;
+}
+
+.winner .info{
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid red; */
+    margin-top:-8%;
+    height:5vw;
+    justify-content: space-evenly;
+}
+
+.winner .info .box{
+    /* border:1px solid gray; */
+    margin-top:1%;
+    font-size:3vh;
+    position:relative;
+}
+
+.winner .info .box small{
+    margin-top:-35%;
+}
+
+.second{
+    border:1px solid rgb(12, 84, 104);
+    box-shadow: none;
+    margin-top:4vw;
+    background-image:linear-gradient(140deg, rgba(25, 144, 177, 0.434), rgba(1, 47, 58, 0.434)) ;
+}
+
+.second .rank{
+    background-color:rgb(22, 149, 184) ;
+}
+
+.second .rank .innr_rank p{
+    color:blueviolet;
+}
+
+.second .dp{
+    border:2px solid rgb(22, 149, 184);
+    box-shadow:0vh 0vh 1vh rgba(18, 144, 179, 0.701);
+}
+
+.second>p{
+    color:rgba(199, 4, 253, 0.605);
+    text-shadow: none;
+}
+
+.third{
+    border:1px solid rgb(104, 87, 12);
+    box-shadow: none;
+    margin-top:4vw;
+    background-image:linear-gradient(140deg, rgba(177, 157, 25, 0.434), rgba(58, 46, 1, 0.434)) ;
+}
+
+.third .rank .innr_rank p{
+    color:rgba(255, 166, 0, 0.705);
+}
+
+.third .rank{
+    background-color:rgb(216, 173, 31) ;
+}
+
+.third .dp{
+    border:2px solid rgb(184, 146, 22);
+    box-shadow:0vh 0vh 1vh rgba(179, 144, 18, 0.701);
+}
+
+.third>p{
+    color:rgb(215, 176, 2);
+    text-shadow: none;
+}
+
+table{
+    border:1px solid gray;
+    border-radius: 10px;
+    overflow:hidden;
+    width:100%;
+}
+
+table thead{
+    border:1px solid blue;
+}
+
+table thead tr{
+    background-color: rgba(14, 82, 150, 0.338);
+    padding:1vw;
+    height:3vw;
+}
+
+table tbody tr{
+    background-color: rgba(3, 3, 91, 0.249);
+    text-align: center;
+    height:5vw;
+    border-bottom: 1px solid violet;
+}
+
+table tbody tr .player_name{
+    position:relative;
+    width:30vw;
+}
+
+table tbody .dp_t{
+    background-size:cover;
+    border:1px solid gray;
+    background-image:url("https://res.cloudinary.com/dnfhwfbmq/image/upload/v1780488368/c8d7aXD4SvWCL8_CMb5ZDQ_tmvj49.webp");
+    height:4vw;
+    width:4vw;
+    background-color: rgb(163, 71, 249);
+    border-radius: 50%;
+    margin:1vw;
+    position:absolute;
+    top:-5%;
+}
+
+table tbody p{
+    position:absolute;
+    left:20%;
+    top:26%;
+    margin:0.5vw;
+}
+
+table tbody .points{
+    color:rgb(166, 14, 205);
+    font-weight: bold;
+}
+
+table tbody tr td{
+  border-top:1px solid gray;
+  margin:0;
+}
+
+table tbody tr td button{
+    border:1.5px solid rgb(252, 3, 252);
+    background-color: rgba(251, 2, 251, 0.331);
+    border-radius:5px;
+    padding:0.5vw 1vw;
+    color:white;
+    font-weight:bold;
+}

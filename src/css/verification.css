@@ -1,0 +1,71 @@
+body, html {
+  background-color: rgb(26, 24, 24) ;
+  background-repeat: no-repeat;
+  background-position: absolute;
+  color:white;
+  background-attachment: fixed;
+  scrollbar-width: none;
+  overflow-x: hidden;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+  margin:0;
+}
+
+.veri_container{
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.veri_container .box{
+  border:1px solid blue;
+  box-shadow: 0px 0px 5px cyan;
+  border-radius:10px;
+  margin:10px;
+  width:40vw;
+  align-items: center;
+  display:flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.veri_container .box .txt{
+  color:gray;
+  margin-top:-2vh;
+}
+
+.veri_container .box .otp .nm{
+  width:3vw;
+  outline:none;
+  border:1px solid gray;
+  border-radius: 5px;
+  height:4vw;
+  font-size: 2vw;
+  background-color: rgba(53, 53, 53, 0.356);
+  padding:1v;
+  text-align:center;
+  margin:1vw;
+  color:white;
+}
+
+.veri_container .box button{
+  background-color: rgba(0, 0, 255, 0.34);
+  color:white;
+  font-weight:bold;
+  width:22vw;
+  border-radius: 5px;
+  border:1px solid blue;
+  margin:1vh;
+  padding:1.5vh;
+}
+
+.veri_container .box .inr_box{
+  display:flex;
+  flex-direction: row;
+}
+
+.veri_container .box .inr_box p{
+  margin-left:-1vw;
+}

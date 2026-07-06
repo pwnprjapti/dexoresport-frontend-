@@ -1,0 +1,405 @@
+.container{
+    display:flex;
+    flex-direction:column;
+}
+
+.container .box1{
+    display:flex;
+    flex-direction:column;
+    background-image: url("https://res.cloudinary.com/dnfhwfbmq/image/upload/v1780477076/file_0000000043ec7207bce522ad71807154_ksa0re.png");
+    background-size:cover;
+    margin-top:-10px;
+    border-radius: 10px;
+    border:1px solid rgb(1, 1, 89);
+}
+
+.container .box1 .player_profile{
+    display:flex;
+    flex-direction:row;
+    margin-top:5vw;
+    /* border:2px solid red; */
+    position:relative;
+}
+
+.container .box1 .player_profile .dp{
+    border-radius:50%;
+    position:absolute;
+    height:30vh;
+    width:30vh;
+    border:2px solid blue;
+    background-color: rgba(26, 26, 219, 0.493);
+    background-image:url("https://res.cloudinary.com/dnfhwfbmq/image/upload/v1780488368/c8d7aXD4SvWCL8_CMb5ZDQ_tmvj49.webp");
+    background-size:cover;
+    left:2%;
+    top:-4%;
+    /* margin-left:1vw; */
+}
+
+.container .box1 .player_profile .biodata{
+    padding:2vw;
+    /* border: 2px solid yellow; */
+    margin-left:15vw;
+    position:relative;
+}
+
+.container .box1 .player_profile .biodata h2{
+    font-size:30px;
+    color:white;
+    text-shadow: 0px 0px 1vw white;
+}
+
+.container .box1 .player_profile .biodata small{
+    position: absolute;
+    top:55%;
+    color:rgb(175, 175, 175);
+    font-weight:bold;
+}
+
+.container .box1 .player_profile .biodata .joined{
+    font-size:14px;
+}
+
+.container .box1 .recent_info{
+    display: flex;
+    flex-direction: row;
+    padding:1vw;
+    margin-top:3vw;
+}
+
+.container .box1 .recent_info .info_box, .container .box1 .recent_info .edit{
+    border:1px solid gray;
+    border-radius:5px;
+    padding:1vw;
+    text-align: center;
+    margin:1vw;
+    width:15vw;
+    background-color: rgba(0, 0, 0, 0.463);
+}
+
+.container .box1 .recent_info .info_box h2{
+    text-shadow:0px 0px 1vw white;
+}
+
+.container .box1 .recent_info .edit{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.container .box1 .recent_info .edit button{
+    color:white;
+    text-shadow: 0px 0px 1vw white;
+    position:relative;
+    font-weight:bold;
+    background-color: rgba(128, 0, 128, 0.457);
+    padding:1vw;
+    border:2px solid violet;
+    border-radius: 5px;
+    padding:1vw 2vw;
+    transition:border-radius 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container .box1 .recent_info .edit button:hover{
+    border-radius: 25px;
+    box-shadow: 0px 0px 1vw purple;
+}
+
+.box2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.box2  .innr_box{
+    background-color: black;
+    border:1.5px solid blue;
+    /* width:100%; */
+    margin:1vw;
+    border-radius:10px;
+    padding:1vw;
+    box-shadow:0vh 0vh 1vw rgba(0, 0, 255, 0.991);
+}
+
+.box2 .innr_box h2{
+    border-bottom:1.5px solid gray;
+    margin-top:-2px;
+    padding-bottom:2px;
+}
+
+.box2 .innr_box .achive_list{
+    display:flex;
+    flex-direction: column;
+}
+
+.box2 .innr_box .achive_list .achievement{
+    display: flex;
+    flex-direction: row;
+    margin:0.5vw;
+}
+
+.box2 .innr_box .achive_list .achievement .achive_logo{
+    width:5vw;
+    height:5vw;
+    border-radius:5px;
+    border:1.5px solid rgb(25, 25, 247);
+    box-shadow:0vw 0vw 1vw rgb(25, 25, 247);
+    background-color: rgba(137, 43, 226, 0.612);
+    overflow:hidden;
+}
+
+.box2 .innr_box .achive_list .achievement .achive_logo img{
+    width:5vw;
+    height:5vw;
+}
+
+.box2 .innr_box .achive_list .achievement .achive_about{
+    padding-left:1vw;
+    text-align:center;
+    position: relative;
+}
+
+.box2 .innr_box .achive_list .achievement .achive_about h4 span{
+    position:absolute;
+    margin-left:150px;
+}
+
+.box2 .innr_box .achive_list .achievement .achive_about h4{
+    position:absolute;
+    top:-18%;
+    left:0%;
+    width:180px;
+}
+
+.box2 .innr_box .achive_list .achievement .achive_about small{
+    position:absolute;
+    top:55%;
+    left:-5%;
+    color:rgb(181, 181, 181);
+    width:180px;
+}
+
+.achive{
+    width:40%;
+}
+
+.tour{
+    width:60%;
+}
+
+.box2 .innr_box .achive_list .achievement .achive_about .timeline{
+    position:relative;
+    width:150px;
+    background-color:gray;
+    height:4px;
+    margin-top:45px;
+    margin-left:200px;
+    border-radius: 10px;
+}
+
+.box2 .innr_box .achive_list .achievement .achive_about .timeline::after{
+    content:'';
+    position:absolute;
+    width:50%;
+    background-color:rgb(255, 1, 255);
+    height:4px;
+    top:0;
+    left:0;
+    border-radius: 10px;
+    box-shadow: 0px 0px 1vh rgb(249, 3, 249);
+}
+
+/* Table Styling */
+.box2 .innr_box .tour_table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1vw;
+}
+
+.box2 .innr_box .tour_table thead{
+    background-color: rgba(0, 0, 255, 0.1);
+}
+
+.box2 .innr_box .tour_table th{
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 1vw;
+    text-align: left;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0px 0px 0.5vw white;
+}
+
+.box2 .innr_box .tour_table td{
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1vw;
+    color: white;
+}
+
+.box2 .innr_box .tour_table td .wining{
+    color:rgb(17, 215, 17);
+    text-shadow:none;
+    font-size: 12px;
+    border:1px solid greenyellow;
+    background-color: rgba(39, 180, 39, 0.224);
+    padding: 0.5vw 1vw;
+    border-radius: 5px;
+    text-align:center;
+}
+
+.box2 .innr_box .tour_table tbody tr:hover{
+    background-color: rgba(0, 0, 255, 0.05);
+}
+
+.tour_info{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+.tour_info img{
+    width: 4vw;
+    height: 4vw;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tour_info span{
+    font-weight: bold;
+}
+
+.type_badge{
+    background-color: rgba(128, 0, 128, 0.4);
+    padding: 0.5vw 1vw;
+    border-radius: 5px;
+    border: 1px solid rgba(249, 3, 249, 0.5);
+    font-size: 12px;
+    color: rgb(249, 3, 249);
+}
+
+.box2 .innr_box .tour_table h4{
+    margin: 0;
+    text-shadow: 0px 0px 0.5vw white;
+}
+
+.box2 .innr_box .tour_table small{
+    color: rgb(175, 175, 175);
+}
+
+.stats{
+    border-radius:10px;
+    border:1px solid gray;
+    margin:1vw;
+    background-color: black;
+}
+
+.stats h2{
+    margin:1vw;
+    color:white;
+}
+
+.stats .stat_list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.stats .stat_list .stat{
+    /* border:1px solid gray; */
+    display: flex;
+    flex-direction: column;
+    text-align:center;
+    margin:1vw;
+    font-size: large;
+}
+
+.stats .stat_list .stat img{
+    margin:0.5vw;
+    width:5vw;
+    border:1.5px solid blue;
+    border-radius:50%;
+    height:5vw;
+    padding:1vw;
+    box-shadow:0vw 0vw 1vw blue;
+}
+
+.stats .stat_list .stat small{
+    color:rgb(165, 163, 163);
+
+}
+
+.recent_tour{
+    border:1px solid gray;
+    border-radius:10px;
+    margin:1vw;
+    padding:1vw;
+    background-color: black;
+}
+
+.recent_tour h2{
+    margin-top:-3px;
+}
+
+.recent_tour .tour_list{
+    display: flex;
+    flex-direction: column;
+}
+
+.recent_tour .tour_list .tour{
+    border:1px solid rgba(128, 128, 128, 0.626);
+    height:8vw;
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    overflow:hidden;
+    margin-top:0.6vw;
+}
+
+.recent_tour .tour_list .tour .box{
+    /* border:1px solid gray; */
+    width:20%;
+    margin:0px;
+    height:8vw;
+    position:relative;
+    background-color:rgba(0, 0, 255, 0.098);
+    text-align: center;
+}
+
+.recent_tour .tour_list .tour .box img{
+    border-radius: 10px;
+    height:100%;
+    margin:4%;
+    border:1px solid rgba(0, 0, 255, 0.24);
+}
+.recent_tour .tour_list .tour .box p {
+    font-size:19px;
+    position:absolute;
+    left:22%;
+    top:10%;
+}
+
+.recent_tour .tour_list .tour .box small{
+    position:absolute;
+    left:25%;
+    top:50%;
+    color:gray;
+}
+
+.recent_tour .tour_list .tour .box button{
+    font-weight:bold;
+    border:1px solid purple;
+    background-color: rgba(215, 11, 215, 0.274);
+    padding:1vw 0.5vw;
+    border-radius:5px;
+    color:white;
+    width:80%;
+    position:absolute;
+    top:28%;
+    left:10%;
+    transition: box-shadow 0.3s ease, text-shadow 0.3s ease;
+}
+
+.recent_tour .tour_list .tour .box button:hover{
+    box-shadow:0vh 0vh 1vh purple;
+    text-shadow:0vh 0vh 1vh white;
+}

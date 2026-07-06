@@ -1,0 +1,190 @@
+body, html {
+  background-color: rgb(26, 24, 24) ;
+  background-repeat: no-repeat;
+  background-position: absolute;
+  color:white;
+  background-attachment: fixed;
+  scrollbar-width: none;
+  overflow-x: hidden;
+}
+
+.container{
+  margin:3.25vh;
+  z-index:0;
+  display: flex;
+  margin-top:75px;
+  border:2px solid blue; 
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding:10px;
+  border-radius:10px;
+  box-shadow:0px 0px 4px rgba(255, 255, 255, 0.265);
+  background-color: black;
+}
+
+.upcoming{
+  display:flex;
+  flex-direction:row;
+  overflow-y: hidden;
+  overflow-x:auto;
+}
+
+.upcoming .card{
+  border:1.5px solid blue;
+  height:76vh;
+  width:60vh;
+  border-radius:15px;
+  margin:10px;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  transition:transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.upcoming .card:hover{
+   box-shadow:0px 10px 20px rgba(0, 0, 0, 0.2);
+   transform: translateY(-1.5vh);
+   background-image:linear-gradient(45deg, rgba(0, 0, 255, 0.128), rgba(128, 0, 128, 0.128));
+}
+
+.upcoming .card h2{
+  margin-top:-1vh;
+}
+
+.upcoming .card img{
+  width:100px;
+  height:100px;
+}
+
+.upcoming .card p{
+   border:1px solid yellow;
+   padding:10px;
+   margin:5px;
+   color:yellow;
+   text-shadow: 0px 0px 5px yellow;
+   box-shadow: 0px 0px 2px yellow;
+   width:120px;
+   text-align:center;
+   margin-top:-1vh;
+}
+
+.upcoming .card .innr_card, .upcoming .card .btns{
+    display:flex;
+    flex-direction: row;
+    border:1px solid blue;
+}
+
+.upcoming .card .innr_card .detail_card{
+  width:150px;
+}
+
+.upcoming .card .innr_card .prize_detail p{
+  border:1px solid blue;
+  box-shadow: none;
+  color:gray;
+  text-shadow: none;
+  margin-top:1vh;
+}
+
+.upcoming .card .innr_card .prize_detail p span{
+  color:gold;
+  text-shadow: 0px 0px 2px gold;
+  margin-top:1vh;
+}
+
+.upcoming .card .innr_card .game_details{
+  border:none;
+  margin:1px;
+  padding:none;
+}
+
+.upcoming .card .innr_card .game_details p{
+  color:gray;
+  text-shadow: none;
+  box-shadow:none;
+  border:none;
+  padding:none;
+  margin:1px;
+}
+
+.upcoming .card .innr_card .game_details p span{
+  color:white;
+  text-shadow:0px 0px 2px gray;
+}
+
+.upcoming .card .btns{
+  border:none;
+}
+
+.upcoming .card .btns button{
+  margin:10px;
+  width:120px;
+  color:blue;
+  border:1px solid blue;
+  border-radius:2px;
+  padding:8px;
+}
+
+.upcoming .card .btns .rulebook{
+  background-color: rgba(0, 0, 255, 0.192);
+  font-weight:bold;
+}
+
+.upcoming .card .btns .join{
+  background-color:rgba(0, 0, 255, 0.475);
+  color:white;
+  font-weight:bold;
+}
+
+.live, .past{
+  /* height:40vh; */
+  display:flex;
+  flex-direction:row;
+  overflow-x:auto;
+  overflow-y:hidden;
+}
+
+.live .card, .past .card{
+  height:35vh;
+  width:60vh;
+  border:1px solid blue;
+  box-shadow:0px 0px 5px blue;
+  border-radius: 10px;
+  margin:5px;
+  display:flex;
+  flex-direction:column;
+}
+
+.live .card .card_live ,.past .card .card_live {
+  display:flex;
+  flex-direction:row;
+}
+
+.live .card .card_live h1{
+  font-size:22px;
+  margin:10px;
+}
+
+.live .card .card_live .innr_card{
+  text-align:center;
+}
+
+.live .card .card_live h2{
+  font-size:14px;
+  margin:5px;
+  margin-top:-5px;
+  border:1px solid gold;
+  color:gold;
+  border-radius:10px;
+  padding:5px;
+}
+
+.live .card p{
+  margin-left:5.5px;
+}
+
+.live .card .card_live img , .past .card .card_live img{
+  width:100px;
+  height:100px
+}
