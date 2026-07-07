@@ -138,7 +138,7 @@ nav .links button:hover{
   background-color: rgba(0, 0, 255, 0.438);
   border:1px solid blue;
   border-radius: 20px;
-  width:256px;
+  width:32ch;
   padding:10px 20px;
   font-family: bold;
   margin-top:10px;
