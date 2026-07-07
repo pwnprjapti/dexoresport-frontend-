@@ -111,7 +111,7 @@ nav .links button:hover{
   margin:5px;
   z-index:0;
   display: flex;
-  margin-top:75px;
+  margin-top:8.5vh;
   border:2px solid blue; 
   flex-direction: column;
   overflow-y: auto;
@@ -125,7 +125,6 @@ nav .links button:hover{
 .home .intro{
   align-items: center;
   height:100%;
-  border:1px solid red;
   /* align-items: center;
   justify-content: center; */
   display: flex;
@@ -139,13 +138,15 @@ nav .links button:hover{
   border:1px solid blue;
   border-radius: 20px;
   width:32ch;
-  padding:10px 20px;
+  padding:5px 25px;
   font-family: bold;
-  margin-top:10px;
+  margin-top:6vh;
+  font-size:3vw;
 }
 
 .home .intro h2, .home .intro h2 span{
-    font-size:12vw;
+    font-size:10vw;
+    margin-top:6vh;
 }
 
 .home .intro h2{
@@ -154,27 +155,36 @@ nav .links button:hover{
 }
 
 .home .intro h2 span{
-    color:blue;
-    text-shadow:0px 0px 10px rgba(0, 0, 255, 0.434);
+    color:rgb(38, 38, 250);
+    text-shadow:0px 0px 10px rgba(0, 0, 255, 0.598);
 }
 
 .home .intro p{
-  margin-top:-7vh;
-  font-size:1.5vw;
+  margin-top:0.5lh;
+  font-size:3.5vw;
+  max-width:80vw;
   color:rgba(243, 242, 242, 0.571);
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.584);
+}
+
+.home .intro .btns{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .home .intro .btns button{
-  font-size:3vh;
+  font-size:4vw;
   font-weight:bold;
   color:white;
-  background-color:rgba(0, 0, 255, 0.61);
+  background-color:rgb(0, 0, 255);
   /* border:1px solid gray; */
   border-radius:5px;
-  padding:2vh;
-  width:20vw;
+  padding:3vw;
+  /* width:45%; */
   box-shadow:0px 0px 2vw rgba(0, 0, 255, 0.457);
-  margin:2vh;
+  margin:2vw;
   transition:transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -193,22 +203,26 @@ nav .links button:hover{
    display : flex;
    flex-direction: row;
    margin-top:7vh;
+   flex-wrap:wrap;
 }
 .home .intro .cards .card{
   color:blue;
-  border:1px solid blue;
+  border:1px solid rgb(90, 89, 89);
   background-color: rgba(128, 128, 128, 0.183);
-  border-radius:5px;
-  box-shadow:0px 0px 5px blue;
-  padding:2vh;
-  margin:2vh;
-  width:200px;
+  border-radius:10px;
+  padding:5vw;
+  margin:2.5vw;
+  max-width:200px;
+  width:28.5vw;
   text-align:center;
 }
 
 .home .intro .cards .card span{
-  color:white;
-  text-shadow:0px 0px 10px blue;
+  color:rgb(156, 156, 156);
+}
+
+h2{
+  font-size:large;
 }
 
 .upcoming{
@@ -324,9 +338,9 @@ nav .links button:hover{
   color:white;
   font-weight:bold;
 }
-
+/* 
 .live, .past{
-  /* height:40vh; */
+  height:40vh;
   display:flex;
   flex-direction:row;
   overflow-x:auto;
@@ -375,10 +389,9 @@ nav .links button:hover{
 .live .card .card_live img , .past .card .card_live img{
   width:100px;
   height:100px
-}
+} */
 
 .home .how_it_works{
-  /* background-image: linear-gradient(135deg, rgba(0, 229, 255, 0.477), rgba(128, 0, 128, 0.6)); */
   margin:3vw 1vw;
   border-radius:10px;
   text-align:center;
@@ -387,11 +400,12 @@ nav .links button:hover{
 .home .how_it_works>small{
   color:rgb(252, 2, 252);
   font-weight:bold;
-  font-size: 2.5vh;
+  font-size: small;
 }
 
 .home .how_it_works h1{
-  margin-top:-1vh;
+  margin-top:0;
+  font-size: x-large;
 }
 
 .home .how_it_works .steps {
@@ -410,19 +424,24 @@ nav .links button:hover{
   display: flex;
   flex-direction: column;
   width:230px;
-  text-align: left;
+}
+
+.home .how_it_works .steps .step h3{
+   font-size:larger;
 }
 
 .home .how_it_works .steps .step h3 small{
-  font-size: 3.5vh;
+  font-size: larger;
   color:rgb(252, 2, 252);
   font-weight:bold;
 }
 
 .home .how_it_works .steps .step .icon{
   background-image:linear-gradient(45deg, silver, rgb(252, 2, 252));
-  width:16vh;
-  height:16vh;
+  width:20vw;
+  height:20vw;
+  max-width: 16vh;
+  max-width: 16vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -438,8 +457,10 @@ nav .links button:hover{
 
 .home .how_it_works .steps .step .icon .innr_icon{
   background-color:black;
-  width:15.5vh;
-  height:15.5vh;
+  width:19vw;
+  max-width: 15.5vh;
+  max-height: 15.5vh;
+  height:19vw;
   clip-path: polygon(
   50% 0%,
   93.3% 25%,
@@ -456,14 +477,15 @@ justify-content: center;
 
 .home .how_it_works .steps .step p{
   color:gray;
-  font-size:3vh;
+  font-size:large;
   margin-top:-2vh;
   margin-left:3vw;
 }
 
 
 .why{
-  height:50vh;
+  /* margin-top:; */
+  /* height:50vh; */
   text-align:center;
   color:white;
   align-items: center;
@@ -476,6 +498,7 @@ justify-content: center;
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
+  /* margin-top:100px; */
   /* background-color: rgba(252, 2, 252, 0.482); */
 }
 

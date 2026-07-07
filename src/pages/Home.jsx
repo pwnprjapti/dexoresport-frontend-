@@ -45,7 +45,7 @@ export default function Home() {
             <div className="intro">
                 <div className='label'><li>India's #1 BGMI Tournament Plateform</li></div>
                 <h2>Play. Win. <span>Earn. </span></h2>
-                <p>Join thousands of BGMI warriors competing daily for real cash prizes.<br /> Free tournaments, instant payouts, and zero BS.</p>
+                <p>Join thousands of BGMI warriors competing daily for real cash prizes. Free tournaments, instant payouts, and zero BS.</p>
                 <div className="btns">
                     <button onClick={()=> navigate("/login")}>Explore Tournaments</button>
                     <button className='btn2' onClick={()=> navigate("/login")}>Be an Organizer</button>
