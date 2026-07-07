@@ -1,4 +1,4 @@
-import '../App.css'
+import styles from '../css/signup.module.css'
 import { useNavigate } from 'react-router-dom'
 import Logo from '../compo/Logo.jsx'
 import { useState, useEffect } from 'react'
@@ -48,12 +48,12 @@ export default function Signup() {
     return (
         <>
         <Logo />
-        <div className="login">
-            <div className="card">
+        <div className={styles.login}>
+            <div className={styles.card}>
                 <div>
-                    <form className="login_card" onSubmit={send_signupdata}>
+                    <form className={styles.login_card} onSubmit={send_signupdata}>
                         <h2>Create Account</h2>
-                     <p className="txt">Join the battle and prove your are the Legend</p>
+                     <p className={styles.txt}>Join the battle and prove your are the Legend</p>
                      {/* <input type="hidden" name="_csrf" value={csrf} /> */}
                     <input type="text" name="name" onChange={handleChange} placeholder="Name" className="data" />
                     <input type="email" name="email" onChange={handleChange} placeholder="Email" className="data" />

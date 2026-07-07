@@ -33,10 +33,11 @@ export default function Login() {
 
     return (
         <>
-        <Logo />
+        
         <div className="login">
             <div className="card">
                 <div className="login_card">
+                <Logo />
                     <input value={email} onChange={(e)=> setEmail(e.target.value)} type="email" placeholder="Email" className="data" />
                     <input value={pass}  onChange={(e)=> setPass(e.target.value)} type="password" placeholder="Password" className="data" />
                     <div className={ !data || data.status === 200 ? "hide" : "show"}>Invalid credientials </div>
