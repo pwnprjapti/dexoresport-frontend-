@@ -478,7 +478,7 @@ justify-content: center;
 .home .how_it_works .steps .step p{
   color:gray;
   font-size:large;
-  margin-top:-2vh;
+  margin-top:0.1lh;
   margin-left:3vw;
 }
 
