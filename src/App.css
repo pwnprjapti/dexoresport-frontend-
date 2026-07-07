@@ -108,7 +108,7 @@ nav .links button:hover{
 }
 
 .home{
-  margin:3.25vh;
+  margin:5px;
   z-index:0;
   display: flex;
   margin-top:75px;
@@ -123,13 +123,14 @@ nav .links button:hover{
 }
 
 .home .intro{
-  align-items: left;
-  height:80vh;
+  align-items: center;
+  height:100%;
+  border:1px solid red;
   /* align-items: center;
   justify-content: center; */
   display: flex;
   flex-direction: column;
-  background-image:url("https://res.cloudinary.com/dnfhwfbmq/image/upload/v1780489524/1780489505663_mbgffc.png");
+  /* background-image:url("https://res.cloudinary.com/dnfhwfbmq/image/upload/v1780489524/1780489505663_mbgffc.png"); */
   background-size:cover;
 }
 
@@ -137,15 +138,14 @@ nav .links button:hover{
   background-color: rgba(0, 0, 255, 0.438);
   border:1px solid blue;
   border-radius: 20px;
-  width:270px;
-  padding:1vh;
+  width:256px;
+  padding:10px 20px;
   font-family: bold;
-  padding-left:5vh;
   margin-top:10px;
 }
 
 .home .intro h2, .home .intro h2 span{
-    font-size:6vw;
+    font-size:12vw;
 }
 
 .home .intro h2{
