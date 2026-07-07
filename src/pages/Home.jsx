@@ -47,7 +47,7 @@ export default function Home() {
                 <h2>Play. Win. <span>Earn. </span></h2>
                 <p>Join thousands of BGMI warriors competing daily for real cash prizes. Free tournaments, instant payouts, and zero BS.</p>
                 <div className="btns">
-                    <button onClick={()=> navigate("/login")}>Explore Tournaments</button>
+                    <button className='btn1' onClick={()=> navigate("/login")}>Explore Tournaments</button>
                     <button className='btn2' onClick={()=> navigate("/login")}>Be an Organizer</button>
                 </div>
                 <div className='cards'>
@@ -186,72 +186,72 @@ export default function Home() {
                 <p>Built to help organizers save time, attract more players and maximize revenue.</p>
                 <div className='cards'>
                     <div className='card'>
-                        <i className="fa-solid fa-gamepad" style={{"color": "rgba(82, 81, 82, 0.94)", "font-size":"4vw"}}></i>
+                        <i className="fa-solid fa-gamepad" style={{"color": "rgba(82, 81, 82, 0.94)"}}></i>
                         <h2>Easy Tournament Management</h2>
                         <p>Create and manage BGMI tournaments in minutes with an intuitive dashboard. No technical skills required</p>
                     </div>
                     <div className='card'>
-                        <i className="fa-solid fa-sack-dollar" style={{"color": "rgba(249, 253, 3, 0.94)", "font-size":"4vw"}}></i>
+                        <i className="fa-solid fa-sack-dollar" style={{"color": "rgba(249, 253, 3, 0.94)"}}></i>
                         <h2>Automated Entry Fee Collection</h2>
                         <p>Secure online payments and automatic participant registeration save hours of manual work.</p>
                     </div>
 
                     <div className='card'>
-                        <i className="fa-solid fa-bullhorn" style={{"color": "rgb(254, 5, 254)", "font-size":"4vw"}}></i>
+                        <i className="fa-solid fa-bullhorn" style={{"color": "rgb(254, 5, 254)"}}></i>
                         <h2>Whatsapp Auto Promotion</h2>
                         <p>Instantly share tournament details, banners, slots updates, and registeration notifications directly to your whatsApp communities.</p>
                     </div>
 
                     <div className='card'>
-                        <i className="fa-solid fa-robot" style={{"color": "rgba(6, 192, 243, 0.94)", "font-size":"4vw"}}></i>
+                        <i className="fa-solid fa-robot" style={{"color": "rgba(6, 192, 243, 0.94)"}}></i>
                         <h2>AI Banner Genration</h2>
                         <p>Genrate proffesinal tournament posters and promotional banners within seconds using Ai.</p>
                     </div>
 
                     <div className='card'>
-                        <i className="fa-solid fa-user-group" style={{"color": "rgba(82, 81, 82, 0.94)", "font-size":"4vw"}}></i>
+                        <i className="fa-solid fa-user-group" style={{"color": "rgba(82, 81, 82, 0.94)"}}></i>
                         <h2>Player Community Access</h2>
                         <p>Reach a growing network of competitive BGMI players ready to join new tournaments.</p>
                     </div>
 
                     <div className='card'>
-                        <i className="fa-solid fa-bell" style={{"color": "gold", "font-size":"4vw"}}></i>
+                        <i className="fa-solid fa-bell" style={{"color": "gold"}}></i>
                         <h2>Real-Time Notifications</h2>
                         <p>Get instant alerts whenever a player registers, slots fill up or important tournament events occur.</p>
                     </div>
 
                     <div className='card'>
-                        <i className="fa-solid fa-square-poll-vertical" style={{"color": "rgba(19, 61, 247, 0.94)", "font-size":"4vw"}}></i>
+                        <i className="fa-solid fa-square-poll-vertical" style={{"color": "rgba(19, 61, 247, 0.94)"}}></i>
                         <h2>Tournament Analytics</h2>
                         <p>Track registeration, revenue, slot occupancy and tournament performance through detailed insights.</p>
                     </div>
 
                     <div className='card'>
-                        <i className="fa-solid fa-trophy" style={{"color": "rgba(249, 245, 6, 0.94)", "font-size":"4vw"}}></i>
+                        <i className="fa-solid fa-trophy" style={{"color": "rgba(249, 245, 6, 0.94)"}}></i>
                         <h2>Multiple Tournament Formats</h2>
                         <p>Host Solo, Duo, Sqaud, TDM, Custom Room, Scrims and special events from a single platform.</p>
                     </div>
 
                     <div className='card'>
-                        <i className="fa-solid fa-wallet" style={{"color": "rgba(251, 11, 167, 0.94)", "font-size":"4vw"}}></i>
+                        <i className="fa-solid fa-wallet" style={{"color": "rgba(251, 11, 167, 0.94)"}}></i>
                         <h2>Wallet & Coin System</h2>
                         <p>Players can use wallet balance and earned coins to join tournaments, increasing participation rates.</p>
                     </div>
 
                     <div className='card'>
-                        <i className="fa-solid fa-mobile" style={{"color": "rgba(5, 197, 255, 0.94)", "font-size":"4vw"}}></i>
+                        <i className="fa-solid fa-mobile" style={{"color": "rgba(5, 197, 255, 0.94)"}}></i>
                         <h2>Mobile Friendly Dashboard</h2>
                         <p>Manage your tournaments anytime, anywhere from your smartphone or desktop.</p>
                     </div>
 
                     <div className='card'>
-                        <i className="fa-solid fa-shield" style={{"color": "rgba(252, 1, 252, 0.94)", "font-size":"4vw"}}></i>
+                        <i className="fa-solid fa-shield" style={{"color": "rgba(252, 1, 252, 0.94)"}}></i>
                         <h2>Secure and Reliable Platform</h2>
                         <p>Built with secure payment proccesing and reliable infrastructure to ensure smooth tournament operations.</p>
                     </div>
 
                     <div className='card'>
-                        <i className="fa-solid fa-hand-holding-dollar" style={{"color": "rgba(210, 252, 20, 0.94)", "font-size":"4vw"}}></i>
+                        <i className="fa-solid fa-hand-holding-dollar" style={{"color": "rgba(210, 252, 20, 0.94)"}}></i>
                         <h2>Higher Earnings Potential</h2>
                         <p>Reduce operational workload and focus on growing your community and revenue.</p>
                     </div>

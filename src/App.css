@@ -142,6 +142,7 @@ nav .links button:hover{
   font-family: bold;
   margin-top:6vh;
   font-size:3vw;
+  box-shadow:0px 0px 20vw blue;
 }
 
 .home .intro h2, .home .intro h2 span{
@@ -155,7 +156,7 @@ nav .links button:hover{
 }
 
 .home .intro h2 span{
-    color:rgb(38, 38, 250);
+    color:rgb(24, 24, 255);
     text-shadow:0px 0px 10px rgba(0, 0, 255, 0.598);
 }
 
@@ -183,9 +184,12 @@ nav .links button:hover{
   border-radius:5px;
   padding:3vw;
   /* width:45%; */
-  box-shadow:0px 0px 2vw rgba(0, 0, 255, 0.457);
   margin:2vw;
   transition:transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home .intro .btns .btn1{
+  box-shadow:0px 0px 10vw blue;
 }
 
 .home .intro .btns .btn2{
@@ -503,9 +507,11 @@ justify-content: center;
 }
 
 .home .why .cards .card{
-  height: 30vh;
-  width:40vh;
-  margin:12px;
+  height: 60vw;
+  width:80vw;
+  max-height:30vh;
+  max-width:40vh;
+  margin:4vw;
   border-radius:12px;
   background-color: rgba(73, 72, 73, 0.313);
   transition: transform 0.3s ease;
@@ -538,10 +544,12 @@ justify-content: center;
   border-radius: 10px;
   display: flex;
   text-align: left;
-  padding:1vw;
+  padding:3vw;
   flex-direction: column;
-  width:250px;
+  max-width:250px;
+  width:70vw;
   height:80px;
+  margin:3vw;
   position: relative;
   transform: rotate(5deg);
   transition: transform 0.2s ease;
@@ -571,6 +579,15 @@ justify-content: center;
   text-align: center;
 }
 
+
+.home .why_organizer_choose_us h1{
+  font-size:x-large;
+}
+
+.home .why_organizer_choose_us>p{
+  font-size:small;
+}
+
 .home .why_organizer_choose_us .cards{
   display: flex;
   flex-direction: row;
@@ -581,10 +598,15 @@ justify-content: center;
 .home .why_organizer_choose_us .cards .card{
   border:1px solid gold;
   border-radius: 10px;
-  width:300px;
-  margin:1vw;
+  max-width:300px;
+  width:80vw;
+  margin:2vw;
   padding: 1vw;
   transition:transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.home .why_organizer_choose_us .cards .card i{
+  font-size:xx-large;
 }
 
 .home .why_organizer_choose_us .cards .card:hover{
@@ -605,22 +627,25 @@ justify-content: center;
   position:relative;
 }
 
+.home .ready_to_organize h1{
+  font-size:x-large;
+}
+
 .home .ready_to_organize p{
-  position:absolute;
-  top:30%;
-  left:15%;
   color:silver;
+  font-size: medium;
 }
 
 .home .ready_to_organize button{
-  font-size: 1.2vw;
-  padding:0.8vw;
+  font-size: 4vw;
+  padding:2vw;
   border-radius: 6px;
   background-color: rgb(252, 182, 3);
   color: white;
   border:none;
   margin:2.5vw;
-  width:150px;
+  max-width:150px;
+  width:100%;
   font-weight:bold;
   transition:box-shadow 0.3s ease;
 }
