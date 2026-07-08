@@ -69,7 +69,7 @@
 }
 
 .login .card .login_card button{
-  background-color: rgba(0, 0, 255, 0.34);
+  background-color:blue;
   color:white;
   font-weight:bold;
   max-width:300px;
