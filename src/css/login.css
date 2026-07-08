@@ -1,14 +1,3 @@
-
-body, html {
-  background-color: rgb(26, 24, 24) ;
-  background-repeat: no-repeat;
-  background-position: absolute;
-  color:white;
-  background-attachment: fixed;
-  scrollbar-width: none;
-  overflow-x: hidden;
-}
-
 .login{
   margin:3vh;
   margin-top:2vh;
@@ -18,9 +7,24 @@ body, html {
   align-items: center;
   align-content: center;
 }
+.login .card{
+   text-align: center;
+}
+
+.login .card small{
+  color:silver;
+  background-color: black;
+  box-shadow: 0vw 0vw 5vw black;
+}
+
+.login .card a{
+  color:blue;
+  text-decoration: none;
+}
 
 .login .card .login_card{
-  padding: 15px;
+  padding: 4vw;
+  margin-top:1vw;
   background-color: rgb(15, 15, 15);
   border:1px solid blue;
   display:flex;
@@ -33,8 +37,7 @@ body, html {
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin:5px;
-  box-shadow: 0px 0px 10px cyan;
+  box-shadow: 0px 0px 10px rgb(55, 0, 255);
 }
 
 .login .card .login_card .data{

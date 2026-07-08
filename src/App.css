@@ -1,12 +1,14 @@
 
 body, html {
-  /* background-color: red ;
-  background-repeat: no-repeat;
+  background-color: black ;
+  background-image: linear-gradient(rgb(72, 72, 72) 1px, transparent 1px), linear-gradient(90deg, rgb(72, 72, 72) 1px, transparent 1px);
+  background-size: 40px 40px;
+  /* background-repeat: no-repeat; */
   background-position: absolute;
   color:white;
   background-attachment: fixed;
   scrollbar-width: thin;
-  overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 .no {  /*agr tournament 0 hai to */
@@ -253,7 +255,6 @@ span{
   color:transparent;
   background: linear-gradient(90deg, blue, rgb(89, 89, 255));
   background-clip: text;
-  text-shadow: 0vw 0vw 5vw rgba(255, 255, 255, 0.489);
 }
 
 .upcoming{

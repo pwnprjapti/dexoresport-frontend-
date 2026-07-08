@@ -36,8 +36,11 @@ export default function Login() {
         
         <div className="login">
             <div className="card">
-                <div className="login_card">
                 <Logo />
+                <small>By continuing you agree with our <Link>terms & conditoins</Link>, <Link>Privacy Policy</Link>, <Link>Refunt Policy</Link> and <Link>Battle rules</Link></small>
+                <div className="login_card">
+                    <h1>Player <span>Login</span></h1>
+                    <p style={{'color':'silver'}}>Login to your account and continue joining excited battles.</p>
                     <input value={email} onChange={(e)=> setEmail(e.target.value)} type="email" placeholder="Email" className="data" />
                     <input value={pass}  onChange={(e)=> setPass(e.target.value)} type="password" placeholder="Password" className="data" />
                     <div className={ !data || data.status === 200 ? "hide" : "show"}>Invalid credientials </div>

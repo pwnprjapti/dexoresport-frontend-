@@ -1,4 +1,4 @@
-body, html{
+/* body, html{
   background-color: rgb(26, 24, 24) ;
   background-repeat: no-repeat;
   background-position: absolute;
@@ -6,7 +6,7 @@ body, html{
   background-attachment: fixed;
   scrollbar-width: none;
   overflow-x: hidden;
-}
+} */
 
 .box{
     /* border:2px solid blue; */
