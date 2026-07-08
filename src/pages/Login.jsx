@@ -37,7 +37,6 @@ export default function Login() {
         <div className="login">
             <div className="card">
                 <Logo />
-                <small>By continuing you agree with our <Link>terms & conditoins</Link>, <Link>Privacy Policy</Link>, <Link>Refunt Policy</Link> and <Link>Battle rules</Link></small>
                 <div className="login_card">
                     <h1>Player <span>Login</span></h1>
                     <p style={{'color':'silver'}}>Login to your account and continue joining excited battles.</p>
@@ -49,6 +48,7 @@ export default function Login() {
                     <p>Don't have account yet ?</p>
                     <button onClick={() => navigate("/signup")}>Sign Up</button>
                 </div>
+                <small>By continuing you agree with our <Link>terms & conditoins</Link>, <Link>Privacy Policy</Link>, <Link>Refunt Policy</Link> and <Link>Battle rules</Link></small>
             </div>
         </div>
       </>

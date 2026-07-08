@@ -6,7 +6,7 @@ body, html {
   background-position: absolute;
   color:white;
   background-attachment: fixed;
-  scrollbar-width: thin;
+  scrollbar-width: none;
   overflow-x: hidden;
 }
 
