@@ -41,12 +41,8 @@
   box-shadow: 0px 0px 70vw rgba(55, 0, 255, 0.388);
 }
 
-.login .card .login_card .txt{
-
-}
-
 .login .card .login_card input{
-  font-size: 2.5vh;
+  font-size: medium;
   padding:1.5vh;
   border-radius:5px;
   outline:none;
@@ -90,6 +86,10 @@
   text-shadow:0.5px 0.5px 10px white;
   cursor:pointer;
   box-shadow: 0.5px 0.5px 4px gray;
+}
+
+.login .card .login_card h2{
+    font-size: xx-large;
 }
 
 .login .card .login_card label{

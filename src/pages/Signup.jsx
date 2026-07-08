@@ -49,14 +49,10 @@ export default function Signup() {
         <>
         <Logo />
         <div className={styles.login}>
-            <div className={styles.card}>
-                <small>By creating an account, you agree to our <Link>Terms and Conditions</Link>, <Link>Privacy & Policy</Link>, <Link>Refund Policy</Link>And <Link>Battle rules</Link></small>
-                <div>
+            <div className={styles.card}>                <div>
                     <form className={styles.login_card} onSubmit={send_signupdata}>
                         <h2>Create Account</h2>
-                     <p className={styles.txt}>Join the battle and prove your are the Legend</p>
-                     {/* <input type="hidden" name="_csrf" value={csrf} /> */}
-                    <input type="text" name="name" onChange={handleChange} placeholder="Name" className="data" />
+                     <p className={styles.txt}>Join the battle and prove your are the Legend</p>                    <input type="text" name="name" onChange={handleChange} placeholder="Name" className="data" />
                     <input type="email" name="email" onChange={handleChange} placeholder="Email" className="data" />
                     <input type="password" name="pass" onChange={handleChange} placeholder="Password" className="data" />
                     <label>BGMI details : </label>
@@ -67,6 +63,7 @@ export default function Signup() {
                     <button onClick={()=> navigate("/login")}>Login</button>
                     </form>
                 </div>
+                 <small>By creating an account, you agree to our <Link>Terms and Conditions</Link>, <Link>Privacy & Policy</Link>, <Link>Refund Policy</Link>And <Link>Battle rules</Link></small>
             </div>
         </div>
       </>
