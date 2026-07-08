@@ -16,7 +16,8 @@
 }
 
 .winner{
-    background-image:linear-gradient(140deg, rgba(177, 174, 25, 0.434), rgba(58, 57, 1, 0.434)) ;
+    /* background-image:linear-gradient(140deg, rgba(177, 174, 25, 0.434), rgba(58, 57, 1, 0.434)) ; */
+    background-image:linear-gradient(140deg, rgb(177, 174, 25, 0.573), rgba(58, 57, 1, 0.573)) ;
     text-align: center;
     width:20vw;
     height:50vw;
@@ -80,7 +81,7 @@
     font-weight:bold;
     margin-top:-0.5lh;
     color:yellow;
-    text-shadow:0vh 0vh 1vw yellow;
+    font-size: small;
 }
 
 .winner .info{
@@ -106,7 +107,7 @@
     border:1px solid rgb(12, 84, 104);
     box-shadow: none;
     margin-top:15vw;
-    background-image:linear-gradient(140deg, rgba(25, 144, 177, 0.434), rgba(1, 47, 58, 0.434)) ;
+    background-image:linear-gradient(140deg, rgba(25, 144, 177, 0.573), rgba(1, 47, 58, 0.573)) ;
 }
 
 .second .rank{
@@ -123,7 +124,7 @@
 }
 
 .second>p{
-    color:rgba(199, 4, 253, 0.605);
+    color:rgba(4, 166, 253, 0.605);
     text-shadow: none;
 }
 
@@ -131,7 +132,7 @@
     border:1px solid rgb(104, 87, 12);
     box-shadow: none;
     margin-top:20vw;
-    background-image:linear-gradient(140deg, rgba(177, 157, 25, 0.434), rgba(58, 46, 1, 0.434)) ;
+    background-image:linear-gradient(140deg, rgba(177, 157, 25, 0.573), rgba(58, 46, 1, 0.573)) ;
 }
 
 .third .rank .innr_rank p{
@@ -167,7 +168,7 @@ table thead tr{
     background-color: rgba(14, 82, 150, 0.338);
     padding:1vw;
     height:7vw;
-    font-size: medium;
+    font-size:4vw;
 }
 
 table tbody tr{
@@ -213,9 +214,9 @@ table tbody tr td{
 }
 
 table tbody tr td button{
-    border:1px solid rgb(252, 3, 252);
-    background-color: rgba(251, 2, 251, 0.331);
-    border-radius:2px;
+    border:0.5px solid rgb(185, 0, 185);
+    background-color: rgb(185, 0, 185);
+    border-radius:3px;
     padding:0.5vw 1vw;
     color:white;
     font-size: xx-small;
