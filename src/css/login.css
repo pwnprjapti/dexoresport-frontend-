@@ -42,7 +42,7 @@
 }
 
 .login .card .login_card .data{
-  font-size: 2.5vh;
+  font-size:medium;
   padding:1.5vh;
   border-radius:5px;
   outline:none;
@@ -56,7 +56,7 @@
 
 .login .card .login_card .data:hover{
   border-color:blue;
-  box-shadow: 0px 0px 5px cyan;
+  box-shadow: 0px 0px 5px rgba(0, 0, 255, 0.575);
 }
 
 .login .card .login_card a{
@@ -85,7 +85,7 @@
   border-radius: 30px;
   text-shadow:0.5px 0.5px 10px white;
   cursor:pointer;
-  box-shadow: 0.5px 0.5px 4px gray;
+  box-shadow: 0.5px 0.5px 4px blue;
 }
 
 .login .card .login_card label{
