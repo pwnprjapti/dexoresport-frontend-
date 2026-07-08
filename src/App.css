@@ -108,10 +108,10 @@ nav .links button:hover{
 }
 
 .home{
-  margin:5px;
+  /* margin:5px; */
   z-index:0;
   display: flex;
-  margin-top:8.5vh;
+  margin-top:13vw;
   border:2px solid blue; 
   flex-direction: column;
   overflow-y: auto;
@@ -229,11 +229,18 @@ h2{
   font-size:large;
 }
 
+span{
+  color:rgb(35, 35, 255);
+  text-shadow: 0vw 0vw 8vw blue;
+}
+
 .upcoming{
   display:flex;
   flex-direction:row;
   overflow-y: hidden;
   overflow-x:auto;
+  border:1px solid rgb(103, 103, 103);
+  border-radius:10px;
 }
 
 .upcoming .card{

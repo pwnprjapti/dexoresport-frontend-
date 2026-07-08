@@ -58,7 +58,7 @@ export default function Home() {
                 </div>
             </div>
              
-             <h2>UPCOMING TOURNAMENTS</h2>
+             <h2>UPCOMING <span>TOURNAMENTS</span></h2>
             <div className=' upcoming'>
                 {future.length === 0 ? <div className='no'>No tournaments right now </div> : future.map((match)=>(
                      <div key={match._id} className='card'>
@@ -125,7 +125,7 @@ export default function Home() {
            </div>      
 
             <div className='why'>
-                <h1>Why Join Us ?</h1>
+                <h1>Why <span>Join Us ?</span></h1>
                 <div className="cards">
                     <div className='card'>
                         <div className='icon'><i className="fa-solid fa-shield" style={{"color": "rgb(23, 240, 6)", "font-size":"8vh"}}></i></div>
@@ -151,7 +151,7 @@ export default function Home() {
             </div>
 
             <div className='for_organizers'>
-                <h1>For Organizers</h1>
+                <h1>For <span>Organizers</span></h1>
                 <p>A simple path to grow your community and build a trusted organizer profile.</p>
                 <div className='cards'>
                     <div className='card'>
@@ -182,7 +182,7 @@ export default function Home() {
             </div>
 
             <div className='why_organizer_choose_us'>
-                <h1>Why Organizers Choose Us ? </h1>
+                <h1>Why Organizers <span>Choose Us ? </span></h1>
                 <p>Built to help organizers save time, attract more players and maximize revenue.</p>
                 <div className='cards'>
                     <div className='card'>
@@ -259,7 +259,7 @@ export default function Home() {
             </div>
 
             <div className='ready_to_organize'>
-                <h1>Ready to Start Organizing ?</h1>
+                <h1>Ready to <span>Start</span> Organizing ?</h1>
                 <p>Join hundreds of trusted organizers who use our platform to promote their tournaments and connect with the Free Fire community.</p>
                 <button>View Pricing </button>
             </div>
