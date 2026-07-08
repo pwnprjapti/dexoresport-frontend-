@@ -5,7 +5,7 @@ body, html {
   background-position: absolute;
   color:white;
   background-attachment: fixed;
-  scrollbar-width: none;
+  scrollbar-width: thin;
   overflow-x: hidden;
 }
 
@@ -230,7 +230,9 @@ h2{
 }
 
 span{
-  color:rgb(35, 35, 255);
+  color:transparent;
+  background: linear-gradient(90deg, blue, rgb(89, 89, 255));
+  background-clip: text;
   text-shadow: 0vw 0vw 8vw blue;
 }
 
