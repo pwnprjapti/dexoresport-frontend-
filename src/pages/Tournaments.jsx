@@ -38,7 +38,7 @@ export default function Tournaments(){
         <>
         <Nav />
         <div className="container">
-         <h2>UPCOMING TOURNAMENTS</h2>
+         <h2>UPCOMING <span>TOURNAMENTS</span></h2>
             <div className=' upcoming'>
                 {future.length === 0 ? <div className='no'>No tournaments right now </div> : future.map((match)=>(
                      <div key={match._id} className='card'>
@@ -70,7 +70,7 @@ export default function Tournaments(){
 
             </div>
             
-            <h2>LIVE TOURNAMENTS</h2>
+            <h2>LIVE <span>TOURNAMENTS</span></h2>
             <div className=' live'>
                 { live.length === 0 ? <div className='no'>No LIve tournaments right now </div> : live.map((match)=>(
                     <div className='card' key={match._id}>
@@ -88,7 +88,7 @@ export default function Tournaments(){
 
             </div>
 
-            <h2>PAST TOURNAMENTS</h2>
+            <h2>PAST <span>TOURNAMENTS</span></h2>
             <div className=' live'>
                 { past.length === 0 ? <div className='no'>No LIve tournaments right now </div> : past.map((match)=>(
                     <div className='card' key={match._id}>

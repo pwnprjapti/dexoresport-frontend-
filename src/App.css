@@ -531,8 +531,7 @@ justify-content: center;
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
-  /* margin-top:100px; */
-  /* background-color: rgba(252, 2, 252, 0.482); */
+  justify-content: center;
 }
 
 .home .why .cards .card{
@@ -640,7 +639,7 @@ justify-content: center;
 
 .home .why_organizer_choose_us .cards .card:hover{
   transform: translateY(-5px);
-  box-shadow:0.5vh 1vh 2vh rgba(101, 101, 101, 0.961);
+  box-shadow:0vw 0vw 2vw gold;
 }
 
 .home .ready_to_organize{

@@ -1,5 +1,5 @@
 .container{
-  background-color: black ;
+  background-color: transparent ;
   background-repeat: no-repeat;
   background-position: absolute;
   color:white;
@@ -10,32 +10,33 @@
 
 .top_winners{
     display:flex;
-    justify-content: center;
+    align-items:center;
     padding:2vw;
+    justify-content: space-evenly;
 }
 
 .winner{
     background-image:linear-gradient(140deg, rgba(177, 174, 25, 0.434), rgba(58, 57, 1, 0.434)) ;
     text-align: center;
     width:20vw;
-    height:20vw;
+    height:50vw;
     border-radius:10px;
     padding:1vw;
-    margin:1.5vw;
-    border:2px solid rgb(186, 186, 8);
+    margin:1vw;
+    border:1.5px solid rgb(186, 186, 8);
     box-shadow: 0vw 0vw 1vh rgba(255, 255, 0, 0.758);
     position:relative;
 }
 
 .winner .rank{
     /* border:2px solid yellow; */
-    height:26%;
-    width:22%;
+    height:10vw;
+    width:8vw;
     background-color: rgba(252, 252, 6, 0.977);
     position:absolute;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    top:-20%;
-    left:39%;
+    top:-15%;
+    left:32%;
 }
 
 .winner .rank .innr_rank{
@@ -49,62 +50,62 @@
 
 .winner .rank .innr_rank p{
     position:absolute;
-    top:-30%;
+    top:-15%;
     left:35%;
     color:yellow;
-    font-size:5vh;
+    font-size:small;
     font-weight:bold;
 }
 
 .dp{
-    width:40%;
-    height:40%;
+    width:10vw;
+    height:10vw;
     border-radius: 50%;
     background-color: rgba(255, 255, 0, 0.365);
-    border:2px solid tomato;
+    border:1px solid tomato;
     box-shadow:0vh 0vh 1vh rgb(255, 39, 1);
     position:absolute;
     top:12%;
-    left:30%;
+    left:25%;
 }
 
 .winner h3{
     color:white;
     text-shadow: 0vh 0vh 0.5vh orange;
-    margin-top:60%;
+    margin-top:90%;
+    font-size: small;
 }
 
 .winner>p{
     font-weight:bold;
-    margin-top:-15px;
+    margin-top:-0.5lh;
     color:yellow;
-    text-shadow:0vh 0vh 1vh yellow;
+    text-shadow:0vh 0vh 1vw yellow;
 }
 
 .winner .info{
     display: flex;
     flex-direction: row;
-    /* border: 1px solid red; */
     margin-top:-8%;
     height:5vw;
     justify-content: space-evenly;
 }
 
 .winner .info .box{
-    /* border:1px solid gray; */
     margin-top:1%;
-    font-size:3vh;
+    font-size:x-small;
     position:relative;
 }
 
 .winner .info .box small{
-    margin-top:-35%;
+    /* margin-top:-35%; */
+    font-weight: bold;
 }
 
 .second{
     border:1px solid rgb(12, 84, 104);
     box-shadow: none;
-    margin-top:4vw;
+    margin-top:15vw;
     background-image:linear-gradient(140deg, rgba(25, 144, 177, 0.434), rgba(1, 47, 58, 0.434)) ;
 }
 
@@ -117,7 +118,7 @@
 }
 
 .second .dp{
-    border:2px solid rgb(22, 149, 184);
+    border:1px solid rgb(22, 149, 184);
     box-shadow:0vh 0vh 1vh rgba(18, 144, 179, 0.701);
 }
 
@@ -129,7 +130,7 @@
 .third{
     border:1px solid rgb(104, 87, 12);
     box-shadow: none;
-    margin-top:4vw;
+    margin-top:20vw;
     background-image:linear-gradient(140deg, rgba(177, 157, 25, 0.434), rgba(58, 46, 1, 0.434)) ;
 }
 
@@ -165,7 +166,8 @@ table thead{
 table thead tr{
     background-color: rgba(14, 82, 150, 0.338);
     padding:1vw;
-    height:3vw;
+    height:7vw;
+    font-size: medium;
 }
 
 table tbody tr{
@@ -178,6 +180,7 @@ table tbody tr{
 table tbody tr .player_name{
     position:relative;
     width:30vw;
+    font-size:small;
 }
 
 table tbody .dp_t{
@@ -191,18 +194,17 @@ table tbody .dp_t{
     margin:1vw;
     position:absolute;
     top:-5%;
+    display: none;
 }
 
 table tbody p{
-    position:absolute;
-    left:20%;
-    top:26%;
     margin:0.5vw;
 }
 
 table tbody .points{
     color:rgb(166, 14, 205);
     font-weight: bold;
+    font-size:small;
 }
 
 table tbody tr td{
@@ -211,10 +213,11 @@ table tbody tr td{
 }
 
 table tbody tr td button{
-    border:1.5px solid rgb(252, 3, 252);
+    border:1px solid rgb(252, 3, 252);
     background-color: rgba(251, 2, 251, 0.331);
-    border-radius:5px;
+    border-radius:2px;
     padding:0.5vw 1vw;
     color:white;
-    font-weight:bold;
+    font-size: xx-small;
+    width:17vw;
 }
