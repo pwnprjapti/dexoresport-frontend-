@@ -12,6 +12,7 @@ export default function Nav(){
     const navigate = useNavigate();
 
     const [status, setStatus] = useState();
+    const [menuState, setMenuState ] = useState(false);
 
     const islogedin = async () => {
         const token = localStorage.getItem("jwt");
@@ -35,11 +36,16 @@ export default function Nav(){
         islogedin();
     }, []);
 
+    const menu = () =>{
+        menuState ? setMenuState(false) : setMenuState(true);
+    }
+
     return (
         
          <nav>
             <img className="logo" src="https://res.cloudinary.com/dnfhwfbmq/image/upload/v1777614927/1000076765-removebg-preview_momgvo.png" alt="Dexor Esport" />
-            <div className="links">
+            <button className='menu' onClick={menu}>{ menuState ? 'close' : 'menu'}</button>
+            <div className="links" style={menuState ? {'display':'flex'}:{'display':'none'}}>
                 <Link to="/"><FaHome /> Home</Link>
                 <Link to="/tournaments"><GiWaterGun /> Tournaments</Link>
                 <Link to="/leaderboard"><MdLeaderboard  /> Leaderboard</Link>

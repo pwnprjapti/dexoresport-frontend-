@@ -63,17 +63,35 @@ nav{
 }
 
 nav .logo{
-  height:4vw;
-  width:4vw;
-  margin:1vw;
-  margin-left:2vw;
+  height:10vw;
+  width:10vw;
+  margin:3vw;
   border-radius:50%;
 }
 
+nav .menu{
+  font-size:medium;
+  background-color: transparent;
+  border:1px solid gray;
+  border-radius: 5px;
+  padding:0.5vw 2vw;
+  color:gray;
+  position:absolute;
+  right:5%;
+}
+
 nav .links{
-  display: flex;
-  flex-direction: row;
+  display: none;
+  flex-direction: column;
   margin-right:10px;
+  position:absolute;
+  background-color: black;
+  border:1px solid silver;
+  border-radius: 10px;
+  padding: 2vw;
+  top:100%;
+  right:0;
+  transition:opacity 0.3s ease;
 }
 
 nav .links a{
@@ -83,11 +101,7 @@ nav .links a{
 }
 
 nav .links a:hover{
-  text-shadow:0.5px 0.5px 15px white;
-}
-
-nav .links a:active{
-  color:red;
+  color:rgb(12, 12, 254);
 }
 
 nav .links button{
@@ -187,7 +201,7 @@ nav .links button:hover{
   /* border:1px solid gray; */
   border-radius:5px;
   padding:3vw;
-  /* width:45%; */
+  max-width: 500px;
   margin:2vw;
   transition:transform 0.3s ease, box-shadow 0.3s ease;
 }
