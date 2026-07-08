@@ -1,5 +1,5 @@
 import styles from '../css/signup.module.css'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import Logo from '../compo/Logo.jsx'
 import { useState, useEffect } from 'react'
 
@@ -50,6 +50,7 @@ export default function Signup() {
         <Logo />
         <div className={styles.login}>
             <div className={styles.card}>
+                <small>By creating an account, you agree to our <Link>Terms and Conditions</Link>, <Link>Privacy & Policy</Link>, <Link>Refund Policy</Link>And <Link>Battle rules</Link></small>
                 <div>
                     <form className={styles.login_card} onSubmit={send_signupdata}>
                         <h2>Create Account</h2>

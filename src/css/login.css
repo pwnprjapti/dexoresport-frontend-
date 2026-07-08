@@ -1,3 +1,4 @@
+
 .login{
   margin:3vh;
   margin-top:2vh;
@@ -7,14 +8,14 @@
   align-items: center;
   align-content: center;
 }
+
 .login .card{
    text-align: center;
+   height:100vh;
 }
 
 .login .card small{
   color:silver;
-  background-color: black;
-  box-shadow: 0vw 0vw 5vw black;
 }
 
 .login .card a{
@@ -37,7 +38,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  box-shadow: 0px 0px 10px rgb(55, 0, 255);
+  box-shadow: 0px 0px 70vw rgba(55, 0, 255, 0.388);
 }
 
 .login .card .login_card .data{
