@@ -110,8 +110,7 @@ nav .links button:hover{
 }
 
 .home{
-  background-image: linear-gradient(rgba(0, 0, 255, 0.251) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 255, 0.251) 1px, transparent 1px);
-  background-size:40px 40px;
+  /* background-image: linear-gradient(rgba(0, 0, 255, 0.251) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 255, 0.251) 1px, transparent 1px); */
   z-index:0;
   display: flex;
   margin-top:13vw;
@@ -130,8 +129,19 @@ nav .links button:hover{
   height:100%;
   display: flex;
   flex-direction: column;
-  /* background-image:url("https://res.cloudinary.com/dnfhwfbmq/image/upload/v1780489524/1780489505663_mbgffc.png"); */
-  /* background-size:cover; */
+  position: relative;
+}
+
+.home .intro::before{
+  content:"";
+  top:-1.5%;
+  left:-3%;
+  background-size:40px 40px;
+  background-image:linear-gradient(rgba(58, 58, 58, 0.511) 1px, transparent 1px), linear-gradient(90deg, rgba(58, 58, 58, 0.511) 1px, transparent 1px) ;
+  position:absolute;
+  height:45%;
+  width:100%;
+  z-index:0;
 }
 
 .home .intro .label{
