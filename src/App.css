@@ -1,6 +1,8 @@
 
 body, html {
-  background-color: rgb(26, 24, 24) ;
+  background-color: red ;
+  background-image: linear-gradient(blue, 1px, transparent 1px), linear-gradient(90deg, blue, 1px transparent 1px);
+  background-size:40px 40px;
   background-repeat: no-repeat;
   background-position: absolute;
   color:white;
@@ -108,7 +110,8 @@ nav .links button:hover{
 }
 
 .home{
-  /* margin:5px; */
+  background-image: linear-gradient(rgba(0, 0, 255, 0.251) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 255, 0.251) 1px, transparent 1px);
+  background-size:40px 40px;
   z-index:0;
   display: flex;
   margin-top:13vw;
@@ -125,12 +128,10 @@ nav .links button:hover{
 .home .intro{
   align-items: center;
   height:100%;
-  /* align-items: center;
-  justify-content: center; */
   display: flex;
   flex-direction: column;
   /* background-image:url("https://res.cloudinary.com/dnfhwfbmq/image/upload/v1780489524/1780489505663_mbgffc.png"); */
-  background-size:cover;
+  /* background-size:cover; */
 }
 
 .home .intro .label{
@@ -212,7 +213,7 @@ nav .links button:hover{
 .home .intro .cards .card{
   color:blue;
   border:1px solid rgb(90, 89, 89);
-  background-color: rgba(128, 128, 128, 0.183);
+  background-color: rgb(24, 24, 24);
   border-radius:10px;
   padding:5vw;
   margin:2.5vw;
