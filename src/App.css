@@ -111,7 +111,7 @@ nav .links button:hover{
 
 .home{
   /* background-image: linear-gradient(rgba(0, 0, 255, 0.251) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 255, 0.251) 1px, transparent 1px); */
-  z-index:0;
+ z-index:0;
   display: flex;
   margin-top:13vw;
   border:2px solid blue; 
@@ -125,23 +125,15 @@ nav .links button:hover{
 }
 
 .home .intro{
+  background-size:40px 40px;
+  background-image:linear-gradient(rgba(58, 58, 58, 0.511) 1px, transparent 1px), linear-gradient(90deg, rgba(58, 58, 58, 0.511) 1px, transparent 1px) ;
   align-items: center;
   height:100%;
   display: flex;
   flex-direction: column;
   position: relative;
-}
-
-.home .intro::before{
-  content:"";
-  top:-1.5%;
-  left:-3%;
-  background-size:40px 40px;
-  background-image:linear-gradient(rgba(58, 58, 58, 0.511) 1px, transparent 1px), linear-gradient(90deg, rgba(58, 58, 58, 0.511) 1px, transparent 1px) ;
-  position:absolute;
-  height:45%;
-  width:100%;
-  z-index:0;
+  margin-top:-10px;
+  margin-left:-10px;
 }
 
 .home .intro .label{
@@ -219,6 +211,7 @@ nav .links button:hover{
    flex-direction: row;
    margin-top:7vh;
    flex-wrap:wrap;
+   justify-content: center;
 }
 .home .intro .cards .card{
   color:blue;
@@ -244,7 +237,7 @@ span{
   color:transparent;
   background: linear-gradient(90deg, blue, rgb(89, 89, 255));
   background-clip: text;
-  text-shadow: 0vw 0vw 8vw blue;
+  text-shadow: 0vw 0vw 5vw rgba(255, 255, 255, 0.489);
 }
 
 .upcoming{
