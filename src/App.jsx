@@ -3,8 +3,8 @@ import Profile from './pages/Profile.jsx'
 import Notfound from './pages/404.jsx'
 import Login from './pages/Login.jsx'
 import Signup from './pages/Signup.jsx'
+import GameDetails from './pages/GameDetails.jsx'
 import Home from './pages/Home.jsx'
-import Verification from './pages/Verification.jsx'
 import Tournament_join from './pages/Tournament_join.jsx'
 import Tournaments from './pages/Tournaments.jsx'
 import Leaderboard from './pages/Leaderboard.jsx'
@@ -19,7 +19,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/Profile" element={<Profile />} />
-        <Route path="/signup/verification/:id" element={<Verification />} />
+        <Route path="/signup/player/:id" element={<GameDetails />} />
         <Route path="/join/:id" element={<Tournament_join />} />
         <Route path="*" element={<Notfound />} />
         <Route path="/tournaments" element={<Tournaments />} />

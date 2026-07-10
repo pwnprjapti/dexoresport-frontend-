@@ -25,19 +25,16 @@
 
 .login .card .login_card{
   padding: 15px;
+  margin-top:1vw;
   background-color: rgb(15, 15, 15);
   border:1px solid blue;
   display:flex;
   flex-direction:column;
-  width:100%;
-  max-width:320px;
-  min-width:250px;
+  width:80vw;
   border-radius: 10px;
-  /* height:80vh; */
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin:5px;
   box-shadow: 0px 0px 70vw rgba(55, 0, 255, 0.388);
 }
 
@@ -101,6 +98,38 @@
 
 .login .card .login_card .txt{
   color:gray;
-  margin-top: -1lh;
+  margin-top: -0.5lh;
   font-size: medium;
+}
+
+.login_card .info_box{
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(53, 53, 53, 0.274);
+  padding:0vw 4vw;
+  margin:10vw 2vw;
+  border-radius: 10px;
+}
+
+.login_card .info_box .box{
+  display: flex;
+}
+
+.login_card .info_box .box .info{
+   text-align: left;
+   align-items: center;
+}
+
+.login_card .info_box .box .info>p{
+   color:rgb(155, 155, 155);
+   margin-top: -0.9lh;
+}
+
+.login_card .info_box .box .icon{
+   align-items: center;
+   justify-content: center;
+   display: flex;
+   width:15vw;
+   height:15vw;
+   margin-top: 3vw;
 }

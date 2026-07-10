@@ -10,7 +10,7 @@ export default function Login() {
     const [data, setdata ] = useState();
 
     const login = async () =>{
-        const res = await fetch('http://localhost:3000/login', {
+        const res = await fetch(`${import.meta.env.VITE_BASE_URL}/login`, {
             method:"POST",
             headers:{
                 "Content-Type":"application/json"
@@ -19,6 +19,7 @@ export default function Login() {
         });
 
         const res_data = await res.json();
+        console.log(res_data);
         setdata(res);
 
         if(res.status === 200){
