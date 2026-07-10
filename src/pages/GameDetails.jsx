@@ -5,17 +5,17 @@ import { useState, useEffect } from 'react'
 
 export default function Signup() {
     // const [ csrf, setCsrf ] = useState("");
-    const [signupdata, setSignupdata] = useState({name:"", email:"", pass:"", ign:"", uid:""})
+    const [gamedetails, setGamedetails] = useState({ pass:"", ign:"", uid:""})
 
     const navigate = useNavigate();
 
     function signup(){
-        navigate("/signup/verification")
+        navigate("/signup/verification");
     }
 
     const handleChange = (e) => {
         let {name, value} = e.target; 
-        setSignupdata((prev) => ({...prev, [name]:value}))   
+        setGamedetails((prev) => ({...prev, [name]:value}))   
     }
 
     const send_signupdata = async (e) => {
@@ -26,14 +26,14 @@ export default function Signup() {
         const csrfData = await csrfRes.json();
         console.log(csrfData.csrfToken);
 
-        const res = await fetch(`${import.meta.env.VITE_BASE_URL}/signup`, {
+        const res = await fetch(`${import.meta.env.VITE_BASE_URL}/gamedetails`, {
             method:'POST',
             credentials: 'include',
             headers:{
                 "Content-Type":"application/json",
-                "x-csrf-token":csrfData.csrfToken
+                // "x-csrf-token":csrfData.csrfToken
             },
-            body:JSON.stringify(signupdata)
+            body:JSON.stringify(gamedetails)
         });
 
         const data  = await res.json();

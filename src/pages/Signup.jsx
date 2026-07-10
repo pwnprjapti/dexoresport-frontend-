@@ -23,10 +23,11 @@ export default function Signup() {
     // }
 
     const send_signupdata = async (usertoken) => {
+        console.log('send_signupdata called with token:', usertoken);
         // Token fetch karo
         const csrfRes = await fetch(`${import.meta.env.VITE_BASE_URL}/getcsrf`, {  credentials: 'include' });
         const csrfData = await csrfRes.json();
-        console.log(csrfData.csrfToken);
+        console.log('csrf token from frontend:', csrfData.csrfToken);
 
         const res = await fetch(`${import.meta.env.VITE_BASE_URL}/signup`, {
             method:'POST',
@@ -38,18 +39,22 @@ export default function Signup() {
             body:JSON.stringify({usertoken})
         });
 
+        console.log('signup response status:', res.status);
         const data  = await res.json();
+        console.log('signup response data:', data);
         // console.log(data);
         if(data === "true"){
             console.log("user exist")
-        }else{
+        }
+        
+        if(res.status === 200){
             navigate(`/signup/player/${data}`)
         }
     }
 
 // google 0auth
 
-   const handleSuccess = (credentialResponse) => {
+    const handleSuccess = (credentialResponse) => {
     console.log(`login successfull ${credentialResponse.credential}`);
     send_signupdata(credentialResponse.credential);
  }
