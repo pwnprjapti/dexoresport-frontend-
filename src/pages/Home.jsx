@@ -17,9 +17,9 @@ export default function Home() {
 
     const getTournaments = async () => {
        try{
-        const res_future = await fetch("http://localhost:3000/future");
-        const res_live = await fetch("http://localhost:3000/live");
-        const res_past = await fetch("http://localhost:3000/past");
+        const res_future = await fetch(`${import.meta.env.VITE_BASE_URL}/future`);
+        const res_live = await fetch(`${import.meta.env.VITE_BASE_URL}/live`);
+        const res_past = await fetch(`${import.meta.env.VITE_BASE_URL}/past`);
 
         const future = await res_future.json();
         const live = await res_live.json();

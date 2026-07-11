@@ -43,8 +43,9 @@ export default function Signup() {
         const data  = await res.json();
         console.log('signup response data:', data);
         // console.log(data);
-        if(data === "true"){
+        if(res.status === 409){
             console.log("user exist")
+            navigate('/login');
         }
         
         if(res.status === 200){

@@ -42,7 +42,7 @@ export default function Tournament_join(){
     const getTournament = async () => {
        try{
         const token = localStorage.getItem("jwt");
-        const res = await fetch("http://localhost:3000/tournament_details", {
+        const res = await fetch(`${import.meta.env.VITE_BASE_URL}/tournament_details`, {
             method:'POST',
             headers:{
                 'Content-Type':'application/json',
@@ -116,7 +116,7 @@ export default function Tournament_join(){
    const loadScript = () => {
        return new Promise((resolve) => {
         const script = document.createElement("script");
-       script.src = "https://checkout.razorpay.com/v1/checkout.js";
+       script.src = import.meta.env.VITE_RAZORPAY_SRC;
        script.onload = () => resolve(true);
        script.onerror = () => resolve(false);
        document.body.appendChild(script);
@@ -130,7 +130,7 @@ export default function Tournament_join(){
             return;
         }
 
-        const res = await fetch("http://localhost:3000/join", {
+        const res = await fetch(`${import.meta.env.VITE_BASE_URL}/join`, {
             method:'POST',
             headers:{
                 'Content-Type':'application/json',
@@ -164,7 +164,7 @@ export default function Tournament_join(){
         alert("error in loading razorpay payment page");
       }
 
-      const response = await fetch('http://localhost:3000/createOrder', {
+      const response = await fetch(`${import.meta.env.VITE_BASE_URL}/createOrder`, {
             method:'POST',
             headers:{ 
                 'Content-Type':'application/json',
@@ -191,7 +191,7 @@ export default function Tournament_join(){
             "handler": async function (response){
                 console.log(response);
                 //payment details verificaton ke liye backend ko bhejna 
-                const verifyres = await fetch('http://localhost:3000/verifyOrder', {
+                const verifyres = await fetch(`${import.meta.env.VITE_BASE_URL}/verifyOrder`, {
                     method:'POST',
                     headers:{ 
                          'Content-Type':'application/json',

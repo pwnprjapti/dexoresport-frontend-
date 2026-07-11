@@ -1,6 +1,7 @@
 .container{
     display:flex;
     flex-direction:column;
+    margin-top:15vw;
 }
 
 .container .box1{
@@ -8,32 +9,28 @@
     flex-direction:column;
     background-size:cover;
     border-radius: 10px;
-    border:1px solid rgb(1, 1, 89);
+    border:0.1px solid gray;
+    border-radius:15px;
+    background-image:linear-gradient(45deg, rgb(23, 23, 23), rgb(1, 0, 54));
+    margin:1vw;
 }
 
 .container .box1 .player_profile{
     display:flex;
-    flex-direction:row-reverse;
+    flex-direction:row;
     flex-wrap:wrap;
     align-items: center;
-    gap:2vw;
-    /* margin-top:5vw; */
-    /* position:relative; */
 }
 
 .container .box1 .player_profile .dp{
-    border-radius:50%;
-    /* position:absolute; */
-    height: min(28vw, 220px);
-    width: min(28vw, 220px);
-    max-width: 220px;
-    max-height: 220px;
-    border:1.5px solid blue;
+    border-radius:20%;
+    height: min(25vw, 220px);
+    width: min(25vw, 220px);
+    border:1px solid blue;
     background-color: rgba(26, 26, 219, 0.493);
     background-image:url("https://res.cloudinary.com/dnfhwfbmq/image/upload/v1780488368/c8d7aXD4SvWCL8_CMb5ZDQ_tmvj49.webp");
     background-size:cover;
-    margin-top:2vw;
-    flex-shrink:0;
+    margin:2vw;
 }
 
 .container .box1 .player_profile .biodata{
@@ -47,7 +44,7 @@
     min-width: 0;
 }
 
-.container .box1 .player_profile .biodata h2{
+.container .box1 .player_profile .biodata p{
     font-size:large;
     color:white;;
 }
@@ -60,7 +57,7 @@
 }
 
 .container .box1 .player_profile .biodata .joined{
-    font-size:14px;
+    font-size:small;
 }
 
 .container .box1 .recent_info{
@@ -68,25 +65,32 @@
     flex-direction: row;
     padding:1vw;
     margin-top:3vw;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .container .box1 .recent_info .info_box, .container .box1 .recent_info .edit{
     border:1px solid gray;
-    border-radius:5px;
+    border-radius:15px;
     padding:1vw;
     text-align: center;
     margin:1vw;
-    width:15vw;
+    width:26vw;
     background-color: rgba(0, 0, 0, 0.463);
+    font-size: small;
 }
 
 .container .box1 .recent_info .info_box h2{
     text-shadow:0px 0px 1vw white;
 }
 
+.container .box1 .recent_info .info_box small{
+    color:blue;
+}
+
 .container .box1 .recent_info .edit{
     justify-content: center;
-    display: flex;
+    display: none;
     align-items: center;
 }
 
@@ -115,12 +119,12 @@
 
 .box2  .innr_box{
     background-color: black;
-    border:1.5px solid blue;
-    /* width:100%; */
-    margin:1vw;
-    border-radius:10px;
+    border:0.5px solid gray;
+    width:min(91vw, 500px);
+     margin:2vw 1vw;
+    border-radius:15px;
     padding:1vw;
-    box-shadow:0vh 0vh 1vw rgba(0, 0, 255, 0.991);
+    background-image:linear-gradient(45deg, rgb(23, 23, 23));
 }
 
 .box2 .innr_box h2{
@@ -137,48 +141,56 @@
 .box2 .innr_box .achive_list .achievement{
     display: flex;
     flex-direction: row;
-    margin:0.5vw;
+    margin:1vw;
 }
 
 .box2 .innr_box .achive_list .achievement .achive_logo{
-    width:5vw;
-    height:5vw;
+    width: min(13vw, 100px);
+    height:min(13vw, 100px);
     border-radius:5px;
-    border:1.5px solid rgb(25, 25, 247);
-    box-shadow:0vw 0vw 1vw rgb(25, 25, 247);
+    border:1px solid rgb(25, 25, 247);
+    /* box-shadow:0vw 0vw 1vw rgb(25, 25, 247); */
     background-color: rgba(137, 43, 226, 0.612);
     overflow:hidden;
 }
 
 .box2 .innr_box .achive_list .achievement .achive_logo img{
-    width:5vw;
-    height:5vw;
+   width: min(13vw, 100px);
+    height:min(13vw, 100px);
 }
 
 .box2 .innr_box .achive_list .achievement .achive_about{
     padding-left:1vw;
-    text-align:center;
-    position: relative;
+    text-align:left;
+    /* position: relative; */
 }
 
 .box2 .innr_box .achive_list .achievement .achive_about h4 span{
     position:absolute;
-    margin-left:150px;
+    right:8%;
 }
 
 .box2 .innr_box .achive_list .achievement .achive_about h4{
-    position:absolute;
+    /* position:absolute;
     top:-18%;
     left:0%;
-    width:180px;
+    width:180px; */
+    margin-top:1vw;
 }
 
 .box2 .innr_box .achive_list .achievement .achive_about small{
     position:absolute;
-    top:55%;
-    left:-5%;
-    color:rgb(181, 181, 181);
-    width:180px;
+    font-size:small;
+    margin-top:-3vw;
+    color:rgb(152, 152, 152);
+}
+
+.box2 .innr_box .achive_list a{
+    color:gray;
+    text-decoration: none;
+    text-align: center;
+    font-size: small;
+    margin-top: 4vw;
 }
 
 .achive{
@@ -205,14 +217,26 @@
     width:50%;
     background-color:rgb(255, 1, 255);
     height:4px;
-    top:0;
-    left:0;
+    /* top:0;
+    left:0; */
     border-radius: 10px;
     box-shadow: 0px 0px 1vh rgb(249, 3, 249);
 }
 
+.box2 .innr_box2{
+    background-color: black;
+    border:0.5px solid gray;
+    width:min(91vw, 500px);
+     margin:2vw 1vw;
+    border-radius:15px;
+    padding:1vw;
+    background-image:linear-gradient(45deg, rgb(23, 23, 23));
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
 /* Table Styling */
-.box2 .innr_box .tour_table{
+.box2 .innr_box2 .tour_table{
     width: 100%;
     border-collapse: collapse;
     margin-top: 1vw;
@@ -259,8 +283,8 @@
 }
 
 .tour_info img{
-    width: 4vw;
-    height: 4vw;
+    width: min(10vw, 200px);
+    height: min(10vw, 200px);
     border-radius: 5px;
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -290,7 +314,8 @@
 .stats{
     border-radius:10px;
     border:1px solid gray;
-    margin:1vw;
+    margin:2vw 1vw;
+    padding:1vw;
     background-color: black;
 }
 
@@ -303,23 +328,38 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    overflow-y: hidden;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.stats .stat_list a{
+    color:gray;
+    text-decoration: none;
+    margin:2vw;
+    margin-top:12vw;
 }
 
 .stats .stat_list .stat{
-    /* border:1px solid gray; */
+    flex-shrink: 0;
     display: flex;
     flex-direction: column;
     text-align:center;
     margin:1vw;
     font-size: large;
+    border:1px solid gray;
+    align-items: center;
+    padding:1vw;
+    border-radius: 15px;
+    width:min(26vw, 200px);
 }
 
 .stats .stat_list .stat img{
     margin:0.5vw;
-    width:5vw;
+    width:min(10vw, 80px);
     border:1.5px solid blue;
     border-radius:50%;
-    height:5vw;
+    height:min(10vw, 80px);;
     padding:1vw;
     box-shadow:0vw 0vw 1vw blue;
 }

@@ -1,11 +1,12 @@
 import styles from '../css/signup.module.css'
-import { useNavigate, Link } from 'react-router-dom'
+import { useNavigate, Link, useParams } from 'react-router-dom'
 import Logo from '../compo/Logo.jsx'
 import { useState, useEffect } from 'react'
 
 export default function Signup() {
-    // const [ csrf, setCsrf ] = useState("");
-    const [gamedetails, setGamedetails] = useState({ pass:"", ign:"", uid:""})
+    const id = useParams();
+
+    const [gamedetails, setGamedetails] = useState({id, password:"", ign:"", uid:""})
 
     const navigate = useNavigate();
 
@@ -31,17 +32,15 @@ export default function Signup() {
             credentials: 'include',
             headers:{
                 "Content-Type":"application/json",
-                // "x-csrf-token":csrfData.csrfToken
+                "x-csrf-token":csrfData.csrfToken
             },
             body:JSON.stringify(gamedetails)
         });
 
         const data  = await res.json();
         console.log(data);
-        if(data === "true"){
-            console.log("user exist")
-        }else{
-            navigate(`/signup/verification/${data}`)
+        if(res.status === 200){
+            navigate(`/login`);
         }
     }
 
@@ -53,7 +52,7 @@ export default function Signup() {
                     <form className={styles.login_card} onSubmit={send_signupdata}>
                         <h2>Create Account</h2>
                      <p className={styles.txt}>Join the battle and prove your are the Legend</p>                    
-                    <input type="password" name="pass" onChange={handleChange} placeholder="Password" className="data" />
+                    <input type="password" name="password" onChange={handleChange} placeholder="Password" className="data" />
                     <label>BGMI details : </label>
                     <input type="text" name="ign" onChange={handleChange} placeholder="IGN(In Game name)" className="data" />
                     <input type="number" name="uid" onChange={handleChange} placeholder="UID e.g., 5534351343" className="data" />

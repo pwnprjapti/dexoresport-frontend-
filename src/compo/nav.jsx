@@ -22,7 +22,7 @@ export default function Nav(){
             return;
         }
 
-        const res = await fetch("http://localhost:3000/islogedin", {
+        const res = await fetch(`${import.meta.env.VITE_BASE_URL}/islogedin`, {
             method:'POST',
             headers:{
                 Authorization:`Bearer ${token}`

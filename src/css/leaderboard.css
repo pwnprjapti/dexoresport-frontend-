@@ -155,9 +155,11 @@
 
 table{
     border:1px solid gray;
-    border-radius: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     overflow:hidden;
     width:100%;
+    border-collapse: collapse;
 }
 
 table thead{
@@ -168,7 +170,7 @@ table thead tr{
     background-color: rgba(14, 82, 150, 0.338);
     padding:1vw;
     height:7vw;
-    font-size:4vw;
+    /* font-size:4vw; */
 }
 
 table tbody tr{
@@ -214,11 +216,11 @@ table tbody tr td{
 }
 
 table tbody tr td button{
-    border:0.5px solid rgb(185, 0, 185);
-    background-color: rgb(185, 0, 185);
+    border:none;
+    background-color: transparent;
     border-radius:3px;
     padding:0.5vw 1vw;
-    color:white;
-    font-size: xx-small;
-    width:17vw;
+    color:gray;
+    font-size: small;
+    /* width:17vw; */
 }

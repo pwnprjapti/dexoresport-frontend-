@@ -57,13 +57,13 @@ const Leaderboard = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    {/* <tr>
                         <td>1</td>
                         <td className="player_name"><div className="dp_t"></div> <p>HunterX</p></td>
                         <td className="points">3234</td>
                         <td>34</td>
                         {/* <td>541</td>
-                        <td>10.2</td> */}
+                        <td>10.2</td> 
                         <td>78</td>
                         <td><button>View Profile</button></td>
                     </tr>
@@ -72,8 +72,8 @@ const Leaderboard = () => {
                         <td className="player_name"><div className="dp_t"></div> <p>HunterX</p></td>
                         <td className="points">3234</td>
                         <td>34</td>
-                        {/* <td>541</td>
-                        <td>10.2</td> */}
+                        <td>541</td>
+                        <td>10.2</td>
                         <td>78</td>
                         <td><button>View Profile</button></td>
                     </tr>
@@ -82,8 +82,8 @@ const Leaderboard = () => {
                         <td className="player_name"><div className="dp_t"></div> <p>HunterX</p></td>
                         <td className="points">3234</td>
                         <td>34</td>
-                        {/* <td>541</td>
-                        <td>10.2</td> */}
+                        <td>541</td>
+                        <td>10.2</td>
                         <td>78</td>
                         <td><button>View Profile</button></td>
                     </tr>
@@ -92,10 +92,20 @@ const Leaderboard = () => {
                         <td className="player_name"><div className="dp_t"></div> <p>HunterX</p></td>
                         <td className="points">3234</td>
                         <td>34</td>
+                        <td>541</td>
+                        <td>10.2</td>
+                        <td>78</td>
+                        <td><button>View Profile</button></td>
+                    </tr> */}
+                    <tr>
+                        <td>5</td>
+                        <td className="player_name"><div className="dp_t"></div> <p>HunterX</p></td>
+                        <td className="points">3234</td>
+                        <td>34</td>
                         {/* <td>541</td>
                         <td>10.2</td> */}
                         <td>78</td>
-                        <td><button>View Profile</button></td>
+                        <td><button>View</button></td>
                     </tr>
                     <tr>
                         <td>5</td>
@@ -105,7 +115,7 @@ const Leaderboard = () => {
                         {/* <td>541</td>
                         <td>10.2</td> */}
                         <td>78</td>
-                        <td><button>View Profile</button></td>
+                        <td><button>View</button></td>
                     </tr>
                 </tbody>
                </table>
