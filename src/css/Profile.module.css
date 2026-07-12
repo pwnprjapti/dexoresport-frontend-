@@ -149,7 +149,6 @@
     height:min(13vw, 100px);
     border-radius:5px;
     border:1px solid rgb(25, 25, 247);
-    /* box-shadow:0vw 0vw 1vw rgb(25, 25, 247); */
     background-color: rgba(137, 43, 226, 0.612);
     overflow:hidden;
 }
@@ -162,7 +161,6 @@
 .box2 .innr_box .achive_list .achievement .achive_about{
     padding-left:1vw;
     text-align:left;
-    /* position: relative; */
 }
 
 .box2 .innr_box .achive_list .achievement .achive_about h4 span{
@@ -171,10 +169,7 @@
 }
 
 .box2 .innr_box .achive_list .achievement .achive_about h4{
-    /* position:absolute;
-    top:-18%;
-    left:0%;
-    width:180px; */
+    
     margin-top:1vw;
 }
 
@@ -217,8 +212,6 @@
     width:50%;
     background-color:rgb(255, 1, 255);
     height:4px;
-    /* top:0;
-    left:0; */
     border-radius: 10px;
     box-shadow: 0px 0px 1vh rgb(249, 3, 249);
 }

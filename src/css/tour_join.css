@@ -13,7 +13,7 @@
     display:flex;
     flex-direction:column;
     margin:1vw;
-    margin-top:80px;
+    margin-top:14vw;
     /* border-radius:10px;
     overflow:hidden; */
 }
@@ -24,8 +24,7 @@
     display:flex;
     flex-direction:column;
     position: relative;
-    padding-bottom: 100px;
-    padding-left: 30px;
+    padding: 3vw;
     border-radius:10px;
 }
 
@@ -38,38 +37,41 @@
 }
 
 .box .poster h2{
-    margin-top:100px;
-    font-size:40px;
+    font-size:x-large;
     position:relative;
 }
 
 .box .poster .brief{
-    margin-top:-20px;
+    margin-top:-1lh;
     color:rgb(207, 204, 204);
     position:relative;
+    font-size: small;
 }
 
 .box .poster .poster_cards{
     display:flex;
     flex-direction:row;
     position:relative;
+    justify-content: space-between;
+    margin:2vw;
 }
 
 .box .poster .poster_cards .card{
-    color:rgb(167, 2, 167);
-    border:2px solid rgb(167, 2, 167);
-    background-color: rgba(28, 28, 28, 0.183);
-    border-radius:5px;
-    box-shadow:0px 0px 5px rgb(167, 2, 167)purple;
-    padding:2vh;
-    margin:2vh;
-    width:150px;
+    color:rgb(204, 0, 204);
+    border:1.3px solid rgb(204, 0, 204);
+    background-color: rgba(255, 0, 255, 0.148);
+    border-radius:15px;
+    padding:2vw;
+    margin:2vw 0vw;
+    width:20vw;
     text-align:center;
+    font-size: small;
 }
 
 .box .poster .organization{
     color:rgba(158, 157, 157, 0.957);
     position:relative;
+    font-size: small;
 }
 
 .box .poster .organization span{
@@ -82,12 +84,11 @@
 
 .btns button{
     border:1px solid blue;
-    font-size:3vh;
-    padding:1.5vh;
+    font-size:medium;
+    padding:2vw;
     border-radius:5px;
-    background:rgba(0, 0, 255, 0.817);
+    background:rgb(0, 0, 255);
     color:white;
-    width:200px;
     margin:1vw;
     box-shadow:0px 0px 0.5vw blue;
     transition: border-radius 0.2s ease;
@@ -98,25 +99,22 @@
 }
 
 .timer{
-    position:absolute;
-    border:1px solid black;
-    background-color:rgba(0, 0, 0, 0.475);
+    border:1px solid rgb(64, 64, 64);
+    background-color:rgb(13, 1, 53);
     border-radius:5px;
-    width:335px;
-    right:0;
-    bottom:0;
-    margin:1vw;
+    margin-top:3vw;
 }
 
 .timer p{
-   font-size:20px;
-   margin-left:15px;
+   font-size:medium;
+   margin:4vw;
 }
 
 .timer .box{
     display: flex;
     flex-direction:row;
-    margin-top:-15px;
+    justify-content: space-evenly;
+    margin-top:4vw;
     border:none;
 }
 
@@ -124,20 +122,20 @@
     background-color:rgba(0, 0, 0, 0.699);
     border:1px solid black;
     border-radius:5px;
-    padding:2vh;
-    margin:2vh;
+    padding:2vw;
+    /* margin:2vh; */
     text-align:center;
     color:gold;
     font-size:12px;
 }
 
 .timer .box .time span{
-    font-size:28px;
+    font-size:xx-large;
 }
 
 .part1 {
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .part1 .box1{
@@ -147,17 +145,17 @@
 
 .part1 .box1 .innr{
     border:1px solid blue;
-    width:60vw;
+    width:min(87vw, 750px);
     border-radius:10px;
-    margin:1vh;
+    margin:2vw;
     margin-left:0;
-    padding:1vw;
+    padding:3vw;
     background-color: black;
 }
 
 .part1 .box1 .innr h3{
     margin-top:-0.5px;
-    font-size:22px;
+    font-size:larger;
 }
 
 .part1 .box1 .innr p{
@@ -167,13 +165,15 @@
 .part1 .box1 .innr .cards{
     display:flex;
     flex-direction:row;
+    justify-content: space-around;
+    gap:2vw;
 }
 
 .part1 .box1 .innr .cards .card{
     border:1px solid blue;
     border-radius:5px;
-    padding:0px 1vw 0px 1vw;
-    margin:10px;
+    padding:0px 2vw;
+    /* margin:2vw; */
     text-align:center;
     display: flex;
 }
@@ -187,17 +187,16 @@
 
 .part1 .box1 .innr2{
    border:1px solid blue;
-    width:60vw;
+    /* width:60vw; */
     border-radius:10px;
-    margin:1vh;
-    margin-left:0;
-    padding:1vw;
+    margin-top:2vw;
+    padding:3vw;
     background-color: black;
 }
 
 .part1 .box1 .innr2 h3{
     margin-top:-0.5px;
-    font-size:22px;
+    font-size:larger;
 }
 
 .part1 .box1 .innr2 .box{
@@ -205,6 +204,7 @@
     display:flex;
     flex-direction:row;
     margin:0;
+    gap:3vw;
 }
 
 .part1 .box1 .innr2 .box .details{
@@ -214,18 +214,23 @@
     position:relative;
     display: flex;
     flex-direction:column;
-    width:20vw;
-}
-
-.part1 .box1 .innr2 .box .details2{
-    width:30vw;
+    /* width:20vw; */
 }
 
 .part1 .box1 .innr2 .box .details span{
-    margin-left:20px;
+    font-size: small;
+    margin-left:3vw;
+}
+
+/* .part1 .box1 .innr2 .box .details2{
+    width:30vw;
+} */
+
+/* .part1 .box1 .innr2 .box .details span{
+    margin-left:20px; 
     position:absolute;
     right:1vw;
-}
+} */
 
 .part1 .box2{
     display: flex;
@@ -234,65 +239,64 @@
 
 .part1 .box2 .innr{
     border:1px solid blue;
-    width:32vw;
+    width:min(87vw, 750px);
     border-radius:10px;
-    margin:1vh;
+    margin:2vw;
     margin-left:0;
-    padding:1vw;
+    padding:3vw;
     position:relative;
     display:flex;
     flex-direction:column;
-    /* box-shadow:0px 0px 0.3vw cyan; */
     background-color: black;
 }
 
 .part1 .box2 .innr h3{
-    margin-top:-0.5px;
-    font-size:22px;
+    margin-top:3vw;
+    font-size:larger;
 }
 
 .part1 .box2 .innr .prizepool{
     border:1px solid gold;
     border-radius:6px;
     text-align:center;
-    background-color:rgba(35, 35, 35, 0.717);
+    background-color:rgba(255, 217, 0, 0.274);
 }
 
 .part1 .box2 .innr .prizepool p{
-    font-size:35px;
+    font-size:xx-large;
     font-weight:bold;
-    color:gold;
+    color:rgb(255, 219, 14);
+    text-shadow: 0vw 0vw 1vw rgba(255, 217, 0, 0.58);
 }
 
-.part1 .box2 .innr p{
-    margin-top:5px;
-}
 .part1 .box2 .innr .prizepool span p{
-    font-size:10px;
-    margin-top:-4vw;
-    color:white;
+    font-size:x-small;
+    margin-top:-10vw;
+    color:silver;
 }
 
-.part1 .box2 .innr p{
+.part1 .box2 .innr>p{
     color:rgb(163, 161, 161);
-    margin-top:2vw;
+    margin-top:3vw;
+    padding-bottom: 3vw;
     padding-left:1vw;
+    font-size: large;
+    border-bottom: 1px solid gray;
 }
 
 .part1 .box2 .innr p span{
     color:white;
     position:absolute;
-    right:0;
-    padding-right:2vw;
+    right:5%;
 }
 
 .part1 .box2 .innr2{
     border:1px solid blue;
-    width:32vw;
+    width:min(87vw, 750px);
     border-radius:10px;
-    margin:1vh;
+    margin:2vw;
     margin-left:0;
-    padding:1vw;
+    padding:3vw;
     position:relative;
     display:flex;
     background-color: black;
@@ -300,15 +304,15 @@
 }
 
 .part1 .box2 .innr2 h2{
-    margin-top:-0.5px;
-    font-size:22px;
+    /* margin-top:-0.5px; */
+    font-size:larger;
 }
 
 .part1 .box2 .innr2 li{
     margin-top:10px;
     color:blue;
-    margin:0.45vw;
-    margin-left:1vw;
+    margin:2vw;
+    margin-left:3vw;
 }
 
 .part1 .box2 .innr2 button{
@@ -332,8 +336,8 @@
 .part2 .box{
     border:1px solid blue;
     border-radius:10px;
-    margin:1px;
-    padding:1vw;
+    margin:3vw 1vw;
+    padding:3vw;
     background-color: black;
 }
 
@@ -350,7 +354,7 @@
    height:70%;
    width:2px;
    position: absolute;
-   left:8.4%;
+   left:4.5%;
    top:5%;
    z-index:1;
    top:13%;
@@ -364,11 +368,11 @@
 }
 
 .part2 .box .timeline .content .circle{
-  height:15px;
-  width:15px;
-  background-color:rgb(183, 10, 183);
+  height: min(3vw, 15px);
+  width:min(3vw, 15px);
+  background-color:rgb(216, 7, 216);
   border-radius:50%;
-  /* position: absolute; */
+  box-shadow: 0vw 0vw 2vw rgb(255, 0, 255);
   left:10%;
   z-index:2;
   /* animation:circle 0.2s forwards; */
@@ -382,23 +386,32 @@
 
 .box .bottom_btn{
     border-radius:10px;
-    font-size:3vh;
-    padding:1vw;
+    font-size:medium;
+    padding:2vw;
     margin:1vw;
-     font-weight:bold;
-    transition:box-shadow 0.3s ease, text-shadow 0.3s ease;
+    font-weight:bold;
+    width: 92vw;
+    z-index:9999;
+    position:fixed;
+    bottom:0;
+    transition:opacity 0.3s ease, box-shadow 0.3s ease, text-shadow 0.3s ease;
+}
+
+.box .bottom_btn.hide{
+    opacity: 0;
 }
 
 .box .disabled{
     cursor:not-allowed;
-    background-color: rgba(0, 255, 38, 0.263);
+    background-image:linear-gradient(135deg, rgb(0, 255, 38), rgb(60, 255, 0.626));
     border:1px solid rgb(0, 255, 21);
-    color:rgb(4, 255, 0);
+    /* color:rgb(4, 255, 0); */
+    color:white;
 }
 
-.box .enabled{
+.box .enabled {
     cursor:pointer;
-    color:rgb(255, 0, 230);
-    border:1px solid rgb(255, 0, 247);
-    background-color:rgba(255, 0, 251, 0.263);
+    color:white;
+    border:none;
+    background-image:linear-gradient(135deg,rgb(34, 0, 255), rgba(70, 42, 255, 0.626));
 }

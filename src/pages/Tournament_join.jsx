@@ -215,6 +215,23 @@ export default function Tournament_join(){
    }
 
 
+   const [ btm_btn_visible, setBtm_btn_visible ] = useState(false);
+   useEffect(()=>{
+       function btm_btn_visibility(){
+        if(window.scrollY > 300){
+            setBtm_btn_visible(true);
+        } else {
+            setBtm_btn_visible(false);
+        }
+       };
+
+       window.addEventListener('scroll', btm_btn_visibility);
+
+       return () => {
+        window.removeEventListener('scroll', btm_btn_visibility);
+       };
+   }, []);
+
     return (
         <>
         <Nav />
@@ -222,10 +239,10 @@ export default function Tournament_join(){
             <div className='poster'>
                 <img src='https://res.cloudinary.com/dnfhwfbmq/image/upload/v1780371407/7f2fd805b3300988ed62b2df0ece536ac53a054717947090d0f73bade54f7ec3_lfwy2x.png' alt="match poster" />
                 <h2>{tournament.tournament_name}</h2>
-                <p className='brief'>{tournament.disc}</p>
+                <p className='brief'>geyfhfyuu hkkhiu jk{tournament.disc}</p>
                 <div className='poster_cards'>
                     <div className='card'>
-                        25 May - 28 may 2024
+                        28 may 2024
                     </div>
                     <div className='card'>
                         07:00 PM IST
@@ -234,12 +251,16 @@ export default function Tournament_join(){
                         {Array.isArray(tournament.enteries) ? tournament.enteries.length : 0}/{tournament.ttl_slots || ''} Teams
                     </div>
                 </div>
-                <p className='organization'>Organized by <span>HunterX esport</span></p>
+               
                 <div className='btns'>
                     <button className={ isRegistered === 422 ? 'disabled' : 'enabled'} disabled={isRegistered === 422 ? true : false} onClick={handlePayment}>{ isRegistered === 422 ? "Registered ✓" : "Join Now" }</button>
                     <button>Share </button>
                 </div>
-                <div className='timer'>
+
+                 <p className='organization'>Organized by <span>HunterX esport</span></p>
+            </div>
+
+            <div className='timer'>
                     <p>Registeration Ends In </p>
                   <div className='box'>
                     <div className='time'><span>{regisCloseIn.days}</span><br />Days</div>
@@ -247,7 +268,6 @@ export default function Tournament_join(){
                     <div className='time'><span>{regisCloseIn.minutes}</span><br />Mins</div>
                     <div className='time'><span>{regisCloseIn.seconds}</span><br />Secs</div>
                   </div>
-                </div>
             </div>
             
             <div className='part1'>
@@ -274,19 +294,19 @@ export default function Tournament_join(){
                         <h3>Tournament Details</h3>
                        <div className='box'>
                         <div className='details'>
-                            <p>Tournament Type    <span>Battle Royale</span></p>
-                            <p>Team Size    <span>{tournament.Team_size}</span></p>
-                            <p>Entry Fee    <span>$100/Team</span></p>
-                            <p>Max Teams    <span>{tournament.ttl_slots}</span></p>
-                            <p>Region     <span>India</span></p>
-                            <p>Organized By   <span>HUnerx esport</span></p>
+                            <p>Tournament Type    <br /><span>Battle Royale</span></p>
+                            <p>Team Size    <br /><span>{tournament.Team_size}</span></p>
+                            <p>Entry Fee    <br /><span>$100/Team</span></p>
+                            <p>Max Teams    <br /><span>{tournament.ttl_slots}</span></p>
+                            <p>Region     <br /><span>India</span></p>
+                            {/* <p>Organized By   <br /><span>HUnerx esport</span></p> */}
                         </div>
                         <div className='details details2'>
-                            <p><SlCalender /> Registeration Start  <span>12 May, 2024 - 12:00 PM IST</span></p>
-                            <p><SlCalender /> Registeration End   <span>13 May, 2024 - 12:00 PM IST</span></p>
-                            <p><SlCalender /> Tournament Start   <span>25 May, 2024 - 12:00 PM IST</span></p>
-                            <p><SlCalender /> Tournament End    <span>25 May, 2024 - 12:00 PM IST</span></p>
-                            <p>Contact   <span>support@ghunterx.com</span></p>
+                            <p><SlCalender /> Registeration Start  <br /><span>12 May, 2024 - 12:00 PM IST</span></p>
+                            <p><SlCalender /> Registeration End   <br /><span>13 May, 2024 - 12:00 PM IST</span></p>
+                            <p><SlCalender /> Tournament Start   <br /><span>25 May, 2024 - 12:00 PM IST</span></p>
+                            <p><SlCalender /> Tournament End   <br /> <span>25 May, 2024 - 12:00 PM IST</span></p>
+                            <p>Contact   <br /><span>support@ghunterx.com</span></p>
                         </div>
                        </div>
                      </div>
@@ -333,13 +353,12 @@ export default function Tournament_join(){
                               </div>
                         </div>
                     </div>
-                    {/* <p>25 may   <span>09:00 pm Ist</span> Round 1 - Group Stage </p>
-                    <p>25 may   <span>09:30 pm Ist</span> Round 1 - Group Stage </p>
-                    <p>25 may   <span>10:00 pm Ist</span> Round 1 - Group Stage </p> */}
                 </div>
-                <div className='box'></div>
+                {/* <div className='box'></div> */}
             </div>
-            <button className={ isRegistered === 422 ? 'bottom_btn disabled' : 'bottom_btn enabled'} disabled={isRegistered === 422 ? true : false} onClick={tour_join}>{ isRegistered === 422 ? "Registered ✓" : "Join Now"}</button>
+           { btm_btn_visible && (
+             <button className={ isRegistered === 422 ? 'bottom_btn disabled' : 'bottom_btn enabled'} disabled={isRegistered === 422 ? true : false} onClick={tour_join}>{ isRegistered === 422 ? "Registered ✓" : "Join Now"}</button>
+           )}
         </div>
         </>
     )
