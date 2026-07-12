@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo-2:wght@300;400;500;600;700;800&display=swap');
 
 body, html {
   background-color: black;
@@ -8,6 +11,18 @@ body, html {
   background-attachment: fixed;
   scrollbar-width: none;
   overflow-x: hidden;
+}
+
+button{
+  font-family: "Oxanium", sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: "Orbitron", sans-serif;
+}
+
+p{
+  font-family: "EXO 2", sans-serif;
 }
 
 .no {  /*agr tournament 0 hai to */
@@ -140,8 +155,7 @@ nav .links button:hover{
 }
 
 .home .intro{
-  background-size:40px 40px;
-  background-image:linear-gradient(rgba(58, 58, 58, 0.511) 1px, transparent 1px), linear-gradient(90deg, rgba(58, 58, 58, 0.511) 1px, transparent 1px) ;
+  /* background-image:linear-gradient(rgba(58, 58, 58, 0.211) 1px, transparent 1px), linear-gradient(90deg, rgba(58, 58, 58, 0.211) 1px, transparent 1px) ; */
   align-items: center;
   text-align: center;
   height:100%;
@@ -154,29 +168,31 @@ nav .links button:hover{
 
 .home .intro .label{
   background-color: rgba(0, 0, 255, 0.438);
-  border:1px solid blue;
+  border:1px solid rgb(25, 25, 255);
+  color:rgb(25, 25, 255);
   border-radius: 20px;
-  width:32ch;
-  padding:5px 25px;
+  padding:1vw 3vw;
   font-family: bold;
   margin-top:6vh;
   font-size:3vw;
   box-shadow:0px 0px 20vw blue;
 }
 
-.home .intro h2, .home .intro h2 span{
-    font-size:10vw;
-    margin-top:6vh;
+.home .intro h2 + h2{
+  margin-top:0px;
 }
 
-.home .intro h2{
+.home .intro h2, .home .intro h2 span{
+    font-size:x-large;
+    margin-top:10vw;
+}
+
+.home .intro h2 {
   color:white;
-  text-shadow:0px 0px 10px rgba(255, 255, 255, 0.434);
 }
 
 .home .intro h2 span{
     color:rgb(24, 24, 255);
-    text-shadow:0px 0px 10px rgba(0, 0, 255, 0.598);
 }
 
 .home .intro p{
@@ -247,7 +263,7 @@ nav .links button:hover{
 }
 
 h2{
-  font-size:large;
+  font-size:larger;
 }
 
 span{
@@ -431,7 +447,7 @@ span{
 .home .how_it_works>small{
   color:rgb(252, 2, 252);
   font-weight:bold;
-  font-size: small;
+  font-size: x-small;
 }
 
 .home .how_it_works h1{
@@ -454,11 +470,13 @@ span{
   justify-content: center;
   display: flex;
   flex-direction: column;
-  width:230px;
+  width: min(35vw, 200px);
+  margin:2vw;
+  /* width: min(38.5vw, 60vw); */
 }
 
 .home .how_it_works .steps .step h3{
-   font-size:larger;
+   font-size:x-small;
 }
 
 .home .how_it_works .steps .step h3 small{
@@ -469,10 +487,10 @@ span{
 
 .home .how_it_works .steps .step .icon{
   background-image:linear-gradient(45deg, silver, rgb(252, 2, 252));
-  width:20vw;
-  height:20vw;
-  max-width: 16vh;
-  max-width: 16vh;
+  width:min(10vw, 20vw);
+  height:min(10vw, 20vw);
+  /* max-width: 16vh;
+  max-width: 16vh; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -488,10 +506,10 @@ span{
 
 .home .how_it_works .steps .step .icon .innr_icon{
   background-color:black;
-  width:19vw;
-  max-width: 15.5vh;
-  max-height: 15.5vh;
-  height:19vw;
+  width:min(9.5vw, 19vw);
+  height:min(9.5vw, 19vw);
+  /* max-width: 15.5vh;
+  max-height: 15.5vh; */
   clip-path: polygon(
   50% 0%,
   93.3% 25%,
@@ -508,21 +526,26 @@ justify-content: center;
 
 .home .how_it_works .steps .step p{
   color:gray;
-  font-size:large;
+  font-size:x-small;
   margin-top:-1lh;
   margin-left:3vw;
 }
 
 
 .why{
-  /* margin-top:; */
-  /* height:50vh; */
   text-align:center;
   color:white;
   align-items: center;
   justify-content: center;
   display:flex;
   flex-direction: column;
+  background-color: rgba(27, 27, 27, 0.811);
+  border:0.5px solid rgb(59, 59, 59);
+  border-radius: 10px;
+}
+
+.why h1{
+  font-size: x-large;
 }
 
 .home .why .cards{
@@ -533,19 +556,29 @@ justify-content: center;
 }
 
 .home .why .cards .card{
-  height: 60vw;
-  width:80vw;
-  max-height:30vh;
-  max-width:40vh;
-  margin:4vw;
+  height: min(30vw, 60vw);
+  width: min(38.5vw, 60vw);
+  padding:2vw;
+  margin:1vw;
   border-radius:12px;
-  background-color: rgb(32, 32, 32);
+  background-color: rgb(20, 20, 20);
   transition: transform 0.3s ease;
-  padding:1vw;
+  border:0.5px solid rgb(59, 59, 59);
+}
+
+.home .why .cards .card .awesome_icon{
+  border-radius: 6px;
+  padding:2vw;
+  font-size: medium;
+}
+
+.home .why .cards .card h2{
+  font-size: small;
 }
 
 .home .why .cards .card p{
-  color:silver;
+  color:rgb(154, 154, 154);
+  font-size: x-small;
 }
 
 .home .why .cards .card:hover{

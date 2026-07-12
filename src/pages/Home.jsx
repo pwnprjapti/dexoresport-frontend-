@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react'
 
 import { AiOutlineUserAdd } from "react-icons/ai";
 import { MdLeaderboard } from 'react-icons/md';
+import { SlCalender } from 'react-icons/sl';
 
 export default function Home() {
     const navigate = useNavigate();
@@ -43,8 +44,10 @@ export default function Home() {
         <Nav />
         <div className="home">
             <div className="intro">
-                <div className='label'><li>India's #1 BGMI Tournament Plateform</li></div>
-                <h2>Play. Win. <span>Earn. </span></h2>
+                <div className='label'>India's #1 BGMI Tournament Plateform</div>
+                <h2>COMPETE</h2>
+                <h2>Win <span>CASH. </span></h2>
+                <h2>BUILD YOUR <span style={{'color':'purple'}}>LEGACY. </span></h2>
                 <p>Join thousands of BGMI warriors competing daily for real cash prizes. Free tournaments, instant payouts, and zero BS.</p>
                 <div className="btns">
                     <button className='btn1' onClick={()=> navigate("/login")}>Explore Tournaments</button>
@@ -95,28 +98,28 @@ export default function Home() {
               <div className='steps'>
                 <div className='step'>
                     <div className='icon'>
-                        <div className='innr_icon'><i className="fa-solid fa-user-plus" style={{"color": "rgb(252, 2, 252)", "font-size":"25px"}}></i></div>
+                        <div className='innr_icon'><i className="fa-solid fa-user-plus" style={{"color": "rgb(252, 2, 252)", "font-size":"small"}}></i></div>
                     </div>
                     <h3><small>01</small> REGISTER</h3>
                     <p>Create your account and complete your Profile.</p>
                 </div>
                 <div className='step'>
                     <div className='icon'>
-                        <div className='innr_icon'><i className="fa-solid fa-trophy" style={{"color": "rgb(252, 2, 252)", "font-size":"25px"}}></i></div>
+                        <div className='innr_icon'><i className="fa-solid fa-trophy" style={{"color": "rgb(252, 2, 252)", "font-size":"small"}}></i></div>
                     </div>
                     <h3><small>02</small> JOIN TOURNAMENT</h3>
                     <p>Choose a tournament that fits your game and skill.</p>
                 </div>
                 <div className='step'>
                     <div className='icon'>
-                        <div className='innr_icon'><i className="fa-solid fa-person-military-rifle" style={{"color": "rgb(252, 2, 252)", "font-size":"25px"}}></i></div>
+                        <div className='innr_icon'><i className="fa-solid fa-person-military-rifle" style={{"color": "rgb(252, 2, 252)", "font-size":"small"}}></i></div>
                     </div>
                     <h3><small>03</small> COMPETE</h3>
                     <p>Play your matches and showcase your skills.</p>
                 </div>
                 <div className='step'>
                     <div className='icon'>
-                        <div className='innr_icon'><i className="fa-solid fa-crown" style={{"color": "rgb(252, 2, 252)", "font-size":"25px"}}></i></div>
+                        <div className='innr_icon'><i className="fa-solid fa-crown" style={{"color": "rgb(252, 2, 252)", "font-size":"small"}}></i></div>
                     </div>
                     <h3><small>04</small> WIN AND EARN</h3>
                     <p>Climb the leaderboard and win exciting rewards.</p>
@@ -128,22 +131,22 @@ export default function Home() {
                 <h1>Why <span>Join Us ?</span></h1>
                 <div className="cards">
                     <div className='card'>
-                        <div className='icon'><i className="fa-solid fa-shield" style={{"color": "rgb(23, 240, 6)", "font-size":"8vh"}}></i></div>
+                        <div className='icon'><i className="fa-solid fa-shield awesome_icon" style={{"color": "rgb(17, 255, 0)", "background-color":"rgba(17, 255, 0, 0.37)", "border":"1px solid rgb(0, 255, 0)"}}></i></div>
                         <h2>Verified Organizers</h2>
                         <p>All organizers go through our verification process with trust scores and badges</p>
                     </div>
                     <div className='card'>
-                        <div className='icon'><i className="fa-solid fa-user-check" style={{"color": "rgb(89, 130, 254)", "font-size":"8vh"}}></i></div>
+                        <div className='icon'><i className="fa-solid fa-user-check awesome_icon" style={{"color": "rgb(21, 79, 254)", "background-color":"rgba(21, 79, 254, 0.37)", "border":"1px solid rgb(21, 79, 254)"}}></i></div>
                         <h2>Zero Plateform Fee</h2>
                         <p>Players do not pay plateform fee, Registeration is handled by organizers </p>
                     </div>
                     <div className='card'>
-                        <div className='icon'><i className="fa-solid fa-award" style={{"color": "rgb(224, 254, 89)", "font-size":"8vh"}}></i></div>
+                        <div className='icon'><i className="fa-solid fa-award awesome_icon" style={{"color": "rgb(216, 255, 42)", "background-color":"rgba(216, 255, 42, 0.37)", "border":"1px solid rgb(216, 255, 42)"}}></i></div>
                         <h2>Guaranteed Prizes</h2>
                         <p>All tournaments feature guaranteed prize pools with transparent payout structures</p>
                     </div>
                     <div className='card'> 
-                        <div className='icon'><i className="fa-solid fa-coins" style={{"color": "gold", "font-size":"8vh"}}></i></div>
+                        <div className='icon'><i className="fa-solid fa-coins awesome_icon" style={{"color": "gold", "background-color":"rgba(243, 248, 0, 0.37)", "border":"1px solid gold"}}></i></div>
                         <h2>Earn Your Entry</h2>
                         <p>Don't have enough balance? Complete tasks, collect coin and turn them into your tournament entry.</p>
                     </div>
@@ -219,6 +222,7 @@ export default function Home() {
                         <h2>Real-Time Notifications</h2>
                         <p>Get instant alerts whenever a player registers, slots fill up or important tournament events occur.</p>
                     </div>
+
 
                     <div className='card'>
                         <i className="fa-solid fa-square-poll-vertical" style={{"color": "rgba(19, 61, 247, 0.94)"}}></i>
