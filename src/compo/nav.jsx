@@ -34,7 +34,7 @@ export default function Nav(){
 
     useEffect(()=>{
         islogedin();
-    }, []);
+    }, [status]);
 
     const menu = () =>{
         menuState ? setMenuState(false) : setMenuState(true);

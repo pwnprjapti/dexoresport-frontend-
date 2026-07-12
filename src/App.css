@@ -261,13 +261,11 @@ span{
   flex-direction:row;
   overflow-y: hidden;
   overflow-x:auto;
-  border:1px solid rgb(103, 103, 103);
-  border-radius:10px;
 }
 
 .upcoming .card{
   border:1.5px solid blue;
-  height:76vh;
+  height:70vw;
   width:60vh;
   border-radius:15px;
   margin:10px;
