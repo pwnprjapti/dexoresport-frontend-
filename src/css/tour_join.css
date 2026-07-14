@@ -68,13 +68,13 @@
     font-size: small;
 }
 
-.box .poster .organization{
+.box .organization{
     color:rgba(158, 157, 157, 0.957);
     position:relative;
     font-size: small;
 }
 
-.box .poster .organization span{
+.box .organization span{
     color:white;
 }
 

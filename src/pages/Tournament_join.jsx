@@ -1,6 +1,7 @@
 import { resolvePath, useParams } from 'react-router-dom'
 import { useState, useEffect, useContext } from 'react'
 import Nav from '../compo/nav';
+import EndTimer from '../compo/EndTimer';
 import "../css/tour_join.css"
 import { FaMap } from "react-icons/fa";
 import { FaMedal } from "react-icons/fa6";
@@ -32,9 +33,7 @@ export default function Tournament_join(){
 
     const [ tournament, setTournament ] = useState({});
     const [ isRegistered ,setIsRegistered ] = useState();
-    const [ regisCloseIn, setRegisCloseIn ] = useState({
-        days:0, hours:0, minutes:0, seconds:0
-    });
+
     const [ btnstate, setBtnstate ] = useState(btnConfig.default);
 
     const { id } = useParams();
@@ -70,49 +69,6 @@ export default function Tournament_join(){
         getTournament();
     }, []);
 
-
-  /* registeration close in timer */
-
- useEffect(() => {
-
-    if (!tournament.regis_end_date || !tournament.regis_end_time){
-        console.log("no data found");
-        return;
-    };
-      
-    const interval = setInterval(() => {
-        const now = Date.now();
-
-        const endTime = new Date(
-            `${tournament.regis_end_date}T${tournament.regis_end_time}`
-        );
-
-        const diff = endTime.getTime() - now;
-
-        if(diff<=0){
-            setRegisCloseIn({
-                days:0, hours:0, minutes:0, seconds:0
-         })
-            
-        }
-        const days = Math.floor(diff/86400000);
-        const miliseconds_afterdays = diff%86400000;
-        const hours = Math.floor(miliseconds_afterdays/(60*60*1000));
-        const milisecond_afterhours = miliseconds_afterdays%(60*60*1000);
-        const minutes = Math.floor(milisecond_afterhours/(60*1000));
-        const miliseconds_afterminutes =milisecond_afterhours%(60*1000);
-        const seconds = Math.floor(miliseconds_afterminutes/1000);
-        
-        // console.log(days, hours, minutes, seconds);
-
-        setRegisCloseIn({days, hours, minutes, seconds});
-
-    }, 1000);
-
-    return () => clearInterval(interval);
-}, [tournament.regis_end_date, tournament.regis_end_time]);
-
-
    const loadScript = () => {
        return new Promise((resolve) => {
         const script = document.createElement("script");
@@ -141,8 +97,7 @@ export default function Tournament_join(){
 
         const data = await res.json();
         console.log(res.status, data);
-{/* <button className={ isRegistered === 422 ? 'disabled' : 'enabled'} disabled={isRegistered === 422 ? true : false} onClick={tour_join}>{ isRegistered === 422 ? "Registered ✓" : "Join Now" }</button> */}
-    
+
         if(res.status === 401){
             alert("please login to continue....", navigate("/login"));
         }
@@ -257,19 +212,12 @@ export default function Tournament_join(){
                     <button>Share </button>
                 </div>
 
-                 <p className='organization'>Organized by <span>HunterX esport</span></p>
+                 {/* <p className='organization'>Organized by <span>HunterX esport</span></p> */}
             </div>
+            <p className='organization'>Organized by <span>HunterX esport</span></p>
 
-            <div className='timer'>
-                    <p>Registeration Ends In </p>
-                  <div className='box'>
-                    <div className='time'><span>{regisCloseIn.days}</span><br />Days</div>
-                    <div className='time'><span>{regisCloseIn.hours}</span><br />Hours</div>
-                    <div className='time'><span>{regisCloseIn.minutes}</span><br />Mins</div>
-                    <div className='time'><span>{regisCloseIn.seconds}</span><br />Secs</div>
-                  </div>
-            </div>
-            
+            <EndTimer endDate={tournament.regis_end_date} endTime={tournament.regis_end_time} />
+
             <div className='part1'>
                 <div className='box1'>
                      <div className='innr'>
