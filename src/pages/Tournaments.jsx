@@ -1,11 +1,13 @@
 import "../css/tournaments.css"
 import Nav from '../compo/nav.jsx'
+import Loading from '../compo/Loading.jsx'
 import TournamentCard from "../compo/TournamentCard.jsx"
 import { Link, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
 export default function Tournaments(){
     const navigate = useNavigate();
+    const [loading, setLaoding] = useState(true);
     const [future, setFuture ] = useState([]);
     const [live, setLive ] = useState([]);
     const [past, setPast ] = useState([]);
@@ -27,6 +29,8 @@ export default function Tournaments(){
 
        }catch(err){
         console.log(err);
+       }finally{
+        setLaoding(false)
        }
     }
     
@@ -37,7 +41,12 @@ export default function Tournaments(){
 
     return(
         <>
-        <Nav />
+        { loading ? (
+            <Loading />
+        ):(
+
+        <>
+           <Nav />
         <div className="container">
          <h2>UPCOMING <span>TOURNAMENTS</span></h2>
             <div className=' upcoming'>
@@ -82,6 +91,9 @@ export default function Tournaments(){
                   )) }
             </div>
           </div>
+        </>
+
+        )}
         </>
     )
 }

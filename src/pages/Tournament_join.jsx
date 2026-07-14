@@ -1,6 +1,7 @@
 import { resolvePath, useParams } from 'react-router-dom'
 import { useState, useEffect, useContext } from 'react'
 import Nav from '../compo/nav';
+import Loading from '../compo/Loading';
 import EndTimer from '../compo/EndTimer';
 import "../css/tour_join.css"
 import { FaMap } from "react-icons/fa";
@@ -14,7 +15,7 @@ import { useNavigate } from "react-router-dom"
 
 
 export default function Tournament_join(){
-
+    const [ loading, setLoading ] = useState(true);
     const navigate = useNavigate();
 
     const btnConfig = {
@@ -61,6 +62,8 @@ export default function Tournament_join(){
         setIsRegistered(res.status);
        }catch(err){
         console.log(err);
+       }finally{
+        setLoading(false);
        }
     }
 
@@ -80,6 +83,8 @@ export default function Tournament_join(){
    }
 
     const tour_join = async () => {
+        try{
+            setLoading(true);
         const token = localStorage.getItem("jwt");
         if(!token){
             console.log("no token found");
@@ -109,9 +114,16 @@ export default function Tournament_join(){
         if(res.status === 200){
             alert("Tournament registeration succefull ✓");
         }
+      }catch(err){
+         console.log(err);
+      }finally{
+        setLoading(false);
+      }
     }
 
    const handlePayment = async () => {
+      try{
+        setLoading(true);
       const token = localStorage.getItem("jwt");
       const isScriptLoaded = await loadScript();
 
@@ -167,6 +179,11 @@ export default function Tournament_join(){
 
         const rzp = new Razorpay(options);
         rzp.open();
+     }catch(err){
+        console.log(err);
+     }finally{
+        setLoading(false);
+     }
    }
 
 
@@ -189,7 +206,11 @@ export default function Tournament_join(){
 
     return (
         <>
-        <Nav />
+        { loading ? (
+            <Loading />
+        ) : (
+          <>
+           <Nav />
          <div className='box'>
             <div className='poster'>
                 <img src='https://res.cloudinary.com/dnfhwfbmq/image/upload/v1780371407/7f2fd805b3300988ed62b2df0ece536ac53a054717947090d0f73bade54f7ec3_lfwy2x.png' alt="match poster" />
@@ -308,6 +329,9 @@ export default function Tournament_join(){
              <button className={ isRegistered === 422 ? 'bottom_btn disabled' : 'bottom_btn enabled'} disabled={isRegistered === 422 ? true : false} onClick={tour_join}>{ isRegistered === 422 ? "Registered ✓" : "Join Now"}</button>
            )}
         </div>
+          </>
+        )
+        }
         </>
     )
 }

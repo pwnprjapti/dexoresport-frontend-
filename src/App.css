@@ -281,8 +281,8 @@ span{
 
 .upcoming .card{
   border:1.5px solid blue;
-  height:70vw;
-  width:60vh;
+  height:50vw;
+  width:90vw;
   border-radius:15px;
   margin:10px;
   display:flex;
