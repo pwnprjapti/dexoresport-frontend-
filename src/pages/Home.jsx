@@ -185,7 +185,7 @@ export default function Home() {
                         <p>Create and manage BGMI tournaments in minutes with an intuitive dashboard. No technical skills required</p>
                     </div>
                     <div className='card'>
-                        <i className="fa-solid fa-sack-dollar" style={{"color": "rgba(249, 253, 3, 0.94)"}}></i>
+                        <i className="fa-solid fa-sack-dollar" style={{"color": "rgba(249, 253, 3, 0.94)", "backgroundColor":"rgba(249, 253, 3, 0.25)"}}></i>
                         <h2>Automated Entry Fee Collection</h2>
                         <p>Secure online payments and automatic participant registeration save hours of manual work.</p>
                     </div>
