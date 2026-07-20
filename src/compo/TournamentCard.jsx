@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom"
 
 export default function TournamentCard({ match }){
     const navigate = useNavigate(0);
+    console.log(match);
 
     const remaining_slots = (match?.ttl_slots ?? 0 ) - (match?.enteries?.length ?? 0);
 
@@ -26,7 +27,7 @@ export default function TournamentCard({ match }){
                     </div>
                     <div className='btns'>
                         <button className='rulebook'>RULEBOOK</button>
-                        <button className='join' onClick={() => navigate(`/join/${match?._id}`)}>Join Now</button>
+                        <button className='join' onClick={() => navigate(`/join/${match._id}`)}>Join Now</button>
                     </div>
                  </div>
     )

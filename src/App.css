@@ -143,14 +143,11 @@ nav .links button:hover{
   /* background-image: linear-gradient(rgba(0, 0, 255, 0.251) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 255, 0.251) 1px, transparent 1px); */
   z-index:0;
   display: flex;
-  margin-top:14vw;
-  border:1.2px solid blue; 
+  margin-top:14vw; 
   flex-direction: column;
   overflow-y: auto;
   overflow-x: hidden;
-  padding:10px;
   border-radius:10px;
-  box-shadow:0px 0px 4px blue;
   background-color: rgba(0, 0, 0, 0.148);
 }
 
@@ -166,16 +163,27 @@ nav .links button:hover{
   margin-left:-10px;
 }
 
+
+/* .home .intro::before{
+  content:"";
+  position:absolute;
+  width:80vw;
+  height:80vw;
+  background-color: rgba(0, 0, 197, 0.377);
+  left:10%;
+  top:10%;
+  filter:blur(100px);
+} */
+
 .home .intro .label{
-  background-color: rgba(0, 0, 255, 0.438);
-  border:1px solid rgb(25, 25, 255);
+  background-color: rgba(0, 0, 255, 0.247);
+  /* border:1px solid rgb(25, 25, 255); */
   color:rgb(25, 25, 255);
   border-radius: 20px;
   padding:1vw 3vw;
   font-family: bold;
   margin-top:6vh;
   font-size:3vw;
-  box-shadow:0px 0px 20vw blue;
 }
 
 .home .intro h2 + h2{
@@ -192,7 +200,7 @@ nav .links button:hover{
 }
 
 .home .intro h2 span{
-    color:rgb(24, 24, 255);
+    color:rgb(57, 57, 255);
 }
 
 .home .intro p{
@@ -211,6 +219,7 @@ nav .links button:hover{
 }
 
 .home .intro .btns button{
+  width:min(60vw, 200px);
   font-size:4vw;
   font-weight:bold;
   color:white;
@@ -224,42 +233,55 @@ nav .links button:hover{
 }
 
 .home .intro .btns .btn1{
-  box-shadow:0px 0px 10vw blue;
+  box-shadow:0px 0px 5vw blue;
 }
 
 .home .intro .btns .btn2{
-  border:1.5px solid white;
+  border:1.5px solid rgb(254, 38, 244);
   color:white;
   background-color:rgba(0, 0, 0, 0.413);
 }
 
 .home .intro .btns button:hover{
-   box-shadow:0px 0px 2vw rgba(0, 0, 255, 0.639);
+   box-shadow:0px 0px 10vw blue;
    transform: translateY(-0.5vh);
 }
 
 .home .intro .cards{
    display : flex;
    flex-direction: row;
-   margin-top:7vh;
+   margin-top:20vw;
    flex-wrap:wrap;
    justify-content: center;
-   background-color: black;
+   background-color: rgba(15, 15, 15, 0.717);
+   border:1px solid rgb(45, 45, 45);
+   border-radius:10px;
+   margin:3vw;
 }
 .home .intro .cards .card{
-  color:blue;
-  border:1px solid rgb(90, 89, 89);
-  background-color: rgb(24, 24, 24);
+  display: flex;
+  align-items: center;
+  gap:2vw;
+  color:white;
+  border:0.5px solid rgb(90, 89, 89);
+  background-color: rgba(1, 22, 0, 0.747);
   border-radius:10px;
-  padding:5vw;
-  margin:2.5vw;
+  padding:3vw;
+  margin:2vw;
   max-width:200px;
-  width:28.5vw;
-  text-align:center;
+  width:35vw;
+  height:15vw;
+  text-align:center;font-size: large;
+}
+
+.home .intro .cards .card i{
+  height: 5vw;
+  width: 5vw;
 }
 
 .home .intro .cards .card span{
   color:rgb(156, 156, 156);
+  font-size: x-small;
 }
 
 h2{
@@ -442,6 +464,21 @@ span{
   margin:3vw 1vw;
   border-radius:10px;
   text-align:center;
+  position:relative;
+  background-color:black;
+}
+
+.home .how_it_works::before{
+  content:"";
+  position:absolute;
+  width:80vw;
+  height:80vw;
+  background-color: rgba(191, 1, 172, 0.438);
+  left:10%;
+  top:0%;
+  /* border-radius: 50%; */
+  filter:blur(100px);
+  box-shadow: 0vw 0vw 10vw rgb(19, 0, 139);
 }
 
 .home .how_it_works>small{
@@ -452,7 +489,7 @@ span{
 
 .home .how_it_works h1{
   margin-top:0;
-  font-size: x-large;
+  font-size: large;
 }
 
 .home .how_it_works .steps {
@@ -545,7 +582,7 @@ justify-content: center;
 }
 
 .why h1{
-  font-size: x-large;
+  font-size: large;
 }
 
 .home .why .cards{
@@ -587,7 +624,35 @@ justify-content: center;
 
 .home .for_organizers{
   text-align: center;
-  margin:2vw;
+  margin-top:5vw;
+  background-color: black;
+  border-radius: 10px;
+  position: relative;
+}
+
+.home .for_organizers::before{
+  position: absolute;
+  content:"";
+  top:33%;
+  left:30%;
+  background-color: rgba(253, 34, 34, 0.276);
+  width:40vw;
+  height: 60vw;
+  border-radius: 50%;
+  box-shadow: 0px 0px 50vw rgb(253, 34, 34);
+  filter:blur(10px)
+}
+
+.home .for_organizers h1{
+  font-size: large;
+}
+
+.home .for_organizers h1>span{
+  color:red;
+}
+
+.home .for_organizers p{
+  font-size: x-small;
 }
 
 .home .for_organizers .cards{
@@ -596,76 +661,111 @@ justify-content: center;
   flex-wrap:wrap;
   justify-content: space-evenly;
   margin-top:4vw;
+  position: relative;
+}
+
+.home .for_organizers .cards::before{
+  content:"";
+  position: absolute;
+  background-color: red;
+  box-shadow: 0px 0px 2px rgb(177, 1, 1);
+  width:1px;
+  height: 93vw;
+  left:5%;
+  top:3%;
 }
 
 .home .for_organizers .cards .card{
-  border:1.5px solid gray;
+  border:none;
+  background-color: rgba(255, 4, 4, 0.299);
   border-radius: 10px;
   display: flex;
   text-align: left;
   padding:3vw;
   flex-direction: column;
   max-width:250px;
-  width:70vw;
+  width:80vw;
   height:80px;
   margin:3vw;
   position: relative;
-  transform: rotate(5deg);
-  transition: transform 0.2s ease;
-}
-
-.home .for_organizers .cards .card:hover{
-  transform: rotate(0deg);
 }
 
 .home .for_organizers .cards .card small{
   color:rgb(255, 1, 255);
+  font-size: x-small;
 }
 
 .home .for_organizers .cards .card>h2{
   position: absolute;
   top:10%;
+  font-size: medium;
+  color:rgb(255, 12, 12);
 }
 
 .home .for_organizers .cards .card>p{
   position:absolute;
   color:silver;
   top:45%;
+  font-size: small;
 }
 
 .home .why_organizer_choose_us{
   margin:2vw;
+  margin-top:3vw;
   text-align: center;
+  background-color: rgb(61, 50, 31);
+  border-radius: 10px;
+  border:0.5px solid orange;
 }
 
 
 .home .why_organizer_choose_us h1{
-  font-size:x-large;
+  font-size:large;
+}
+
+.home .why_organizer_choose_us h1>span{
+  font-size:large;
+  color:orange;
 }
 
 .home .why_organizer_choose_us>p{
-  font-size:small;
+  font-size:x-small;
 }
 
 .home .why_organizer_choose_us .cards{
   display: flex;
   flex-direction: row;
-  flex-wrap:wrap;
+  /* width:960vw; */
+  margin: 2vw;
+  /* animation:move 15s infinite; */
   justify-content: space-evenly;
+  overflow-x: scroll;
+  scrollbar-width: none;
 }
 
 .home .why_organizer_choose_us .cards .card{
-  border:1px solid gold;
+  flex:0 0 50%;
+  background-color: rgba(165, 42, 42, 0.525);
+  border:1px solid brown;
   border-radius: 10px;
   max-width:300px;
   width:80vw;
   margin:2vw;
-  padding: 1vw;
+  padding: 2vw;
   transition:transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .home .why_organizer_choose_us .cards .card i{
-  font-size:xx-large;
+  font-size:large;
+  padding:2vw;
+}
+
+.home .why_organizer_choose_us .cards .card h2{
+  font-size: medium;
+}
+
+.home .why_organizer_choose_us .cards .card>p{
+  font-size: small;
 }
 
 .home .why_organizer_choose_us .cards .card:hover{
@@ -680,19 +780,26 @@ justify-content: center;
   justify-content: space-between;
   align-items: center;
   border:1px solid gray;
-  background-color: rgba(25, 25, 25, 0.836);
+  background-color: rgba(0, 156, 107, 0.589);
   border-radius: 10px;
   padding:1vw;
   position:relative;
+  margin:2vw;
+  margin-top:3vw;
 }
 
 .home .ready_to_organize h1{
-  font-size:x-large;
+  font-size:large;
+}
+
+.home .ready_to_organize h1>span{
+  font-size:large;
+  color:rgb(0, 255, 174);
 }
 
 .home .ready_to_organize p{
   color:silver;
-  font-size: medium;
+  font-size: small;
 }
 
 .home .ready_to_organize button{

@@ -7,10 +7,12 @@ import Tournament_join from "./Tournament_join";
 import { SlCalender } from "react-icons/sl";
 
 export default function Profile() {
+    const [ loading, setLoading ] = useState();
      const { usr_id } = useParams();
      const [userdata, setUserdata] = useState({})
 
      const getuserdata = async () => {
+        setLoading(true);
         const token = localStorage.getItem("jwt");
         // console.log(token)
         if(!token){
@@ -36,6 +38,8 @@ export default function Profile() {
         }
 
         setUserdata(data);
+
+        setLoading(false);
      }
  
        useEffect(()=>{
@@ -72,16 +76,17 @@ export default function Profile() {
     // }, [])
 
     return (
-        <>
+         loading ? <p>loading please wait </p> : (
+              <>
               <Nav />
             <div className={styles.container}>
-                <h2>Welcome back, pawan</h2>
+                <h2>Welcome back, {userdata?.user?.name}</h2>
                 <div className={styles.box1}>
                     <div className={styles.player_profile}>
                         <div className={styles.dp}></div>
                         <div className={styles.biodata}>
-                            <h2>HunterXm416</h2>
-                            <small>UID: 554643533</small>
+                            <h2>{userdata?.user?.ign}</h2>
+                            <small>UID: {userdata?.user?.uid}</small>
                             <div> <p className={styles.joined}><SlCalender /> Joined May 2026</p></div>
                         </div>
                     </div>
@@ -98,14 +103,20 @@ export default function Profile() {
                     <div className={`${styles.innr_box} ${styles.achive}`}>
                         {/* <h2>ACHIEVEMENTS</h2> */}
                         <div className={styles.achive_list}>
-                          <div className={styles.achievement}>
+                         { userdata?.user?.achievements?.length === 0 ? <p>no achievent is available right now </p> : userdata.user?.achievements?.map((achievement)=>(
+                            //    console.log(achievement)
+                               <> 
+                            <div className={styles.achievement}>
                             <div className={styles.achive_logo}><img src="https://res.cloudinary.com/dnfhwfbmq/image/upload/v1780486725/Screenshot_20260603_170431_Gallery_webzfc.jpg" /></div>
                             <div className={styles.achive_about}>
-                                <h4>Tournament Champion <span>10/15</span></h4>
+                                <h4>{achievement?.name} <span>{achievement?.ttl_no_of_time_have}/{achievement?.ttl_no_of_time_must_have}</span></h4>
                                 <small>Win 10 tournaments</small><div className='timeline'></div>
                             </div>
                           </div>
-                          <div className={styles.achievement}>
+                            </>
+                         ))}
+
+                          {/* <div className={styles.achievement}>
                             <div className={styles.achive_logo}><img src="https://res.cloudinary.com/dnfhwfbmq/image/upload/v1780486725/Screenshot_20260603_170638_Gallery_sn5c14.jpg" /></div>
                             <div className={styles.achive_about}>
                                 <h4>Unstoppable <span>15/15</span></h4>
@@ -118,7 +129,7 @@ export default function Profile() {
                                 <h4>Sharp Shooter <span>100/100</span></h4>
                                 <small>Get 100 headshots</small><div className='timeline'></div>
                             </div>
-                          </div>
+                          </div> */}
                           {/* <div className={styles.achievement}>
                             <div className={styles.achive_logo}><img src="https://res.cloudinary.com/dnfhwfbmq/image/upload/v1780486725/Screenshot_20260603_170747_Gallery_b09har.jpg" /></div>
                             <div className={styles.achive_about}>
@@ -143,11 +154,15 @@ export default function Profile() {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                {
+                                 userdata.user?.ttl_matches_joined?.length === 0 ? <p>You have not joined any match yet <br /> <button onClick={navigate("/tournaments")}>Explore tournaments</button></p> : 
+                                 userdata.user?.ttl_matches_joined.map((match)=>(
+                                    <>
+                                   <tr>
                                     <td>
                                         <div className={styles.tour_info}>
                                             <img src="https://res.cloudinary.com/dnfhwfbmq/image/upload/v1777614927/1000076765-removebg-preview_momgvo.png" alt="Tournament" />
-                                            <span>BGMI Pro Showdown</span>
+                                            <span></span>
                                         </div>
                                     </td>
                                     <td><span className={styles.type_badge}>SQUAD</span></td>
@@ -155,6 +170,9 @@ export default function Profile() {
                                     <td><small>May 20, 2026</small></td>
                                     <td><small>32432, 231j</small></td>
                                 </tr>
+                                </>
+                                 ))
+                                }
                             </tbody>
                         </table>
                     </div>
@@ -243,4 +261,4 @@ export default function Profile() {
             </div>
        </>
     )
-}
+)}

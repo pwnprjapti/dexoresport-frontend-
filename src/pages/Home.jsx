@@ -62,24 +62,25 @@ export default function Home() {
                 <h2>BUILD YOUR <span style={{'color':'purple'}}>LEGACY. </span></h2>
                 <p>Join thousands of BGMI warriors competing daily for real cash prizes. Free tournaments, instant payouts, and zero BS.</p>
                 <div className="btns">
-                    <button className='btn1' onClick={()=> navigate("/login")}>Explore Tournaments</button>
-                    <button className='btn2' onClick={()=> navigate("/login")}>Be an Organizer</button>
+                    <button className='btn1' onClick={()=> navigate("/login")}>Explore Tournaments <i className="fa-solid fa-arrow-right-long" style={{"color": "white", "font-size":"medium"}}></i></button>
+                    <button className='btn2' onClick={()=> navigate("/login")}>Be an Organizer <i className="fa-regular fa-user" style={{"color": "rgb(255, 39, 255)", "font-size":"medium"}}></i></button>
                 </div>
                 <div className='cards'>
-                    <div className='card'>100 <br /><span>Player</span></div>
-                    <div className='card'> {live.length} <br /><span>Live</span></div>
-                    <div className='card'> {future.length + live.length + past.length} <br /><span>Tournaments</span></div>
-                    <div className='card'> 10 <br /> <span>Enteries</span> </div>
+                    <div className='card'><i className="fa-solid fa-user-group" style={{"color": "rgb(252, 2, 214)", "border-radius":"5px", "backgroundColor":"rgb(252, 2, 214, 0.20)", "padding":"2vw", "border":"none", "font-size":"medium"}}></i> <h4>100 +<br /> <span>Active Players</span></h4></div>
+                    <div className='card'><i className="fa-solid fa-trophy" style={{"color": "rgb(2, 219, 252)", "border-radius":"5px", "backgroundColor":"rgba(2, 219, 252, 0.20)", "padding":"2vw", "border":"none", "font-size":"medium"}}></i> <h4> {live.length} +<br /><span>Prize Distributed</span></h4></div>
+                    <div className='card'><i className="fa-duotone fa-solid fa-sack-dollar" style={{"color": "rgb(252, 56, 2)", "border-radius":"5px", "backgroundColor":"rgba(252, 56, 2, 0.20)", "padding":"2vw", "border":"none", "font-size":"medium"}}></i><h4> {future.length + live.length + past.length} +<br /><span>Tournaments</span></h4></div>
+                    <div className='card'><i className="fa-jelly fa-solid fa-gamepad" style={{"color": "rgb(2, 252, 27)", "border-radius":"5px", "backgroundColor":"rgba(2, 252, 27, 0.20)", "padding":"2vw", "border":"none", "font-size":"medium"}}></i><h4> 10 + <br /> <span>Matches Played</span></h4> </div>
                 </div>
             </div>
              
              <h2>UPCOMING <span>TOURNAMENTS</span></h2>
             <div className=' upcoming'>
-                {future.length === 0 ? <div className='no'>No tournaments right now </div> : future.map((i, match)=>(
-                    <TournamentCard kye={match?._id} match={match} />
-
+                {future.length === 0 ? <div className='no'>No tournaments right now </div> : future.map((match)=>(
+                    // console.log(match)
+                    <TournamentCard match={match} />
+                
                 ))}
-
+             
             </div>
 
            <div className='how_it_works'>
@@ -211,9 +212,7 @@ export default function Home() {
                         <i className="fa-solid fa-bell" style={{"color": "gold"}}></i>
                         <h2>Real-Time Notifications</h2>
                         <p>Get instant alerts whenever a player registers, slots fill up or important tournament events occur.</p>
-                    </div>import { useState } from 'react';
-
-
+                    </div>
 
                     <div className='card'>
                         <i className="fa-solid fa-square-poll-vertical" style={{"color": "rgba(19, 61, 247, 0.94)"}}></i>
