@@ -163,8 +163,7 @@ nav .links button:hover{
   margin-left:-10px;
 }
 
-
-/* .home .intro::before{
+.home .intro::before{
   content:"";
   position:absolute;
   width:80vw;
@@ -173,7 +172,7 @@ nav .links button:hover{
   left:10%;
   top:10%;
   filter:blur(100px);
-} */
+}
 
 .home .intro .label{
   background-color: rgba(0, 0, 255, 0.247);
