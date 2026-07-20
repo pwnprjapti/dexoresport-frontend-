@@ -222,6 +222,7 @@ nav .links button:hover{
   font-size:4vw;
   font-weight:bold;
   color:white;
+  text-shadow: 0vw 0vw 5vw black;
   background-color:rgb(0, 0, 255);
   /* border:1px solid gray; */
   border-radius:5px;

@@ -59,7 +59,7 @@ export default function Home() {
                 <div className='label'>India's #1 BGMI Tournament Plateform</div>
                 <h2>COMPETE</h2>
                 <h2>Win <span>CASH. </span></h2>
-                <h2>BUILD YOUR <span style={{'color':'purple'}}>LEGACY. </span></h2>
+                <h2>BUILD YOUR <span style={{'color':'rgb(254, 38, 244)'}}>LEGACY. </span></h2>
                 <p>Join thousands of BGMI warriors competing daily for real cash prizes. Free tournaments, instant payouts, and zero BS.</p>
                 <div className="btns">
                     <button className='btn1' onClick={()=> navigate("/login")}>Explore Tournaments <i className="fa-solid fa-arrow-right-long" style={{"color": "white", "font-size":"medium"}}></i></button>
