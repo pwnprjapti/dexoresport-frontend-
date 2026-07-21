@@ -41,6 +41,7 @@ export default function Tournament_join(){
 
     const getTournament = async () => {
        try{
+        setLoading(true);
         const token = localStorage.getItem("jwt");
         const res = await fetch(`${import.meta.env.VITE_BASE_URL}/tournament_details`, {
             method:'POST',
@@ -60,10 +61,9 @@ export default function Tournament_join(){
 
         setTournament(data.tournament);
         setIsRegistered(res.status);
+        setLoading(false);
        }catch(err){
         console.log(err);
-       }finally{
-        setLoading(false);
        }
     }
 
@@ -114,10 +114,9 @@ export default function Tournament_join(){
         if(res.status === 200){
             alert("Tournament registeration succefull ✓");
         }
+        setLoading(false);
       }catch(err){
          console.log(err);
-      }finally{
-        setLoading(false);
       }
     }
 
@@ -179,10 +178,9 @@ export default function Tournament_join(){
 
         const rzp = new Razorpay(options);
         rzp.open();
+        setLoading(false);
      }catch(err){
         console.log(err);
-     }finally{
-        setLoading(false);
      }
    }
 
@@ -205,10 +203,10 @@ export default function Tournament_join(){
    }, []);
 
     return (
-        <>
-        { loading ? (
-            <Loading />
-        ) : (
+        // <>
+        // { loading ? (
+        //     <Loading />
+        // ) : (
           <>
            <Nav />
          <div className='box'>
@@ -330,8 +328,8 @@ export default function Tournament_join(){
            )}
         </div>
           </>
-        )
-        }
-        </>
+    //   )  
+    //     }
+    //     </>
     )
 }

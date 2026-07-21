@@ -22,16 +22,22 @@ export default function verfication() {
     }
 
     const verify = async () => {
-        const res = await fetch('http://localhost:3000/verification', {
-            method:'POST',
-            headers:{
-                'Content-Type':'application/json'
-            },
-            body:JSON.stringify({otp, id})
-        });
-        const data = await res.json();
-        await setBool(data);
-        console.log(bool)
+        try {
+            const res = await fetch('http://localhost:3000/verification', {
+                method:'POST',
+                headers:{
+                    'Content-Type':'application/json'
+                },
+                body:JSON.stringify({otp, id})
+            });
+            const data = await res.json();
+            setBool(data);
+            if (data === true) {
+                navigate("/login");
+            }
+        } catch (err) {
+            console.log(err);
+        }
     }
 
     return (
@@ -49,7 +55,7 @@ export default function verfication() {
             <input onChange={handleChange} onKeyDown={(e)=>handlekeydown(e)} maxLength={1} className="nm"  type="number" placeholder="_" />
             <input onChange={handleChange} onKeyDown={(e)=>handlekeydown(e)} maxLength={1} className="nm" type="number" placeholder="_" />
         </div>
-        <p style={{"display":"none" }} className={ bool ? navigate("/login") : "show"}>verfication failed </p>
+        {bool === false && <p className="show">verification failed</p>}
         <button onClick={verify}>Verify</button>
         <div className="inr_box">
             <p className="request">Request to resend OTP in 01:23</p>

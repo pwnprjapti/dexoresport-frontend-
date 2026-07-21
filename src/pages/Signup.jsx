@@ -70,7 +70,7 @@ export default function Signup() {
         <div className={styles.login}>
             <div className={styles.card}>                
                 <div>
-                    <form className={styles.login_card} onSubmit={send_signupdata}>
+                    <form className={styles.login_card} onSubmit={(e) => e.preventDefault()}>
                         <h2>Create Account</h2>
                      <p className={styles.txt}>Join the battle and prove you are the Legend</p> 
                      {/* <input type="name" name="pass" placeholder="name" className="data" />

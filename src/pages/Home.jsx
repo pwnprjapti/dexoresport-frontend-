@@ -1,5 +1,6 @@
 import '../App.css'
 import Nav from '../compo/nav.jsx'
+import Footer from '../compo/Footer.jsx'
 import Loading from '../compo/Loading.jsx'
 import TournamentCard from '../compo/TournamentCard.jsx'
 import { Link, useNavigate } from 'react-router-dom'
@@ -56,15 +57,35 @@ export default function Home() {
             <Nav />
         <div className="home">
             <div className="intro">
-                <div className='label'>India's #1 BGMI Tournament Plateform</div>
-                <h2>COMPETE</h2>
-                <h2>Win <span>CASH. </span></h2>
-                <h2>BUILD YOUR <span style={{'color':'rgb(254, 38, 244)'}}>LEGACY. </span></h2>
+                <div className="title-wrapper">
+                    <div className="fire-sparks">
+                        <span className="ember"></span>
+                        <span className="ember"></span>
+                        <span className="ember"></span>
+                        <span className="ember"></span>
+                        <span className="ember"></span>
+                        <span className="ember"></span>
+                        <span className="ember"></span>
+                        <span className="ember"></span>
+                        <span className="ember"></span>
+                        <span className="ember"></span>
+                        <span className="ember"></span>
+                        <span className="ember"></span>
+                        <span className="ember"></span>
+                        <span className="ember"></span>
+                        <span className="ember"></span>
+                    </div>
+                    <div className='label'>India's #1 BGMI Tournament Plateform</div>
+                    <h2>COMPETE</h2>
+                    <h2>Win <span>CASH. </span></h2>
+                    <h2>BUILD YOUR <span style={{'color':'rgb(254, 38, 244)'}}>LEGACY. </span></h2>
+                </div>
                 <p>Join thousands of BGMI warriors competing daily for real cash prizes. Free tournaments, instant payouts, and zero BS.</p>
                 <div className="btns">
                     <button className='btn1' onClick={()=> navigate("/login")}>Explore Tournaments <i className="fa-solid fa-arrow-right-long" style={{"color": "white", "font-size":"medium"}}></i></button>
                     <button className='btn2' onClick={()=> navigate("/login")}>Be an Organizer <i className="fa-regular fa-user" style={{"color": "rgb(255, 39, 255)", "font-size":"medium"}}></i></button>
                 </div>
+                <img src="/bgmi_character.jpg" alt="BGMI Mascot Character" className="hero_image" />
                 <div className='cards'>
                     <div className='card'><i className="fa-solid fa-user-group" style={{"color": "rgb(252, 2, 214)", "border-radius":"5px", "backgroundColor":"rgb(252, 2, 214, 0.20)", "padding":"2vw", "border":"none", "font-size":"medium"}}></i> <h4>100 +<br /> <span>Active Players</span></h4></div>
                     <div className='card'><i className="fa-solid fa-trophy" style={{"color": "rgb(2, 219, 252)", "border-radius":"5px", "backgroundColor":"rgba(2, 219, 252, 0.20)", "padding":"2vw", "border":"none", "font-size":"medium"}}></i> <h4> {live.length} +<br /><span>Prize Distributed</span></h4></div>
@@ -257,6 +278,7 @@ export default function Home() {
                 <p>Join hundreds of trusted organizers who use our platform to promote their tournaments and connect with the Free Fire community.</p>
                 <button>View Pricing </button>
             </div>
+            <Footer />
         </div>
        </>
 

@@ -1,5 +1,6 @@
 import "../css/tournaments.css"
 import Nav from '../compo/nav.jsx'
+import Footer from '../compo/Footer.jsx'
 import Loading from '../compo/Loading.jsx'
 import TournamentCard from "../compo/TournamentCard.jsx"
 import { Link, useNavigate } from 'react-router-dom'
@@ -90,6 +91,7 @@ export default function Tournaments(){
                  </div>
                   )) }
             </div>
+            <Footer />
           </div>
         </>
 

@@ -1,4 +1,5 @@
 import Nav from "../compo/nav";
+import Footer from '../compo/Footer.jsx'
 import "../css/leaderboard.css"
 
 const Leaderboard = () => {
@@ -121,6 +122,7 @@ const Leaderboard = () => {
                </table>
             </div>
         </div>
+        <Footer />
         </>
     )
 }

@@ -1,0 +1,186 @@
+.tournament-card {
+    width: 310px;
+    max-width: 90vw;
+    background: linear-gradient(135deg, rgba(15, 15, 15, 0.95), rgba(5, 5, 20, 0.95));
+    border: 1.5px solid rgba(0, 0, 255, 0.25);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.tournament-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #3939ff, #fe26f4);
+    opacity: 0.8;
+}
+
+.tournament-card:hover {
+    transform: translateY(-8px);
+    border-color: #3939ff;
+    box-shadow: 0 12px 30px rgba(57, 57, 255, 0.25);
+    background: linear-gradient(135deg, rgba(20, 20, 20, 0.98), rgba(8, 8, 30, 0.98));
+}
+
+/* Logo */
+.tournament-card-logo {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 1.5px solid rgba(57, 57, 255, 0.3);
+    padding: 4px;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.15);
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.tournament-card:hover .tournament-card-logo {
+    transform: scale(1.05) rotate(5deg);
+    border-color: #fe26f4;
+    box-shadow: 0 0 12px rgba(254, 38, 244, 0.3);
+}
+
+/* Title */
+.tournament-card-title {
+    font-family: "Orbitron", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.3;
+}
+
+/* Prize Pool Badge */
+.tournament-card-prize {
+    font-family: "Orbitron", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffd700;
+    background-color: rgba(255, 215, 0, 0.08);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin: 0 0 20px 0;
+    text-align: center;
+    text-shadow: 0 0 6px rgba(255, 215, 0, 0.3);
+    letter-spacing: 0.5px;
+}
+
+/* Details Section */
+.tournament-card-inner {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 15px;
+    margin-bottom: 20px;
+}
+
+.tournament-card-detail-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tournament-card-detail-col p {
+    font-family: "Exo 2", sans-serif;
+    font-size: 11px;
+    color: #8f92a1;
+    margin: 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.tournament-card-detail-col p span {
+    font-family: "Oxanium", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* Highlights */
+.prize-split p span {
+    color: #ffd700;
+    text-shadow: 0 0 2px rgba(255, 215, 0, 0.2);
+}
+
+.low-slots span {
+    color: #ff3333 !important;
+    text-shadow: 0 0 5px rgba(255, 51, 51, 0.4);
+}
+
+/* Buttons */
+.tournament-card-btns {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.tournament-card-btns button {
+    flex: 1;
+    font-family: "Oxanium", sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 10px 0;
+    border-radius: 6px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.btn-rulebook {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #8f92a1;
+}
+
+.btn-rulebook:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.btn-join {
+    background-color: rgba(57, 57, 255, 0.5);
+    border: 1px solid #3939ff;
+    color: #ffffff;
+    box-shadow: 0 0 8px rgba(57, 57, 255, 0.3);
+}
+
+.btn-join:hover {
+    background-color: #3939ff;
+    box-shadow: 0 0 15px rgba(57, 57, 255, 0.6);
+    transform: translateY(-1px);
+}
