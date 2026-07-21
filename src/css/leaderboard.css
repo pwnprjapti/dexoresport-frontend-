@@ -16,24 +16,28 @@
 }
 
 .winner{
-    /* background-image:linear-gradient(140deg, rgba(177, 174, 25, 0.434), rgba(58, 57, 1, 0.434)) ; */
-    background-image:linear-gradient(140deg, rgb(177, 174, 25, 0.573), rgba(58, 57, 1, 0.573)) ;
+    background-image: linear-gradient(135deg, rgba(35, 30, 10, 0.95), rgba(15, 12, 5, 0.95));
     text-align: center;
     width:20vw;
     height:50vw;
     border-radius:10px;
     padding:1vw;
     margin:1vw;
-    border:1.5px solid rgb(186, 186, 8);
-    box-shadow: 0vw 0vw 1vh rgba(255, 255, 0, 0.758);
+    border:1.5px solid #ffd700;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.35);
     position:relative;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
+}
+
+.winner:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
 }
 
 .winner .rank{
-    /* border:2px solid yellow; */
     height:10vw;
     width:8vw;
-    background-color: rgba(252, 252, 6, 0.977);
+    background-color: #ffd700;
     position:absolute;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     top:-15%;
@@ -45,7 +49,7 @@
     width:80%;
     margin:8% 10%;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    background-image:linear-gradient(45deg, black, blue);
+    background-image: linear-gradient(45deg, #0b0b10, #141420);
     position: relative;
 }
 
@@ -53,7 +57,7 @@
     position:absolute;
     top:-15%;
     left:35%;
-    color:yellow;
+    color:#ffd700;
     font-size:small;
     font-weight:bold;
 }
@@ -62,25 +66,29 @@
     width:10vw;
     height:10vw;
     border-radius: 50%;
-    background-color: rgba(255, 255, 0, 0.365);
-    border:1px solid tomato;
-    box-shadow:0vh 0vh 1vh rgb(255, 39, 1);
+    background-color: rgba(255, 215, 0, 0.15);
+    border:2px solid #ffd700;
+    box-shadow: 0 0 12px rgba(255, 215, 0, 0.4);
     position:absolute;
     top:12%;
     left:25%;
+    background-image: url("https://res.cloudinary.com/dnfhwfbmq/image/upload/v1780488368/c8d7aXD4SvWCL8_CMb5ZDQ_tmvj49.webp");
+    background-size: cover;
+    background-position: center;
 }
 
 .winner h3{
     color:white;
-    text-shadow: 0vh 0vh 0.5vh orange;
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.35);
     margin-top:90%;
     font-size: small;
+    text-transform: uppercase;
 }
 
 .winner>p{
     font-weight:bold;
     margin-top:-0.5lh;
-    color:yellow;
+    color:#ffd700;
     font-size: small;
 }
 
@@ -99,91 +107,133 @@
 }
 
 .winner .info .box small{
-    /* margin-top:-35%; */
     font-weight: bold;
+    color: #a0a3b5;
 }
 
 .second{
-    border:1px solid rgb(12, 84, 104);
-    box-shadow: none;
+    border:1.5px solid #00f0ff;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
     margin-top:15vw;
-    background-image:linear-gradient(140deg, rgba(25, 144, 177, 0.573), rgba(1, 47, 58, 0.573)) ;
+    background-image: linear-gradient(135deg, rgba(15, 30, 35, 0.95), rgba(5, 12, 15, 0.95));
 }
 
 .second .rank{
-    background-color:rgb(22, 149, 184) ;
+    background-color:#00f0ff ;
 }
 
 .second .rank .innr_rank p{
-    color:blueviolet;
+    color:#00f0ff;
 }
 
 .second .dp{
-    border:1px solid rgb(22, 149, 184);
-    box-shadow:0vh 0vh 1vh rgba(18, 144, 179, 0.701);
+    border:2px solid #00f0ff;
+    background-color: rgba(0, 240, 255, 0.15);
+    box-shadow: 0 0 12px rgba(0, 240, 255, 0.4);
 }
 
 .second>p{
-    color:rgba(4, 166, 253, 0.605);
-    text-shadow: none;
+    color:#00f0ff;
+}
+
+.second:hover{
+    box-shadow: 0 0 25px rgba(0, 240, 255, 0.55);
 }
 
 .third{
-    border:1px solid rgb(104, 87, 12);
-    box-shadow: none;
+    border:1.5px solid #ff7f00;
+    box-shadow: 0 0 15px rgba(255, 127, 0, 0.3);
     margin-top:20vw;
-    background-image:linear-gradient(140deg, rgba(177, 157, 25, 0.573), rgba(58, 46, 1, 0.573)) ;
+    background-image: linear-gradient(135deg, rgba(30, 20, 10, 0.95), rgba(15, 8, 5, 0.95));
 }
 
 .third .rank .innr_rank p{
-    color:rgba(255, 166, 0, 0.705);
+    color:#ff7f00;
 }
 
 .third .rank{
-    background-color:rgb(216, 173, 31) ;
+    background-color:#ff7f00 ;
 }
 
 .third .dp{
-    border:2px solid rgb(184, 146, 22);
-    box-shadow:0vh 0vh 1vh rgba(179, 144, 18, 0.701);
+    border:2px solid #ff7f00;
+    background-color: rgba(255, 127, 0, 0.15);
+    box-shadow: 0 0 12px rgba(255, 127, 0, 0.4);
 }
 
 .third>p{
-    color:rgb(215, 176, 2);
-    text-shadow: none;
+    color:#ff7f00;
+}
+
+.third:hover{
+    box-shadow: 0 0 25px rgba(255, 127, 0, 0.55);
+}
+
+.container .table {
+    width: 100%;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(57, 57, 255, 0.3) transparent;
+    margin-top: 30px;
+    box-sizing: border-box;
 }
 
 table{
-    border:1px solid gray;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius:12px;
     overflow:hidden;
     width:100%;
+    min-width: 600px;
     border-collapse: collapse;
-}
-
-table thead{
-    border:1px solid blue;
+    background-color: rgba(10, 10, 15, 0.6);
+    backdrop-filter: blur(10px);
 }
 
 table thead tr{
-    background-color: rgba(14, 82, 150, 0.338);
-    padding:1vw;
+    background-color: rgba(15, 15, 22, 0.95);
+    border-bottom: 2px solid rgba(57, 57, 255, 0.3);
     height:7vw;
-    /* font-size:4vw; */
+}
+
+table thead th{
+    font-family: "Orbitron", sans-serif;
+    font-size: clamp(11px, 2vw, 15px);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding:1vw;
 }
 
 table tbody tr{
-    background-color: rgba(3, 3, 91, 0.249);
+    background-color: transparent;
     text-align: center;
     height:5vw;
-    border-bottom: 1px solid violet;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    transition: background-color 0.2s ease;
+}
+
+table tbody tr:nth-child(even){
+    background-color: rgba(255, 255, 255, 0.01);
+}
+
+table tbody tr:hover{
+    background-color: rgba(57, 57, 255, 0.08);
+}
+
+table tbody tr td{
+    border-top: none;
+    font-size: clamp(11px, 1.8vw, 14px);
+    color:#d1d4e5;
+    font-family: "Exo 2", sans-serif;
+    padding: 1vw;
 }
 
 table tbody tr .player_name{
     position:relative;
     width:30vw;
-    font-size:small;
+    font-weight: 700;
+    color: white;
+    text-align: center;
 }
 
 table tbody .dp_t{
@@ -205,22 +255,30 @@ table tbody p{
 }
 
 table tbody .points{
-    color:rgb(166, 14, 205);
+    color:#00f0ff;
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
     font-weight: bold;
-    font-size:small;
-}
-
-table tbody tr td{
-  border-top:1px solid gray;
-  margin:0;
+    font-family: "Orbitron", sans-serif;
 }
 
 table tbody tr td button{
-    border:none;
-    background-color: transparent;
-    border-radius:3px;
-    padding:0.5vw 1vw;
-    color:gray;
-    font-size: small;
-    /* width:17vw; */
+    border:1.5px solid rgba(57, 57, 255, 0.4);
+    background-color: rgba(57, 57, 255, 0.1);
+    border-radius:6px;
+    padding:6px 16px;
+    color:white;
+    font-family: "Orbitron", sans-serif;
+    font-size: clamp(9px, 1.5vw, 12px);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+table tbody tr td button:hover{
+    background-color: rgba(254, 38, 244, 0.2);
+    border-color: #fe26f4;
+    box-shadow: 0 0 12px rgba(254, 38, 244, 0.4);
+    transform: translateY(-1px);
 }
