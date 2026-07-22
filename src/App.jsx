@@ -23,6 +23,7 @@ function App() {
         <Route path="/join/:id" element={<Tournament_join />} />
         <Route path="*" element={<Notfound />} />
         <Route path="/tournaments" element={<Tournaments />} />
+        <Route path="/leaderboard/:id" element={<Leaderboard />} />
         <Route path="/leaderboard" element={<Leaderboard />} />
         <Route path="/blog" element={<Blog />} />
       </Routes>

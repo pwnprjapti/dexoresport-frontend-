@@ -1,11 +1,47 @@
 import Nav from "../compo/nav";
 import Footer from '../compo/Footer.jsx'
 import "../css/leaderboard.css"
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import Loading from "../compo/Loading.jsx";
 
 const Leaderboard = () => {
+    const { id } = useParams();
+
+    const [ loading, setLoading ] = useState(true);
+
+     const [ data, setData ] = useState();
+
+     const getLeaderboard = async () => {
+         setLoading(true);
+        //  const token = localStorage.getItem("jwt");
+
+         const leaderboardres = await fetch(`${import.meta.env.VITE_BASE_URL}/leaderboard`, {
+             method:'POST',
+             headers:{
+               "Content-Type":"json/application",
+            //    authorization:`Bearer ${token}`
+             },
+             body:JSON.stringify(id)
+         });
+
+         const leaderboard = await leaderboardres.json();
+
+         console.log(leaderboard);
+         setData(leaderboard);
+         setLoading(false);
+     }
+
+useEffect(()=>{
+    getLeaderboard();
+}, []);
 
     return(
         <>
+        { loading ? (
+            <Loading /> 
+        ):(
+       <>
         <Nav />
         <div className="container">
             <div className="top_winners">
@@ -124,6 +160,9 @@ const Leaderboard = () => {
         </div>
         <Footer />
         </>
+                )
+        }
+     </>
     )
 }
 
