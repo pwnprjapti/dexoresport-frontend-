@@ -34,6 +34,8 @@ export default function Tournament_join(){
 
     const [ tournament, setTournament ] = useState({});
     const [ isRegistered ,setIsRegistered ] = useState();
+    const [ showJoinModal, setShowJoinModal ] = useState(false);
+    const [ hasTeam, setHasTeam ] = useState(true);
 
     const [ btnstate, setBtnstate ] = useState(btnConfig.default);
 
@@ -61,6 +63,7 @@ export default function Tournament_join(){
 
         setTournament(data.tournament);
         setIsRegistered(res.status);
+        // BtnValues('disabled', true, handlePayment, "registered");
         setLoading(false);
        }catch(err){
         console.log(err);
@@ -81,6 +84,18 @@ export default function Tournament_join(){
        document.body.appendChild(script);
        });
    }
+
+//    const [ btnClass, setBtnClass ] = useState();
+//    const [ btnDisabled, setBtnDisabled ] = useState();
+//    const [ btnClick, setBtnClick ] = useState();
+//    const [ btnText, setBtnText ] = useState();
+
+//    function BtnValues(_class, _disabled, _click, _text){
+//        setBtnClass(_class);
+//        setBtnDisabled(_disabled);
+//        setBtnClass(_click);
+//        setBtnText(_text);
+//    }
 
     const tour_join = async () => {
         try{
@@ -203,10 +218,10 @@ export default function Tournament_join(){
    }, []);
 
     return (
-        // <>
-        // { loading ? (
-        //     <Loading />
-        // ) : (
+        <>
+        { loading ? (
+            <Loading />
+        ) : (
           <>
            <Nav />
          <div className='box'>
@@ -227,7 +242,7 @@ export default function Tournament_join(){
                 </div>
                
                 <div className='btns'>
-                    <button className={ isRegistered === 422 ? 'disabled' : 'enabled'} disabled={isRegistered === 422 ? true : false} onClick={handlePayment}>{ isRegistered === 422 ? "Registered ✓" : "Join Now" }</button>
+                    <button className={ isRegistered === 422 ? 'disabled' : 'enabled'} disabled={isRegistered === 422 ? true : false} onClick={() => setShowJoinModal(true)}>{ isRegistered === 422 ? "Registered ✓" : "Join Now" }</button>
                     <button>Share </button>
                 </div>
 
@@ -324,12 +339,68 @@ export default function Tournament_join(){
                 {/* <div className='box'></div> */}
             </div>
            { btm_btn_visible && (
-             <button className={ isRegistered === 422 ? 'bottom_btn disabled' : 'bottom_btn enabled'} disabled={isRegistered === 422 ? true : false} onClick={tour_join}>{ isRegistered === 422 ? "Registered ✓" : "Join Now"}</button>
+             <button className={ isRegistered === 422 ? 'bottom_btn disabled' : 'bottom_btn enabled'} disabled={isRegistered === 422 ? true : false} onClick={() => setShowJoinModal(true)}>{ isRegistered === 422 ? "Registered ✓" : "Join Now"}</button>
+           )}
+           
+           {showJoinModal && (
+                <div className="modal-backdrop" onClick={() => setShowJoinModal(false)}>
+                    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                        <button className="close-btn" onClick={() => setShowJoinModal(false)}>
+                            &times;
+                        </button>
+                        
+                        {hasTeam ? (
+                            <>
+                                <h2>Select Your Team</h2>
+                                <p className="modal-subtitle">Choose your team register for this tournament.</p>
+                                
+                                <div className="team-card">
+                                    <div className="team-info">
+                                        <span className="team-avatar">T</span>
+                                        <div>
+                                            <h3>Dexor Warriors</h3>
+                                            <p>Leader: Scout</p>
+                                        </div>
+                                    </div>
+                                    <button className="select-btn" onClick={() => { setShowJoinModal(false); handlePayment(); }}>
+                                        Select & Pay
+                                    </button>
+                                </div>
+                                
+                                <div className="modal-footer">
+                                    <button className="text-btn" onClick={() => setHasTeam(false)}>
+                                         Create or find Team
+                                    </button>
+                                </div>
+                            </>
+                        ) : (
+                            <>
+                                <h2>No Team Found</h2>
+                                <p className="modal-subtitle">You haven't created or joined any team yet. Choose an option to proceed:</p>
+                                
+                                <div className="options-container">
+                                    <button className="option-btn invite-btn" onClick={() => { alert("Invite link copied to clipboard!"); setShowJoinModal(false); }}>
+                                        Invite your teammates
+                                    </button>
+                                    <button className="option-btn random-btn" onClick={() => { alert("Searching for random teammates..."); setShowJoinModal(false); }}>
+                                        Team up with random players
+                                    </button>
+                                </div>
+                                
+                                <div className="modal-footer">
+                                    <button className="text-btn" onClick={() => setHasTeam(true)}>
+                                        Back to your teams
+                                    </button>
+                                </div>
+                            </>
+                        )}
+                    </div>
+                </div>
            )}
         </div>
           </>
-    //   )  
-    //     }
-    //     </>
+      )  
+        }
+        </>
     )
 }

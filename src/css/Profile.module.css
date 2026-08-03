@@ -871,3 +871,404 @@
         margin-top: 5px;
     }
 }
+
+/* Your Teams Section styling */
+.your_teams_section {
+    background-color: rgba(15, 15, 15, 0.75);
+    border: 1px solid rgb(45, 45, 45);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 5vw rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+}
+
+.section_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.section_header h2 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    color: #ffd700;
+}
+
+.btn_build_team {
+    background: linear-gradient(90deg, #3939ff, #fe26f4);
+    border: none;
+    color: white;
+    font-family: "Orbitron", sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 8px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 8px rgba(57, 57, 255, 0.3);
+}
+
+.btn_build_team:hover {
+    box-shadow: 0 0 12px rgba(254, 38, 244, 0.5);
+    transform: translateY(-1px);
+}
+
+.teams_list_container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    overflow-x: auto;
+    width: 100%;
+    padding: 10px 0;
+    
+    /* Scrollbar none */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.teams_list_container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+}
+
+.no_teams {
+    color: #a0a3b5;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.team_card {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(57, 57, 255, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 15px;
+    margin: 15px 0;
+    flex-shrink: 0;
+    width: 260px;
+}
+
+.team_main {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.team_avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3939ff, #fe26f4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Orbitron", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+.team_main h3 {
+    margin: 0 0 4px 0;
+    font-size: 16px;
+    font-family: "Exo 2", sans-serif;
+    color: white;
+}
+
+.team_main p {
+    margin: 0;
+    font-size: 12px;
+    color: #a0a3b5;
+}
+
+.team_roster {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.team_roster span {
+    background-color: rgba(0, 240, 255, 0.1);
+    border: 1px solid rgba(0, 240, 255, 0.2);
+    color: #00f0ff;
+    font-family: "Orbitron", sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 5px 14px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    box-sizing: border-box;
+}
+
+/* Modal Popup styling */
+.modalBackdrop,
+.modalBackdrop *,
+.modalBackdrop *::before,
+.modalBackdrop *::after {
+    box-sizing: border-box;
+}
+
+.modalBackdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.modalContent {
+    background-color: #0b0c16;
+    border: 2px solid rgba(57, 57, 255, 0.4);
+    border-radius: 12px;
+    padding: 25px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 0 35px rgba(57, 57, 255, 0.35);
+    position: relative;
+    box-sizing: border-box;
+    color: white;
+}
+
+.modalContent h2 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #ffd700;
+    margin: 0 0 10px 0;
+    letter-spacing: 0.5px;
+}
+
+.modalSubtitle {
+    color: #a0a3b5;
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0 0 25px 0;
+}
+
+.btnCloseModal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    color: #fe26f4;
+    font-size: 28px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.btnCloseModal:hover {
+    color: #00f0ff;
+    transform: scale(1.1);
+}
+
+.optionsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.optionBtnInvite,
+.optionBtnRandom {
+    padding: 12px 15px;
+    border-radius: 6px;
+    font-family: "Orbitron", sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.optionBtnInvite {
+    background-color: transparent;
+    border: 1.5px solid rgba(0, 240, 255, 0.4);
+    color: #00f0ff;
+}
+
+.optionBtnInvite:hover {
+    background-color: rgba(0, 240, 255, 0.08);
+    border-color: #00f0ff;
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.25);
+}
+
+.optionBtnRandom {
+    background-color: transparent;
+    border: 1.5px solid rgba(254, 38, 244, 0.4);
+    color: #fe26f4;
+}
+
+.optionBtnRandom:hover {
+    background-color: rgba(254, 38, 244, 0.08);
+    border-color: #fe26f4;
+    box-shadow: 0 0 10px rgba(254, 38, 244, 0.25);
+}
+
+/* RESPONSIVE LAYOUT FOR TEAMS ON MOBILE */
+@media (max-width: 600px) {
+    .team_card {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+    
+    .team_roster {
+        justify-content: flex-start;
+    }
+    
+    .modalContent {
+        padding: 20px 15px;
+    }
+    
+    .modalContent h2 {
+        font-size: 18px;
+    }
+}
+
+/* Team builder form styles */
+.teamForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formScrollContainer {
+    max-height: 50vh;
+    overflow-y: auto;
+    padding-right: 8px;
+    margin-bottom: 10px;
+}
+
+/* Custom scrollbar for form container */
+.formScrollContainer::-webkit-scrollbar {
+    width: 6px;
+}
+.formScrollContainer::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 4px;
+}
+.formScrollContainer::-webkit-scrollbar-thumb {
+    background: rgba(57, 57, 255, 0.4);
+    border-radius: 4px;
+}
+.formScrollContainer::-webkit-scrollbar-thumb:hover {
+    background: #fe26f4;
+}
+
+.formSection {
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 12px;
+}
+
+.formSection h3 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 13px;
+    color: #ffd700;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.inputGroupRow {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.inputGroupRow input {
+    background-color: rgba(7, 7, 12, 0.85);
+    border: 1.5px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    padding: 10px 12px;
+    color: white;
+    font-family: "Exo 2", sans-serif;
+    font-size: 12px;
+    outline: none;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.inputGroupRow input:focus {
+    border-color: #00f0ff;
+    box-shadow: 0 0 8px rgba(0, 240, 255, 0.2);
+}
+
+.btnCreateTeam {
+    background: linear-gradient(90deg, #3939ff, #fe26f4);
+    border: none;
+    color: white;
+    font-family: "Orbitron", sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 12px rgba(57, 57, 255, 0.35);
+    text-align: center;
+    width: 100%;
+}
+
+.btnCreateTeam:hover {
+    box-shadow: 0 0 18px rgba(254, 38, 244, 0.6);
+    transform: translateY(-1px);
+}
+
+.formFooterLink {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.formFooterLink a {
+    color: #a0a3b5;
+    font-family: "Exo 2", sans-serif;
+    font-size: 12px;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.formFooterLink a:hover {
+    color: #fe26f4;
+}
+
+/* RESPONSIVE UPDATES FOR MOBILE FORM */
+@media (max-width: 480px) {
+    .inputGroupRow {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    
+    .formSection {
+        padding: 12px 10px;
+    }
+}

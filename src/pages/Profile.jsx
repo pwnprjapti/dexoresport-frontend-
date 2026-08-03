@@ -9,8 +9,47 @@ export default function Profile() {
     const [loading, setLoading] = useState(true);
     const { usr_id } = useParams();
     const [userdata, setUserdata] = useState({});
+    const [showBuildModal, setShowBuildModal] = useState(false);
     const navigate = useNavigate();
 
+    const [ teamData, setTeamData ] = useState({
+        teamName:"",
+        iglName:"", iglUid:"", iglIgn:"",
+        assaulterName:"", assaulterUid:"", assaulterIgn:"",
+        rusherName:"", rusherUid:"", rusherIgn:"",
+        helperName:"", helperUid:"", helperIgn:"",
+        substituteName:"", substituteUid:"", substituteIgn:""
+    })
+
+    const team_handleChange = (e) => {
+       const { name, value } = e.target;
+       setTeamData((prev)=>({...prev, [name]:value}));
+    }
+
+    const createTeam = async (e) => {
+        e.preventDefault();
+
+        const token = localStorage.getItem("jwt");
+        if(!token){
+            alert("Please login to continue.");
+            navigate("/login");
+        }
+
+        const res = await fetch(`${import.meta.env.VITE_BASE_URL}/createteam`, {
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json",
+                Authorization:`Bearer ${token}`
+            },
+            body:JSON.stringify({teamData})
+        });
+        if(res.status === 401){
+            alert("Your login session have been expired please login to continue.");
+            navigate("/login");
+        }
+        const data = await res.json();
+        console.log(data.msg);
+    }
     const recentMatchesData = [
         { name: "BGMI Summer Showdown", result: "VICTORY", kills: 19, winnings: 3940, date: "May 10, 2026", time: "10:45 PM", map: "Erangel" },
         { name: "Dexor Ultimate Cup", result: "VICTORY", kills: 12, winnings: 1200, date: "May 08, 2026", time: "09:15 PM", map: "Miramar" },
@@ -181,6 +220,42 @@ export default function Profile() {
                         </div>
                     </div>
 
+                    {/* Your Teams Section */}
+                    <div className={styles.your_teams_section}>
+                        <div className={styles.section_header}>
+                            <h2>YOUR TEAMS</h2>
+                            <button className={styles.btn_build_team} onClick={() => setShowBuildModal(true)}>
+                                Build team
+                            </button>
+                        </div>
+                        
+                        {/* Display exactly one static team as requested by user (no arrays, no objects) */}
+                        <div className={styles.teams_list_container}>
+                            {userdata?.user?.teams.length === 0 ? (
+                                <p className={styles.no_teams}>You have not created Team yet</p>
+                            ) : (
+                                userdata?.user?.teams.map((team, i)=>(
+                                    <div key={i} className={styles.team_card}>
+                                        <div className={styles.team_main}>
+                                            <div className={styles.team_avatar}>T</div>
+                                            <div>
+                                                <h3>{team.teamName}</h3>
+                                                <p>Leader: {team.igl?.name}</p>
+                                            </div>
+                                        </div>
+                                        <div className={styles.team_roster}>
+                                            <span>IGL: {team.igl?.name || "N/A"}</span>
+                                            <span>Assaulter: {team.assaulter?.name || "N/A"}</span>
+                                            <span>Rusher: {team.rusher?.name || "N/A"}</span>
+                                            <span>Helper: {team.helper?.name || "N/A"}</span>
+                                            <span>Substitute: {team.substitute?.name || "N/A"}</span>
+                                        </div>
+                                    </div>
+                                ))
+                            )}
+                        </div>
+                    </div>
+
                     {/* Detailed Stats */}
                     <div className={styles.stats}>
                         <h2>DETAILED STATS</h2>
@@ -255,6 +330,92 @@ export default function Profile() {
                     </div>
                 </div>
             )}
+            
+            
+            {showBuildModal && (
+                <div className={styles.modalBackdrop} onClick={() => setShowBuildModal(false)}>
+                    <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+                        <button className={styles.btnCloseModal} onClick={() => setShowBuildModal(false)}>
+                            &times;
+                        </button>
+                        <h2>Build Your Team</h2>
+                        <p className={styles.modalSubtitle}>Fill in the details for all roles to register your esports squad.</p>
+                        
+                        <form className={styles.teamForm} onSubmit={(e) => { e.preventDefault(); alert("Team created successfully!"); setShowBuildModal(false); }}>
+                            <div className={styles.formScrollContainer}>
+                                {/* Team Info */}
+                                <div className={styles.formSection}>
+                                    <h3>Team Name</h3>
+                                    <div className={styles.inputGroupRow} style={{ gridTemplateColumns: '1fr' }}>
+                                        <input type="text" name="teamName" value={teamData.teamName} onChange={team_handleChange} placeholder="Team Name" required />
+                                    </div>
+                                </div>
+
+                                {/* IGL Role */}
+                                <div className={styles.formSection}>
+                                    <h3>IGL (Leader)</h3>
+                                    <div className={styles.inputGroupRow}>
+                                        <input type="text" name="iglName" value={teamData.iglName} onChange={team_handleChange} placeholder="Player Name" required />
+                                        <input type="text" name="iglIgn" value={teamData.iglIgn} placeholder="In-game Name (IGN)" onChange={team_handleChange} required />
+                                        <input type="text" name="iglUid" value={teamData.iglUid} placeholder="Player UID" onChange={team_handleChange} required />
+                                    </div>
+                                </div>
+
+                                {/* Assaulter Role */}
+                                <div className={styles.formSection}>
+                                    <h3>Assaulter</h3>
+                                    <div className={styles.inputGroupRow}>
+                                        <input type="text" name="assaulterName" value={teamData.assaulterName} placeholder="Player Name" onChange={team_handleChange} required />
+                                        <input type="text" name="assaulterIgn" value={teamData.assaulterIgn} placeholder="In-game Name (IGN)" onChange={team_handleChange} required />
+                                        <input type="text" name="assaulterUid" value={teamData.assaulterUid} placeholder="Player UID" onChange={team_handleChange} required />
+                                    </div>
+                                </div>
+
+                                {/* Rusher Role */}
+                                <div className={styles.formSection}>
+                                    <h3>Rusher</h3>
+                                    <div className={styles.inputGroupRow}>
+                                        <input type="text" name="rusherName" value={teamData.rusherName} placeholder="Player Name" onChange={team_handleChange} required />
+                                        <input type="text" name="rusherIgn" value={teamData.rusherIgn} placeholder="In-game Name (IGN)" onChange={team_handleChange} required />
+                                        <input type="text" name="rusherUid" value={teamData.rusherUid} placeholder="Player UID" onChange={team_handleChange} required />
+                                    </div>
+                                </div>
+
+                                {/* Helper Role */}
+                                <div className={styles.formSection}>
+                                    <h3>Helper</h3>
+                                    <div className={styles.inputGroupRow}>
+                                        <input type="text" name="helperName" value={teamData.helperName} placeholder="Player Name" onChange={team_handleChange} required />
+                                        <input type="text" name="helperIgn" value={teamData.helperIgn} placeholder="In-game Name (IGN)" onChange={team_handleChange} required />
+                                        <input type="text" name="helperUid" value={teamData.helperUid} placeholder="Player UID" onChange={team_handleChange} required />
+                                    </div>
+                                </div>
+
+                                {/* Substitute Role */}
+                                <div className={styles.formSection}>
+                                    <h3>Substitute</h3>
+                                    <div className={styles.inputGroupRow}>
+                                        <input type="text" name="substituteName" value={teamData.igsubstituteNamelName} placeholder="Player Name" onChange={team_handleChange} required />
+                                        <input type="text" name="substituteIgn" value={teamData.substituteIgn} placeholder="In-game Name (IGN)" onChange={team_handleChange} required />
+                                        <input type="text" name="substituteUid" value={teamData.substituteUid} placeholder="Player UID" onChange={team_handleChange} required />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" onClick={createTeam} className={styles.btnCreateTeam}>
+                                Create Team
+                            </button>
+                            
+                            <div className={styles.formFooterLink}>
+                                <a href="#" onClick={(e) => { e.preventDefault(); alert("Redirecting to gamer community..."); }}>
+                                    don't have team ? join our community of players
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            )}
+            
             <Footer />
         </>
     );
