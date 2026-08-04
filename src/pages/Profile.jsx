@@ -214,13 +214,14 @@ export default function Profile() {
                                             <th>Type</th>
                                             <th>Prizepool</th>
                                             <th>Date</th>
-                                            <th>Id, pass</th>
+                                            <th>Room ID</th>
+                                            <th>Room Pass</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         {(!userdata.user?.ttl_matches_joined || userdata.user?.ttl_matches_joined?.length === 0) ? (
                                             <tr className={styles.empty_row}>
-                                                <td colSpan="5">
+                                                <td colSpan="6">
                                                     <div className={styles.empty_state}>
                                                         <p>You have not joined any match yet</p>
                                                         <button onClick={() => navigate("/tournaments")}>Explore tournaments</button>
@@ -233,13 +234,14 @@ export default function Profile() {
                                                     <td>
                                                         <div className={styles.tour_info}>
                                                             <img src="https://res.cloudinary.com/dnfhwfbmq/image/upload/v1777614927/1000076765-removebg-preview_momgvo.png" alt="Tournament" />
-                                                            <span>Tournament #{match.tour_id ? match.tour_id.slice(-6).toUpperCase() : 'N/A'}</span>
+                                                            <span>Tournament #{match.tour_id ? (typeof match.tour_id === 'string' ? match.tour_id.slice(-6).toUpperCase() : match.tour_id._id?.slice(-6).toUpperCase() || 'N/A') : 'N/A'}</span>
                                                         </div>
                                                     </td>
                                                     <td><span className={styles.type_badge}>{match.type || 'SQUAD'}</span></td>
                                                     <td><h4 className={styles.wining}>${match.prizepool || '0'}</h4></td>
                                                     <td><small>{match.date ? new Date(match.date).toLocaleDateString() : 'N/A'}</small></td>
-                                                    <td><small>Shared on TG</small></td>
+                                                    <td><small>{(typeof match.tour_id === 'object' ? match.tour_id?.roomId : '') || 'Shared on TG'}</small></td>
+                                                    <td><small>{(typeof match.tour_id === 'object' ? match.tour_id?.roomPassword : '') || 'Shared on TG'}</small></td>
                                                 </tr>
                                             ))
                                         )}

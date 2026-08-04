@@ -81,7 +81,7 @@
     color:white;
     text-shadow: 0 0 8px rgba(255, 215, 0, 0.35);
     margin-top:90%;
-    font-size: small;
+    font-size: x-small;
     text-transform: uppercase;
 }
 
@@ -89,7 +89,7 @@
     font-weight:bold;
     margin-top:-0.5lh;
     color:#ffd700;
-    font-size: small;
+    font-size: x-small;
 }
 
 .winner .info{
@@ -97,10 +97,12 @@
     flex-direction: row;
     margin-top:-8%;
     height:5vw;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .winner .info .box{
+    margin:0;
+    background-color: transparent;
     margin-top:1%;
     font-size:x-small;
     position:relative;
@@ -281,4 +283,91 @@ table tbody tr td button:hover{
     border-color: #fe26f4;
     box-shadow: 0 0 12px rgba(254, 38, 244, 0.4);
     transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .top_winners {
+    flex-direction: column;
+    gap: 40px;
+    padding: 30px 10px;
+  }
+
+  .winner {
+    width: 90%;
+    max-width: 320px;
+    height: auto;
+    padding: 20px 15px 25px 15px;
+    margin: 0 auto;
+  }
+
+  .winner.first {
+    order: 1;
+  }
+
+  .winner.second {
+    order: 2;
+    margin-top: 0;
+  }
+
+  .winner.third {
+    order: 3;
+    margin-top: 0;
+  }
+
+  .winner .rank {
+    height: 50px;
+    width: 40px;
+    top: -25px;
+    left: calc(50% - 20px);
+  }
+
+  .winner .rank .innr_rank {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 8% 10%;
+  }
+
+  .winner .rank .innr_rank p {
+    position: static;
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .dp {
+    width: 80px;
+    height: 80px;
+    top: 40px;
+    left: calc(50% - 40px);
+  }
+
+  .winner h3 {
+    margin-top: 130px;
+    font-size: 14px;
+  }
+
+  .winner > p {
+    font-size: 12px;
+    margin-top: 4px;
+  }
+
+  .winner .info {
+    height: auto;
+    margin-top: 15px;
+    justify-content: space-around;
+  }
+
+  .winner .info .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 11px;
+    margin: 0;
+  }
+
+  .winner .info .box p {
+    margin: 0 0 2px 0;
+    font-size: 14px;
+    font-weight: bold;
+  }
 }
