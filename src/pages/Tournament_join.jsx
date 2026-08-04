@@ -32,6 +32,7 @@ export default function Tournament_join(){
         }
     }
 
+    const [ teams, setTeams ] = useState();
     const [ tournament, setTournament ] = useState({});
     const [ isRegistered ,setIsRegistered ] = useState();
     const [ showJoinModal, setShowJoinModal ] = useState(false);
@@ -63,6 +64,7 @@ export default function Tournament_join(){
 
         setTournament(data.tournament);
         setIsRegistered(res.status);
+        setTeams(JSON.parse(localStorage.getItem("teams")));
         // BtnValues('disabled', true, handlePayment, "registered");
         setLoading(false);
        }catch(err){
@@ -97,7 +99,8 @@ export default function Tournament_join(){
 //        setBtnText(_text);
 //    }
 
-    const tour_join = async () => {
+    const tour_join = async (team) => {
+        console.log('this function is running....')
         try{
             setLoading(true);
         const token = localStorage.getItem("jwt");
@@ -105,6 +108,7 @@ export default function Tournament_join(){
             console.log("no token found");
             return;
         }
+        console.log('this function is running....')
 
         const res = await fetch(`${import.meta.env.VITE_BASE_URL}/join`, {
             method:'POST',
@@ -112,8 +116,10 @@ export default function Tournament_join(){
                 'Content-Type':'application/json',
                 Authorization:`Bearer ${token}`
             },
-            body:JSON.stringify({ id })
+            body:JSON.stringify({id, team})
         })
+
+            console.log('this function is running....')
 
         const data = await res.json();
         console.log(res.status, data);
@@ -130,12 +136,14 @@ export default function Tournament_join(){
             alert("Tournament registeration succefull ✓");
         }
         setLoading(false);
+
+        getTournament();
       }catch(err){
          console.log(err);
       }
     }
 
-   const handlePayment = async () => {
+   const handlePayment = async (team) => {
       try{
         setLoading(true);
       const token = localStorage.getItem("jwt");
@@ -184,7 +192,7 @@ export default function Tournament_join(){
                 const result = await verifyres.json();
                 if(result.success){
                     alert("payment succefull");
-                    tour_join();
+                    tour_join(team);
                 }else{
                     alert('payment failed')
                 }
@@ -198,7 +206,6 @@ export default function Tournament_join(){
         console.log(err);
      }
    }
-
 
    const [ btm_btn_visible, setBtm_btn_visible ] = useState(false);
    useEffect(()=>{
@@ -349,23 +356,27 @@ export default function Tournament_join(){
                             &times;
                         </button>
                         
-                        {hasTeam ? (
+                        {hasTeam ?  (
                             <>
                                 <h2>Select Your Team</h2>
                                 <p className="modal-subtitle">Choose your team register for this tournament.</p>
                                 
-                                <div className="team-card">
+                            {teams.length === 0 ? <p>You have not created your team.</p> : teams.map((team, i)=>(
+                                    
+                                <div key={i} className="team-card">
                                     <div className="team-info">
                                         <span className="team-avatar">T</span>
                                         <div>
-                                            <h3>Dexor Warriors</h3>
-                                            <p>Leader: Scout</p>
+                                            <h3>{team.teamName}</h3>
+                                            <p>{team.igl.name}</p>
                                         </div>
                                     </div>
-                                    <button className="select-btn" onClick={() => { setShowJoinModal(false); handlePayment(); }}>
+                                    <button className="select-btn" onClick={() => { setShowJoinModal(false); handlePayment(team); }}>
                                         Select & Pay
                                     </button>
                                 </div>
+
+                            ))}
                                 
                                 <div className="modal-footer">
                                     <button className="text-btn" onClick={() => setHasTeam(false)}>

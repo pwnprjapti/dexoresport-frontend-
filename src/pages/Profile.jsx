@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import Nav from "../compo/nav";
 import Footer from '../compo/Footer.jsx'
 import { SlCalender } from "react-icons/sl";
+import { FaTrash } from "react-icons/fa";
 
 export default function Profile() {
     const [loading, setLoading] = useState(true);
@@ -20,6 +21,42 @@ export default function Profile() {
         helperName:"", helperUid:"", helperIgn:"",
         substituteName:"", substituteUid:"", substituteIgn:""
     })
+
+ const getuserdata = async () => {
+        setLoading(true);
+        const token = localStorage.getItem("jwt");
+        if (!token) {
+            console.error("no token found")
+            navigate("/login");
+            return;
+        }
+
+        try {
+            const res = await fetch(`${import.meta.env.VITE_BASE_URL}/profile`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: `Bearer ${token}`
+                },
+                body: JSON.stringify({ usr_id })
+            });
+
+            const data = await res.json();
+            
+            if (res.status === 401) {
+                navigate("/login");
+                return;
+            }
+             
+            setUserdata(data);
+            localStorage.setItem("teams", JSON.stringify(data.user.teams));
+        } catch (err) {
+            console.error("Error fetching user data:", err);
+        } finally {
+            setLoading(false);
+        }
+    }
+
 
     const team_handleChange = (e) => {
        const { name, value } = e.target;
@@ -50,46 +87,38 @@ export default function Profile() {
         const data = await res.json();
         console.log(data.msg);
     }
+
+    const deleteTeam = async (id) => {
+        const token = localStorage.getItem("jwt");
+        if(!token){
+            alert("Your login session have been expired please login.");
+            navigate("/login");
+        }
+
+        const res = await fetch(`${import.meta.env.VITE_BASE_URL}/deleteteam/${id}`, {
+            method:"DELETE",
+            headers:{
+                "Content-Type":"application/json",
+                Authorization:`Bearer ${token}`
+            }
+        });
+
+        if(res.ok){
+            alert("Team deleted successfully");
+            getuserdata();
+        } else {
+            alert("Failed to delete team")
+        }
+
+    }
+
+
     const recentMatchesData = [
         { name: "BGMI Summer Showdown", result: "VICTORY", kills: 19, winnings: 3940, date: "May 10, 2026", time: "10:45 PM", map: "Erangel" },
         { name: "Dexor Ultimate Cup", result: "VICTORY", kills: 12, winnings: 1200, date: "May 08, 2026", time: "09:15 PM", map: "Miramar" },
         { name: "BGMI Pro League", result: "DEFEAT", kills: 8, winnings: 0, date: "May 05, 2026", time: "06:30 PM", map: "Sanhok" },
         { name: "Challenger Series", result: "VICTORY", kills: 15, winnings: 2500, date: "May 02, 2026", time: "08:00 PM", map: "Vikendi" }
     ];
-
-    const getuserdata = async () => {
-        setLoading(true);
-        const token = localStorage.getItem("jwt");
-        if (!token) {
-            console.error("no token found")
-            navigate("/login");
-            return;
-        }
-
-        try {
-            const res = await fetch(`${import.meta.env.VITE_BASE_URL}/profile`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    Authorization: `Bearer ${token}`
-                },
-                body: JSON.stringify({ usr_id })
-            });
-
-            const data = await res.json();
-            
-            if (res.status === 401) {
-                navigate("/login");
-                return;
-            }
-
-            setUserdata(data);
-        } catch (err) {
-            console.error("Error fetching user data:", err);
-        } finally {
-            setLoading(false);
-        }
-    }
 
     useEffect(() => {
         getuserdata();
@@ -242,6 +271,9 @@ export default function Profile() {
                                                 <h3>{team.teamName}</h3>
                                                 <p>Leader: {team.igl?.name}</p>
                                             </div>
+                                            <button onClick={()=>deleteTeam(team._id)} className={styles.delete_team_btn} title="Delete Team">
+                                                <FaTrash />
+                                            </button>
                                         </div>
                                         <div className={styles.team_roster}>
                                             <span>IGL: {team.igl?.name || "N/A"}</span>
