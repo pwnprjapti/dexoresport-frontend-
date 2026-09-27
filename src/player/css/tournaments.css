@@ -1,0 +1,206 @@
+.container {
+  z-index: 1;
+  display: flex;
+  margin: 85px auto 40px auto;
+  max-width: 1240px;
+  width: calc(100% - 30px);
+  border: 1.5px solid rgba(57, 57, 255, 0.3);
+  flex-direction: column;
+  padding: 30px 20px;
+  border-radius: 16px;
+  box-shadow: 0 0 35px rgba(0, 0, 255, 0.15);
+  background: rgba(10, 10, 16, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 75px auto 30px auto;
+    width: calc(100% - 20px);
+    padding: 20px 12px;
+    border-radius: 12px;
+  }
+}
+
+.container > h2 {
+  font-family: "Orbitron", sans-serif;
+  font-size: clamp(18px, 3vw, 26px);
+  margin: 30px 0 15px 0;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.container > h2:first-of-type {
+  margin-top: 10px;
+}
+
+.container > h2 > span {
+  background: linear-gradient(90deg, #3939ff, #00f0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container h2.live-heading > span,
+.container h2:nth-of-type(2) > span {
+  background: linear-gradient(90deg, #ff3333, #fe26f4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container h2:nth-of-type(3) > span {
+  background: linear-gradient(90deg, #ffd700, #ff8c00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Upcoming horizontal scroll strip */
+.upcoming {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 10px 5px 25px 5px;
+  gap: 15px;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(57, 57, 255, 0.4) transparent;
+}
+
+.upcoming::-webkit-scrollbar,
+.live::-webkit-scrollbar,
+.past::-webkit-scrollbar {
+  height: 6px;
+}
+
+.upcoming::-webkit-scrollbar-thumb,
+.live::-webkit-scrollbar-thumb,
+.past::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #3939ff, #fe26f4);
+  border-radius: 3px;
+}
+
+/* Live & Past tournament containers */
+.live, .past {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border: 1px solid rgba(57, 57, 255, 0.2);
+  border-radius: 12px;
+  padding: 15px 10px;
+  gap: 15px;
+  background-color: rgba(5, 5, 10, 0.5);
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(57, 57, 255, 0.4) transparent;
+}
+
+.live .card, .past .card {
+  width: 310px;
+  min-width: 270px;
+  max-width: 85vw;
+  height: auto;
+  border: 1.5px solid rgba(57, 57, 255, 0.35);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  margin: 5px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(135deg, rgba(15, 15, 25, 0.95), rgba(8, 8, 15, 0.95));
+  box-sizing: border-box;
+  flex-shrink: 0;
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.live .card:hover, .past .card:hover {
+  transform: translateY(-5px);
+  border-color: #3939ff;
+  box-shadow: 0 10px 30px rgba(57, 57, 255, 0.3);
+}
+
+.live .card .card_live, .past .card .card_live {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+
+.live .card .card_live img, .past .card .card_live img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(57, 57, 255, 0.4);
+  padding: 3px;
+  background-color: rgba(0, 0, 0, 0.4);
+  flex-shrink: 0;
+}
+
+.live .card .card_live .innr_card {
+  text-align: left;
+  flex: 1;
+}
+
+.live .card .card_live h1 {
+  font-size: 15px;
+  font-family: "Orbitron", sans-serif;
+  margin: 0 0 6px 0;
+  color: white;
+  text-transform: uppercase;
+  line-height: 1.25;
+}
+
+.live .card .card_live h1 span {
+  font-size: 12px;
+  color: #00f0ff;
+  display: block;
+}
+
+.live .card .card_live h2 {
+  font-size: 13px;
+  font-family: "Orbitron", sans-serif;
+  margin: 0;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  background-color: rgba(255, 215, 0, 0.08);
+  color: #ffd700;
+  border-radius: 6px;
+  padding: 4px 10px;
+  display: inline-block;
+  font-weight: 700;
+}
+
+.live .card > p, .past .card > p {
+  color: #a0a3b5;
+  font-size: 11px;
+  font-family: "Exo 2", sans-serif;
+  margin: 14px 0 12px 0;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.live .card button, .past .card button {
+  background: linear-gradient(90deg, #3939ff, #fe26f4);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  width: 100%;
+}
+
+.live .card button:hover, .past .card button:hover {
+  box-shadow: 0 0 15px rgba(254, 38, 244, 0.5);
+  transform: translateY(-2px);
+}

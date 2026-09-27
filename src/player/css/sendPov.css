@@ -1,0 +1,427 @@
+/* =========================================================
+   DEXOR ESPORTS - PLAYER SEND POV UPLOAD ROOM STYLESHEET
+   ========================================================= */
+
+.sendpov-container,
+.sendpov-container *,
+.sendpov-container *::before,
+.sendpov-container *::after {
+  box-sizing: border-box;
+}
+
+.sendpov-container {
+  min-height: 85vh;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  padding: 25px 35px;
+  background: radial-gradient(circle at top right, rgba(15, 23, 42, 0.96), rgba(5, 7, 18, 0.98));
+  border: 1px solid rgba(0, 102, 255, 0.35);
+  border-radius: 16px;
+  box-shadow: 0 0 35px rgba(0, 85, 255, 0.2), inset 0 0 15px rgba(0, 50, 150, 0.1);
+  color: #f1f5f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Header Section */
+.sendpov-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sendpov-title-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sendpov-header h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin: 0;
+  color: #ffffff;
+}
+
+.sendpov-header h1 span {
+  color: #3b82f6;
+  text-shadow: 0 0 15px rgba(59, 130, 246, 0.6);
+}
+
+.badge-upload-count {
+  background: linear-gradient(135deg, #2563eb, #00f0ff);
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
+}
+
+/* Guidelines Box */
+.guidelines-card {
+  background: rgba(30, 41, 59, 0.4);
+  border: 1px solid rgba(234, 179, 8, 0.35);
+  border-left: 5px solid #eab308;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.guidelines-icon {
+  font-size: 1.6rem;
+  color: #facc15;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.guidelines-content h4 {
+  margin: 0 0 6px 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fef08a;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.guidelines-content ul {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+.guidelines-content li {
+  margin-bottom: 4px;
+}
+
+/* Match & Team Info Banner */
+.match-info-strip {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 12px 18px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.strip-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: #94a3b8;
+}
+
+.strip-item strong {
+  color: #38bdf8;
+}
+
+/* 5 Player Cards Grid */
+.player-pov-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+/* Single Player Upload Card */
+.player-upload-card {
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(8px);
+  position: relative;
+}
+
+.player-upload-card:hover {
+  border-color: rgba(59, 130, 246, 0.45);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 15px rgba(59, 130, 246, 0.2);
+  transform: translateY(-2px);
+}
+
+.player-upload-card.uploaded-ready {
+  border-color: rgba(34, 197, 94, 0.4);
+  background: linear-gradient(180deg, rgba(15, 35, 25, 0.7), rgba(15, 23, 42, 0.65));
+}
+
+/* Card Header */
+.card-top {
+  padding: 14px 18px;
+  background: rgba(20, 30, 55, 0.85);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-player-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.slot-tag {
+  background: linear-gradient(135deg, #1d4ed8, #2563eb);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.player-names-box h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 0;
+  color: #ffffff;
+}
+
+.player-names-box span {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  display: block;
+}
+
+.upload-status-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 12px;
+  text-transform: uppercase;
+}
+
+.pill-pending {
+  background: rgba(234, 179, 8, 0.15);
+  color: #facc15;
+  border: 1px solid rgba(234, 179, 8, 0.35);
+}
+
+.pill-ready {
+  background: rgba(34, 197, 94, 0.15);
+  color: #4ade80;
+  border: 1px solid rgba(34, 197, 94, 0.35);
+}
+
+/* Card Form Body */
+.card-form-body {
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.input-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.form-field label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+}
+
+.form-field input, .form-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  padding: 8px 12px;
+  color: #ffffff;
+  font-size: 0.85rem;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.form-field input:focus, .form-field textarea:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.35);
+}
+
+/* Video Upload Area */
+.upload-dropzone {
+  border: 2px dashed rgba(59, 130, 246, 0.35);
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.upload-dropzone:hover {
+  border-color: #3b82f6;
+  background: rgba(59, 130, 246, 0.08);
+}
+
+.upload-dropzone input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.dropzone-icon {
+  font-size: 1.8rem;
+  color: #60a5fa;
+}
+
+.dropzone-text {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.dropzone-hint {
+  font-size: 0.72rem;
+  color: #64748b;
+}
+
+/* Video Preview Player inside Card */
+.video-preview-wrapper {
+  margin-top: 4px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  background: #000;
+  position: relative;
+}
+
+.video-preview-element {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+.preview-file-info {
+  padding: 6px 10px;
+  background: rgba(15, 23, 42, 0.9);
+  font-size: 0.75rem;
+  color: #38bdf8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-remove-video {
+  background: transparent;
+  border: none;
+  color: #f87171;
+  font-size: 0.75rem;
+  cursor: pointer;
+  padding: 2px 6px;
+  font-weight: bold;
+}
+
+.btn-remove-video:hover {
+  text-decoration: underline;
+}
+
+/* Bottom Action Bar */
+.sendpov-bottom-actions {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.summary-text {
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.summary-text strong {
+  color: #4ade80;
+}
+
+.btn-submit-all {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  border: 1px solid #60a5fa;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 0 15px rgba(37, 99, 235, 0.4);
+}
+
+.btn-submit-all:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sendpov-container {
+    margin-top: 80px;
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .sendpov-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .player-pov-grid {
+    grid-template-columns: 1fr;
+  }
+}

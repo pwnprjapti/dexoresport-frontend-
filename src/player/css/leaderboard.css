@@ -1,0 +1,336 @@
+.container {
+  max-width: 1200px;
+  margin: 85px auto 40px auto;
+  width: calc(100% - 30px);
+  padding: 20px 15px;
+  background-color: transparent;
+  color: white;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 75px auto 30px auto;
+    width: calc(100% - 20px);
+    padding: 15px 10px;
+  }
+}
+
+.top_winners {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 10px 20px 10px;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.winner {
+  background-image: linear-gradient(135deg, rgba(35, 30, 10, 0.95), rgba(15, 12, 5, 0.95));
+  text-align: center;
+  width: 270px;
+  border-radius: 14px;
+  padding: 25px 15px 20px 15px;
+  margin: 0;
+  border: 1.5px solid #ffd700;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  position: relative;
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.winner.first {
+  order: 2;
+  min-height: 380px;
+  z-index: 2;
+}
+
+.winner.second {
+  order: 1;
+  min-height: 340px;
+  border-color: #00f0ff;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.25);
+  background-image: linear-gradient(135deg, rgba(15, 30, 35, 0.95), rgba(5, 12, 15, 0.95));
+}
+
+.winner.third {
+  order: 3;
+  min-height: 310px;
+  border-color: #ff7f00;
+  box-shadow: 0 0 20px rgba(255, 127, 0, 0.25);
+  background-image: linear-gradient(135deg, rgba(30, 20, 10, 0.95), rgba(15, 8, 5, 0.95));
+}
+
+.winner:hover {
+  transform: translateY(-8px);
+}
+
+.winner.first:hover {
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.55);
+}
+
+.winner.second:hover {
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.5);
+}
+
+.winner.third:hover {
+  box-shadow: 0 0 30px rgba(255, 127, 0, 0.5);
+}
+
+/* Podium Rank Hexagon Badge */
+.winner .rank {
+  height: 52px;
+  width: 44px;
+  background-color: #ffd700;
+  position: absolute;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  top: -26px;
+  left: calc(50% - 22px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.winner.second .rank {
+  background-color: #00f0ff;
+}
+
+.winner.third .rank {
+  background-color: #ff7f00;
+}
+
+.winner .rank .innr_rank {
+  height: 86%;
+  width: 82%;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background-image: linear-gradient(45deg, #0b0b10, #141420);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.winner .rank .innr_rank p {
+  color: #ffd700;
+  font-size: 15px;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 800;
+  margin: 0;
+}
+
+.winner.second .rank .innr_rank p {
+  color: #00f0ff;
+}
+
+.winner.third .rank .innr_rank p {
+  color: #ff7f00;
+}
+
+/* Avatar DP */
+.dp {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgba(255, 215, 0, 0.15);
+  border: 2px solid #ffd700;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+  background-image: url("https://res.cloudinary.com/dnfhwfbmq/image/upload/v1780488368/c8d7aXD4SvWCL8_CMb5ZDQ_tmvj49.webp");
+  background-size: cover;
+  background-position: center;
+  margin-top: 25px;
+  margin-bottom: 12px;
+  flex-shrink: 0;
+}
+
+.winner.second .dp {
+  border-color: #00f0ff;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+}
+
+.winner.third .dp {
+  border-color: #ff7f00;
+  box-shadow: 0 0 15px rgba(255, 127, 0, 0.4);
+}
+
+.winner h3 {
+  color: white;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.35);
+  font-size: 15px;
+  font-family: "Orbitron", sans-serif;
+  text-transform: uppercase;
+  margin: 0 0 6px 0;
+}
+
+.winner.second h3 {
+  text-shadow: 0 0 8px rgba(0, 240, 255, 0.35);
+}
+
+.winner.third h3 {
+  text-shadow: 0 0 8px rgba(255, 127, 0, 0.35);
+}
+
+.winner > p {
+  font-weight: 700;
+  font-family: "Orbitron", sans-serif;
+  margin: 0 0 16px 0;
+  color: #ffd700;
+  font-size: 13px;
+}
+
+.winner.second > p {
+  color: #00f0ff;
+}
+
+.winner.third > p {
+  color: #ff7f00;
+}
+
+.winner .info {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 12px;
+}
+
+.winner .info .box {
+  margin: 0;
+  text-align: center;
+}
+
+.winner .info .box p {
+  margin: 0 0 2px 0;
+  font-family: "Orbitron", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+}
+
+.winner .info .box small {
+  font-weight: 600;
+  color: #a0a3b5;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   LEADERBOARD TABLE
+   ========================================================= */
+
+.container .table {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(57, 57, 255, 0.4) transparent;
+  margin-top: 40px;
+  box-sizing: border-box;
+  border-radius: 12px;
+}
+
+.container .table::-webkit-scrollbar {
+  height: 6px;
+}
+
+.container .table::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #3939ff, #fe26f4);
+  border-radius: 3px;
+}
+
+table {
+  border: 1px solid rgba(57, 57, 255, 0.2);
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  background-color: rgba(10, 10, 18, 0.85);
+  backdrop-filter: blur(10px);
+}
+
+table thead tr {
+  background-color: rgba(15, 15, 25, 0.95);
+  border-bottom: 2px solid rgba(57, 57, 255, 0.35);
+  height: 50px;
+}
+
+table thead th {
+  font-family: "Orbitron", sans-serif;
+  font-size: 12px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  padding: 12px 16px;
+  text-align: center;
+}
+
+table tbody tr {
+  background-color: transparent;
+  text-align: center;
+  height: 52px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  transition: background-color 0.2s ease;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.015);
+}
+
+table tbody tr:hover {
+  background-color: rgba(57, 57, 255, 0.1);
+}
+
+table tbody tr td {
+  font-size: 13px;
+  color: #d1d4e5;
+  font-family: "Exo 2", sans-serif;
+  padding: 10px 16px;
+}
+
+table tbody tr .player_name {
+  font-weight: 700;
+  color: white;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+table tbody .points {
+  color: #00f0ff;
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.25);
+  font-weight: bold;
+  font-family: "Orbitron", sans-serif;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .top_winners {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 35px 5px 15px 5px;
+  }
+
+  .winner {
+    width: 100%;
+    max-width: 320px;
+    min-height: auto !important;
+  }
+
+  .winner.first {
+    order: 1;
+  }
+
+  .winner.second {
+    order: 2;
+  }
+
+  .winner.third {
+    order: 3;
+  }
+}

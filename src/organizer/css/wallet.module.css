@@ -1,0 +1,262 @@
+.walletContainer {
+    border: 1px solid rgba(57, 57, 255, 0.3);
+    border-radius: 12px;
+    margin: 20px;
+    margin-left: 250px;
+    background-color: #0b0c16;
+    padding: 25px;
+    box-sizing: border-box;
+    box-shadow: 0 0 25px rgba(57, 57, 255, 0.1);
+    font-family: "Exo 2", sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 15px;
+}
+
+.titleArea h1 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+    background: linear-gradient(90deg, #00f0ff, #fe26f4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.titleArea p {
+    color: #a0a3b5;
+    font-size: 14px;
+    margin: 5px 0 0 0;
+}
+
+.walletGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.balanceCard {
+    background: linear-gradient(135deg, rgba(57, 57, 255, 0.15), rgba(254, 38, 244, 0.05));
+    border: 1.5px solid rgba(57, 57, 255, 0.3);
+    border-radius: 12px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 0 15px rgba(57, 57, 255, 0.15);
+    box-sizing: border-box;
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffd700;
+    font-family: "Orbitron", sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.cardHeader i {
+    font-size: 18px;
+}
+
+.balanceCard h2 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 32px;
+    margin: 15px 0;
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.balanceCard small {
+    color: #a0a3b5;
+    font-size: 12px;
+}
+
+.statsCard {
+    background-color: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.statsRow {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.statsItem {
+    display: flex;
+    flex-direction: column;
+}
+
+.statsItem small {
+    color: #707385;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.statsItem h4 {
+    margin: 5px 0 0 0;
+    font-family: "Orbitron", sans-serif;
+    font-size: 18px;
+    color: white;
+}
+
+.bankDetail {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+.bankDetail i {
+    font-size: 24px;
+    color: #00f0ff;
+}
+
+.bankDetail small {
+    color: #707385;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.bankDetail p {
+    margin: 2px 0 0 0;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.withdrawCard {
+    border: 1px solid rgba(57, 57, 255, 0.2);
+    border-radius: 12px;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.01);
+    box-sizing: border-box;
+}
+
+.withdrawCard h3 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin: 0 0 8px 0;
+    color: white;
+}
+
+.withdrawCard p {
+    font-size: 13px;
+    color: #a0a3b5;
+    margin: 0 0 20px 0;
+}
+
+.withdrawForm {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+}
+
+.inputArea {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    padding: 10px 15px;
+    flex: 1;
+    transition: all 0.3s ease;
+}
+
+.currencySymbol {
+    color: #ffd700;
+    font-family: "Orbitron", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.inputArea input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    width: 100%;
+    font-family: "Exo 2", sans-serif;
+}
+
+.inputArea:hover,
+.inputArea:focus-within {
+    border-color: #3939ff;
+    box-shadow: 0 0 10px rgba(57, 57, 255, 0.2);
+}
+
+.btnWithdraw {
+    border: none;
+    border-radius: 6px;
+    padding: 12px 24px;
+    font-family: "Orbitron", sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: white;
+    background: linear-gradient(90deg, #3939ff, #fe26f4);
+    box-shadow: 0 0 15px rgba(57, 57, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 44px;
+}
+
+.btnWithdraw:hover {
+    box-shadow: 0 0 20px rgba(254, 38, 244, 0.5);
+    transform: translateY(-1px);
+}
+
+/* RESPONSIVE LAYOUT FOR MOBILE DEVICES */
+@media (max-width: 768px) {
+    .walletContainer {
+        margin: 15px 0;
+        margin-left: 0;
+        padding: 15px;
+        margin-top: 60px; /* Space for fixed top nav */
+    }
+    
+    .header {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .walletGrid {
+        grid-template-columns: 1fr;
+    }
+    
+    .withdrawForm {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .btnWithdraw {
+        width: 100%;
+    }
+}

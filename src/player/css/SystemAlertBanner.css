@@ -1,0 +1,139 @@
+/* =========================================================
+   SYSTEM ALERT BANNER - GLOBAL CYBER ANNOUNCEMENT BAR
+   ========================================================= */
+.system-alert-banner {
+  width: 100%;
+  position: relative;
+  z-index: 999;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  font-family: 'Orbitron', 'Inter', sans-serif;
+  font-size: 13px;
+  box-sizing: border-box;
+  animation: slideDownBanner 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes slideDownBanner {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Priority color themes */
+.system-alert-banner.urgent {
+  background: linear-gradient(90deg, rgba(255, 30, 80, 0.95) 0%, rgba(138, 20, 60, 0.95) 100%);
+  border-bottom: 2px solid #ff1e50;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(255, 30, 80, 0.35);
+}
+
+.system-alert-banner.high {
+  background: linear-gradient(90deg, rgba(255, 170, 0, 0.95) 0%, rgba(180, 110, 0, 0.95) 100%);
+  border-bottom: 2px solid #ffaa00;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(255, 170, 0, 0.3);
+}
+
+.system-alert-banner.normal {
+  background: linear-gradient(90deg, rgba(0, 240, 255, 0.92) 0%, rgba(0, 110, 255, 0.92) 100%);
+  border-bottom: 2px solid #00f0ff;
+  color: #060913;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+}
+
+.alert-banner-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+.alert-tag-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  white-space: nowrap;
+}
+
+.alert-message-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.alert-message-text strong {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  margin-right: 6px;
+  letter-spacing: 0.5px;
+}
+
+.alert-banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.alert-action-link {
+  color: inherit;
+  font-weight: 700;
+  font-size: 12px;
+  text-decoration: underline;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+
+.alert-action-link:hover {
+  opacity: 0.8;
+}
+
+.alert-close-btn {
+  background: transparent;
+  border: none;
+  color: inherit;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.alert-close-btn:hover {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .system-alert-banner {
+    padding: 8px 14px;
+  }
+  .alert-tag-badge {
+    display: none;
+  }
+}

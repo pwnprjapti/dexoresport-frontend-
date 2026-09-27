@@ -1,0 +1,12 @@
+.toaster{
+    background-color: blue;
+    border: 1px solid purple;
+    border-radius: 5px;
+    padding:1px;
+    max-width: 300px;
+    min-width:100px;
+    color:white;
+    margin:1vw;
+    text-align: center;
+    font-weight:bold;
+}

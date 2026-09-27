@@ -1,0 +1,444 @@
+body, html{
+  background-color: #07070c;
+  background-repeat: no-repeat;
+  background-position: absolute;
+  color:white;
+  background-attachment: fixed;
+  scrollbar-width: none;
+  overflow-x: hidden;
+  font-family: "Exo 2", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items:center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto 0 250px;
+    box-sizing: border-box;
+}
+
+/* Cyber grid background effect */
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(57, 57, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(57, 57, 255, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: center;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.container h1{
+    color: white;
+    font-family: "Orbitron", sans-serif;
+    font-size: clamp(32px, 5vw, 64px);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 20px 0;
+    background: linear-gradient(90deg, #00f0ff, #fe26f4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgba(0, 240, 255, 0.2);
+}
+
+.container>p{
+    color: #a0a3b5;
+    width: 100%;
+    max-width: 800px;
+    font-size: clamp(14px, 2vw, 18px);
+    line-height: 1.6;
+    margin: 0 0 30px 0;
+}
+
+.container .cards{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 30px;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+}
+
+.container .cards .card{
+    background: linear-gradient(135deg, rgba(57, 57, 255, 0.1), rgba(254, 38, 244, 0.05));
+    border: 1px solid rgba(57, 57, 255, 0.25);
+    margin: 0;
+    border-radius: 12px;
+    padding: 20px;
+    width: 200px;
+    box-shadow: 0 0 15px rgba(57, 57, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.container .cards .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(57, 57, 255, 0.25);
+}
+
+.container .cards .card h2 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 28px;
+    margin: 0 0 8px 0;
+    color: white;
+    background: linear-gradient(90deg, #00f0ff, #fe26f4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container .cards .card p,
+.container .cards .card small {
+    font-size: 13px;
+    color: #a0a3b5;
+    font-weight: 600;
+    margin: 0;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.container a{
+    text-decoration: none;
+}
+
+.container a h3{
+    font-size: clamp(14px, 2vw, 18px);
+    font-family: "Orbitron", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    background: linear-gradient(90deg, #ffd700, #ff7f00);
+    padding: 16px 32px;
+    border-radius: 30px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    margin: 40px auto;
+    display: inline-block;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+.container a h3:hover{
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+    transform: translateY(-2px);
+}
+
+.container h2{
+    font-family: "Orbitron", sans-serif;
+    font-size: clamp(22px, 3.5vw, 36px);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 40px 0 10px 0;
+    color: white;
+}
+
+.container>.p{
+    font-size: 15px;
+    color: #a0a3b5;
+    margin-bottom: 30px;
+}
+
+.container .subscriptions{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.container .subscriptions .plane{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+    backdrop-filter: blur(10px);
+    border: 1.5px solid rgba(255, 255, 255, 0.05);
+    text-align: left;
+    padding: 35px 25px;
+    position:relative;
+    width: 100%;
+    max-width: 320px;
+    margin: 0;
+    border-radius: 12px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.container .subscriptions .plane:hover {
+    transform: translateY(-8px);
+}
+
+.container .subscriptions .plane .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+    gap: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.container .subscriptions .plane .box img{
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 3px solid rgba(57, 57, 255, 0.4);
+    position: relative;
+    margin-bottom: 10px;
+    box-shadow: 0 0 15px rgba(57, 57, 255, 0.3);
+}
+
+.container .subscriptions .plane .box h2{
+    font-family: "Orbitron", sans-serif;
+    font-size: 22px;
+    margin: 0;
+    color: white;
+    letter-spacing: 1.5px;
+}
+
+.container .subscriptions .plane .box h4{
+   font-size: 32px;
+   font-family: "Orbitron", sans-serif;
+   color: white;
+   margin: 5px 0;
+   display: flex;
+   align-items: baseline;
+   justify-content: center;
+   gap: 4px;
+}
+
+.container .subscriptions .plane .box h4 small{
+    font-size:14px;
+    color:#a0a3b5;
+    font-weight: normal;
+}
+
+.container .subscriptions .plane .box>p{
+    color: #a0a3b5;
+    font-size: 13px;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.container .subscriptions .free{
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+.container .subscriptions .pro{
+     border-color: rgba(57, 57, 255, 0.4);
+     box-shadow: 0 0 20px rgba(57, 57, 255, 0.15);
+}
+
+.container .subscriptions .pro .box img {
+    border-color: rgba(254, 38, 244, 0.4);
+    box-shadow: 0 0 15px rgba(254, 38, 244, 0.3);
+}
+
+.container .subscriptions .pro .recomended{
+    text-align: center;
+    padding: 6px 16px;
+    border-radius: 20px;
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    background: linear-gradient(90deg, #3939ff, #fe26f4);
+    color: white;
+    font-family: "Orbitron", sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 0 10px rgba(254, 38, 244, 0.4);
+}
+
+.container .subscriptions .elite {
+     border-color: rgba(255, 215, 0, 0.4);
+     box-shadow: 0 0 20px rgba(255, 215, 0, 0.15);
+}
+
+.container .subscriptions .elite .box img {
+    border-color: #ffd700;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+.container .subscriptions .plane p {
+    font-size: 13px;
+    color: #d1d4e5;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.container .subscriptions .plane button{
+    border: 1.5px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 12px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.02);
+    width: 100%;
+    font-family: "Orbitron", sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+
+.container .subscriptions .plane button:hover{
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.container .subscriptions .pro button {
+    background: linear-gradient(90deg, #3939ff, #fe26f4);
+    border: none;
+}
+
+.container .subscriptions .pro button:hover {
+    box-shadow: 0 0 15px rgba(254, 38, 244, 0.5);
+    color: white;
+}
+
+.container .subscriptions .elite button {
+    background: linear-gradient(90deg, #ffd700, #ff7f00);
+    border: none;
+}
+
+.container .subscriptions .elite button:hover {
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+    color: white;
+}
+
+.support{
+    background-image: linear-gradient(135deg, rgba(6, 6, 240, 0.15), rgba(128, 0, 128, 0.12));
+    border: 1.5px solid rgba(129, 0, 250, 0.3);
+    width: 90%;
+    max-width: 800px;
+    border-radius: 12px;
+    padding: 40px;
+    margin-top: 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.support h2 {
+    font-family: "Orbitron", sans-serif;
+    font-size: clamp(20px, 3vw, 28px);
+    margin: 0 0 10px 0;
+    color: white;
+}
+
+.support p {
+    font-size: 14px;
+    color: #a0a3b5;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+.support button{
+    border: none;
+    color: black;
+    background-color: white;
+    border-radius: 6px;
+    font-weight: bold;
+    padding: 12px 24px;
+    font-size: 14px;
+    margin: 10px;
+    width: 200px;
+    cursor: pointer;
+    font-family: "Orbitron", sans-serif;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.support button:hover {
+    background-color: #ffd700;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+.support .btn2{
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+.support .btn2:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 80px 15px 60px 15px;
+    margin: 0 auto;
+  }
+  
+  .container .cards {
+    gap: 15px;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .container .cards .card {
+    width: 45%; /* Side-by-side on tablet/mobile */
+    min-width: 140px;
+    padding: 15px 10px;
+  }
+  
+  .container .cards .card h2 {
+    font-size: 22px;
+  }
+  
+  .container .subscriptions {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .container .subscriptions .plane {
+    max-width: 340px;
+    width: 100%;
+  }
+  
+  .support {
+    padding: 25px 20px;
+    width: 100%;
+  }
+  
+  .support button {
+    width: 100%;
+    margin: 8px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container .cards .card {
+    width: 100%; /* Full width stack on small mobile screens */
+  }
+}

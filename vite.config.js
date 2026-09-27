@@ -5,6 +5,9 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [react()],
-})
+  oxc: {
+    drop: mode === 'production' ? ['console', 'debugger'] : [],
+  },
+}))

@@ -1,0 +1,140 @@
+.login {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 15px;
+  box-sizing: border-box;
+}
+
+.login .card {
+  text-align: center;
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.login .card small {
+  color: #8f92a1;
+  font-size: 11px;
+  line-height: 1.5;
+  margin-top: 15px;
+  display: block;
+}
+
+.login .card a {
+  color: #00f0ff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.login .card a:hover {
+  color: #fe26f4;
+  text-decoration: underline;
+}
+
+.login .card .login_card {
+  padding: 35px 25px;
+  margin-top: 20px;
+  background-color: rgba(12, 12, 18, 0.95);
+  border: 1.5px solid rgba(57, 57, 255, 0.35);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 16px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 0 35px rgba(57, 57, 255, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-sizing: border-box;
+}
+
+.login .card .login_card h1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 24px;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+  color: white;
+}
+
+.login .card .login_card h1 span {
+  background: linear-gradient(90deg, #3939ff, #fe26f4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.login .card .login_card p {
+  font-size: 13px;
+  color: #a0a3b5;
+  margin: 0 0 15px 0;
+  line-height: 1.5;
+}
+
+.login .card .login_card .data {
+  font-size: 14px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  width: 100%;
+  margin: 8px 0;
+  color: white;
+  font-family: "Exo 2", sans-serif;
+  box-sizing: border-box;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.login .card .login_card .data:focus,
+.login .card .login_card .data:hover {
+  border-color: #3939ff;
+  box-shadow: 0 0 10px rgba(57, 57, 255, 0.4);
+}
+
+.login .card .login_card .login_btn,
+.login .card .login_card button {
+  background: linear-gradient(90deg, #3939ff, #fe26f4);
+  color: white;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  width: 100%;
+  margin: 14px 0 10px 0;
+  border-radius: 8px;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.login .card .login_card .login_btn:hover,
+.login .card .login_card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 18px rgba(254, 38, 244, 0.5);
+}
+
+.login .card .login_card button:not(.login_btn) {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(57, 57, 255, 0.4);
+  color: #00f0ff;
+}
+
+.login .card .login_card button:not(.login_btn):hover {
+  background: rgba(57, 57, 255, 0.15);
+  border-color: #00f0ff;
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.3);
+}
+
+.login .card .login_card a {
+  font-size: 12px;
+  margin: 6px 0;
+}

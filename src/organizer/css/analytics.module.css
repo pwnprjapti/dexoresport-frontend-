@@ -1,0 +1,512 @@
+.analyticsContainer {
+    border: 1px solid rgba(57, 57, 255, 0.3);
+    border-radius: 12px;
+    margin: 20px;
+    margin-left: 250px;
+    background-color: #0b0c16;
+    padding: 25px;
+    box-sizing: border-box;
+    box-shadow: 0 0 25px rgba(57, 57, 255, 0.1);
+    font-family: "Exo 2", sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 15px;
+}
+
+.titleArea h1 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+    background: linear-gradient(90deg, #00f0ff, #fe26f4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.titleArea p {
+    color: #a0a3b5;
+    font-size: 14px;
+    margin: 5px 0 0 0;
+}
+
+.metricsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.metricCard {
+    border: 1px solid rgba(57, 57, 255, 0.2);
+    border-radius: 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(57, 57, 255, 0.08), rgba(254, 38, 244, 0.03));
+    gap: 15px;
+    box-sizing: border-box;
+}
+
+.metricIcon {
+    font-size: 24px;
+    width: 48px;
+    height: 48px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.03);
+    flex-shrink: 0;
+}
+
+.metricInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.metricInfo small {
+    color: #a0a3b5;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.metricInfo h3 {
+    margin: 5px 0 0 0;
+    font-family: "Orbitron", sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+.chartsSection {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.chartCard,
+.donutCard {
+    border: 1px solid rgba(57, 57, 255, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.01);
+    box-sizing: border-box;
+}
+
+.chartCard h3,
+.donutCard h3 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+    color: white;
+}
+
+.chartCard p,
+.donutCard p {
+    font-size: 12px;
+    color: #707385;
+    margin: 5px 0 20px 0;
+}
+
+/* Custom CSS Bar Chart */
+.barChartContainer {
+    display: flex;
+    flex-direction: row;
+    height: 220px;
+    margin-top: 10px;
+    gap: 15px;
+}
+
+.chartYAxis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #707385;
+    font-size: 11px;
+    font-weight: bold;
+    padding-bottom: 25px; /* Alignment shift for X-axis labels */
+    text-align: right;
+    width: 30px;
+}
+
+.chartWrapper {
+    flex: 1;
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-left: 10px;
+}
+
+.barsArea {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: calc(100% - 25px); /* Leave space for bottom day labels */
+    width: 100%;
+}
+
+.barCol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    height: 100%;
+    position: relative;
+    justify-content: flex-end;
+}
+
+.barProgress {
+    width: 24px;
+    background: linear-gradient(180deg, #fe26f4, #3939ff);
+    border-radius: 4px 4px 0 0;
+    transition: height 1s ease-in-out;
+    box-shadow: 0 0 10px rgba(57, 57, 255, 0.3);
+    cursor: pointer;
+}
+
+.barProgress:hover {
+    filter: brightness(1.2);
+    box-shadow: 0 0 15px rgba(254, 38, 244, 0.6);
+}
+
+.barTooltip {
+    position: absolute;
+    bottom: calc(100% + 5px);
+    background-color: #0b0c16;
+    border: 1px solid #3939ff;
+    color: white;
+    font-size: 10px;
+    padding: 3px 6px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 10;
+}
+
+.barCol:hover .barTooltip {
+    opacity: 1;
+}
+
+.barLabel {
+    position: absolute;
+    bottom: -22px;
+    color: #a0a3b5;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+/* Slot Utilization Donut/Progress circle Chart */
+.progressCircleArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.progressCircle {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: conic-gradient(#3939ff 0% 75%, rgba(255, 255, 255, 0.05) 75% 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px rgba(57, 57, 255, 0.2);
+}
+
+.circleOuter {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: #0b0c16;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circleInner {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.circleInner h3 {
+    margin: 0;
+    font-family: "Orbitron", sans-serif;
+    font-size: 24px;
+    color: #00f0ff;
+}
+
+.circleInner small {
+    color: #707385;
+    font-size: 10px;
+    margin-top: 2px;
+    text-transform: uppercase;
+}
+
+.circleLegend {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.legendItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    color: #a0a3b5;
+}
+
+.dotFilled {
+    width: 10px;
+    height: 10px;
+    background-color: #3939ff;
+    border-radius: 50%;
+}
+
+.dotEmpty {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+}
+
+/* Gameplay Section Styling */
+.gameplaySection {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.clansCard,
+.matchStatsCard {
+    border: 1px solid rgba(57, 57, 255, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.01);
+    box-sizing: border-box;
+}
+
+.sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.badgeLabel {
+    font-family: "Orbitron", sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    background-color: rgba(0, 240, 255, 0.1);
+    border: 1px solid rgba(0, 240, 255, 0.3);
+    color: #00f0ff;
+    padding: 3px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.sectionSubtitle {
+    font-size: 12px;
+    color: #707385;
+    margin: 5px 0 20px 0;
+}
+
+.clansTableWrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.clansTable {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    min-width: 480px;
+}
+
+.clansTable th {
+    padding: 12px;
+    font-family: "Orbitron", sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #a0a3b5;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+}
+
+.clansTable td {
+    padding: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    color: #d1d4e5;
+    font-size: 13px;
+}
+
+.clansTable tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.clansTable tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.rankCell {
+    width: 50px;
+    text-align: center;
+}
+
+.rankBadge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    font-family: "Orbitron", sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    color: white;
+}
+
+.rank1 {
+    background-color: #ffd700;
+    color: black;
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+}
+
+.rank2 {
+    background-color: #c0c0c0;
+    color: black;
+    box-shadow: 0 0 8px rgba(192, 192, 192, 0.4);
+}
+
+.rank3 {
+    background-color: #cd7f32;
+    color: white;
+    box-shadow: 0 0 8px rgba(205, 127, 50, 0.4);
+}
+
+.rank4,
+.rank5 {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #a0a3b5;
+}
+
+.clanNameCell {
+    font-weight: 600;
+    color: white;
+}
+
+.winCount {
+    color: #00ff59;
+    font-weight: 600;
+    font-family: "Orbitron", sans-serif;
+}
+
+.killCount {
+    font-family: "Orbitron", sans-serif;
+    color: #fe26f4;
+}
+
+.rateCell {
+    color: #00f0ff;
+    font-weight: bold;
+    font-family: "Orbitron", sans-serif;
+}
+
+.statsList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.statsItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.statsItem:hover {
+    border-color: rgba(57, 57, 255, 0.35);
+    background-color: rgba(255, 255, 255, 0.04);
+}
+
+.statsLabel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #a0a3b5;
+    font-size: 13px;
+}
+
+.statsLabel i {
+    color: #3939ff;
+    font-size: 15px;
+}
+
+.statsValue {
+    font-family: "Orbitron", sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+}
+
+/* RESPONSIVE LAYOUT FOR MOBILE DEVICES */
+@media (max-width: 900px) {
+    .chartsSection {
+        grid-template-columns: 1fr; /* Stack graphs on smaller screens */
+    }
+    .gameplaySection {
+        grid-template-columns: 1fr; /* Stack gameplay sections */
+    }
+}
+
+@media (max-width: 768px) {
+    .analyticsContainer {
+        margin: 15px 0;
+        margin-left: 0;
+        padding: 15px;
+        margin-top: 60px; /* Space for top nav header bar */
+    }
+    
+    .header {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .metricsGrid {
+        grid-template-columns: repeat(2, 1fr); /* 2x2 grid metrics */
+    }
+    
+    .barProgress {
+        width: 16px; /* Narrower bars on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .metricsGrid {
+        grid-template-columns: 1fr; /* Single column on extremely small viewports */
+    }
+}

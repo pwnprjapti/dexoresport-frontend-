@@ -1,0 +1,262 @@
+.integrationsContainer {
+    border: 1px solid rgba(57, 57, 255, 0.3);
+    border-radius: 12px;
+    margin: 20px;
+    margin-left: 250px;
+    background-color: #0b0c16;
+    padding: 25px;
+    box-sizing: border-box;
+    box-shadow: 0 0 25px rgba(57, 57, 255, 0.1);
+    font-family: "Exo 2", sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 15px;
+}
+
+.titleArea h1 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+    background: linear-gradient(90deg, #00f0ff, #fe26f4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.titleArea p {
+    color: #a0a3b5;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 5px 0 0 0;
+}
+
+.cardsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.integrationCard {
+    border: 1px solid rgba(57, 57, 255, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.01);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.integrationCard:hover {
+    border-color: rgba(57, 57, 255, 0.45);
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.integrationCard.connected {
+    border-color: #00ff59;
+    box-shadow: 0 0 15px rgba(0, 255, 89, 0.1);
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.platformIcon {
+    font-size: 32px;
+}
+
+.statusLabel {
+    font-family: "Orbitron", sans-serif;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    background-color: rgba(255, 0, 0, 0.08);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    color: #ff0000;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+.statusActive {
+    background-color: rgba(0, 255, 89, 0.08) !important;
+    border-color: rgba(0, 255, 89, 0.3) !important;
+    color: #00ff59 !important;
+}
+
+.integrationCard h3 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin: 0 0 8px 0;
+    color: white;
+}
+
+.integrationCard p {
+    font-size: 12px;
+    color: #a0a3b5;
+    line-height: 1.5;
+    margin: 0 0 15px 0;
+    min-height: 36px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+.formGroup label {
+    font-family: "Orbitron", sans-serif;
+    font-size: 9.5px;
+    text-transform: uppercase;
+    color: #ffd700;
+    margin-bottom: 6px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.formGroup input {
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    padding: 10px 12px;
+    color: white;
+    font-size: 13px;
+    font-family: "Exo 2", sans-serif;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.formGroup input:hover,
+.formGroup input:focus {
+    border-color: #3939ff;
+    box-shadow: 0 0 8px rgba(57, 57, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.04);
+}
+
+.formGroup input:disabled {
+    background-color: rgba(255, 255, 255, 0.01);
+    border-color: rgba(255, 255, 255, 0.03);
+    color: #707385;
+    cursor: not-allowed;
+}
+
+.btnConnect {
+    border: none;
+    border-radius: 6px;
+    padding: 11px;
+    margin-top: 10px;
+    font-family: "Orbitron", sans-serif;
+    font-weight: bold;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: white;
+    background: linear-gradient(90deg, #3939ff, #fe26f4);
+    box-shadow: 0 0 10px rgba(57, 57, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btnConnect:hover {
+    box-shadow: 0 0 15px rgba(254, 38, 244, 0.4);
+    transform: translateY(-1px);
+}
+
+.btnDisconnect {
+    background: transparent !important;
+    border: 1.5px solid rgba(255, 0, 0, 0.4) !important;
+    color: #ff0000 !important;
+    box-shadow: none !important;
+}
+
+.btnDisconnect:hover {
+    background-color: #ff0000 !important;
+    color: white !important;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.4) !important;
+}
+
+.broadcastSettingsCard {
+    border: 1px solid rgba(57, 57, 255, 0.2);
+    border-radius: 12px;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.01);
+    box-sizing: border-box;
+}
+
+.broadcastSettingsCard h3 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin: 0 0 8px 0;
+    color: white;
+}
+
+.broadcastSettingsCard p {
+    font-size: 13px;
+    color: #a0a3b5;
+    margin: 0 0 20px 0;
+}
+
+.triggerOptions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.checkboxLabel {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.checkboxLabel input[type="checkbox"] {
+    margin-top: 4px;
+    cursor: pointer;
+    accent-color: #3939ff;
+}
+
+.checkboxInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkboxInfo span {
+    color: white;
+    font-size: 13.5px;
+    font-weight: 600;
+}
+
+.checkboxInfo small {
+    color: #707385;
+    font-size: 11.5px;
+    margin-top: 2px;
+}
+
+/* RESPONSIVE LAYOUT FOR MOBILE DEVICES */
+@media (max-width: 768px) {
+    .integrationsContainer {
+        margin: 15px 0;
+        margin-left: 0;
+        padding: 15px;
+        margin-top: 60px; /* Space for fixed top nav */
+    }
+    
+    .header {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        gap: 10px;
+    }
+}

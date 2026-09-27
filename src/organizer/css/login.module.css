@@ -1,0 +1,137 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 420px;
+    margin: 60px auto;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    font-family: "Exo 2", sans-serif;
+    text-align: center;
+}
+
+.container img{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(57, 57, 255, 0.2);
+}
+
+.container h1{
+    font-family: "Orbitron", sans-serif;
+    font-size: clamp(24px, 4vw, 32px);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 10px 0;
+}
+
+.container span{
+    background: linear-gradient(90deg, #00f0ff, #fe26f4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.container>p{
+    color: #a0a3b5;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0 0 25px 0;
+    max-width: 320px;
+}
+
+.container .box{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 30px 20px;
+    background: linear-gradient(135deg, rgba(15, 15, 22, 0.95), rgba(10, 10, 12, 0.95));
+    border: 1.5px solid rgba(57, 57, 255, 0.3);
+    border-radius: 12px;
+    box-shadow: 0px 0px 30px rgba(55, 0, 255, 0.2);
+    box-sizing: border-box;
+    gap: 15px;
+}
+
+.container .box input{
+    padding: 12px 16px;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background-color: rgba(255, 255, 255, 0.02);
+    border-radius: 6px;
+    width: 100%;
+    font-size: 14px;
+    font-family: "Exo 2", sans-serif;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.container .box input:focus,
+.container .box input:hover{
+    border-color: #3939ff;
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0px 0px 10px rgba(57, 57, 255, 0.25);
+}
+
+.container .box small {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: -5px;
+}
+
+.container .box small a{
+    color: #a0a3b5;
+    text-decoration: none;
+    font-size: 12px;
+    transition: color 0.3s ease;
+}
+
+.container .box small a:hover{
+    color: #00f0ff;
+}
+
+.container .box a{
+    color: #3939ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.container .box a:hover{
+    color: #fe26f4;
+}
+
+.container .box button{
+    color: white;
+    padding: 14px;
+    background: linear-gradient(90deg, #3939ff, #fe26f4);
+    border-radius: 6px;
+    border: none;
+    font-family: "Orbitron", sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    margin-top: 10px;
+    box-shadow: 0 0 10px rgba(57, 57, 255, 0.2);
+}
+
+.container .box button:hover{
+    border-radius: 30px;
+    box-shadow: 0 0 15px rgba(254, 38, 244, 0.5);
+    transform: translateY(-1px);
+}
+
+.container .box p {
+    color: #707385;
+    font-size: 13px;
+    margin: 10px 0 0 0;
+}

@@ -1,0 +1,301 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    background-color: #07070c;
+    color: white;
+    box-sizing: border-box;
+    font-family: "Exo 2", sans-serif;
+}
+
+.container .box{
+    background: linear-gradient(135deg, rgba(15, 15, 22, 0.95), rgba(10, 10, 12, 0.95));
+    border: 1.5px solid rgba(57, 57, 255, 0.3);
+    max-width: 800px;
+    width: calc(100% - 300px);
+    margin: 30px 30px 30px 270px;
+    border-radius: 12px;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 25px rgba(57, 57, 255, 0.15);
+    box-sizing: border-box;
+}
+
+.container .box label{
+    font-family: "Orbitron", sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffd700;
+    margin: 15px 8px 5px 8px;
+    font-weight: 600;
+}
+
+.container .box input{
+    margin: 5px 8px 12px 8px;
+    padding: 12px 16px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.02);
+    outline: none;
+    color: white;
+    box-sizing: border-box;
+    font-family: "Exo 2", sans-serif;
+    transition: all 0.3s ease;
+}
+
+.container .box input::placeholder{
+    color: #707385;
+}
+
+.container .box input:hover,
+.container .box input:focus{
+    border-color: #3939ff;
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 10px rgba(57, 57, 255, 0.25);
+}
+
+.container .box textarea{
+    margin: 5px 8px 12px 8px;
+    padding: 12px 16px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.02);
+    outline: none;
+    color: white;
+    min-height: 80px;
+    font-family: "Exo 2", sans-serif;
+    transition: all 0.3s ease;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.container .box textarea:hover,
+.container .box textarea:focus{
+    border-color: #3939ff;
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 10px rgba(57, 57, 255, 0.25);
+}
+
+.container .box select{
+    margin: 5px 8px 12px 8px;
+    padding: 12px 16px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.02);
+    outline: none;
+    color: white;
+    cursor: pointer;
+    font-family: "Exo 2", sans-serif;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.container .box select option {
+    background-color: #0b0c16;
+    color: white;
+}
+
+.container .box select:hover,
+.container .box select:focus{
+    border-color: #3939ff;
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 10px rgba(57, 57, 255, 0.25);
+}
+
+.container .box button{
+    border: none;
+    border-radius: 6px;
+    padding: 14px;
+    margin: 25px 8px 10px 8px;
+    font-family: "Orbitron", sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: white;
+    background: linear-gradient(90deg, #3939ff, #fe26f4);
+    box-shadow: 0 0 15px rgba(57, 57, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.container .box button:hover{
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(254, 38, 244, 0.5);
+    transform: translateY(-1px);
+}
+
+/* RESPONSIVE LAYOUT FOR MOBILE DEVICES */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .container .box {
+        width: 100%;
+        margin: 60px 0 20px 0; /* Space for fixed mobile top navigation toggle */
+        padding: 25px 15px;
+    }
+    
+    .container .box label {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .container .box input,
+    .container .box textarea,
+    .container .box select,
+    .container .box button {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+/* Schedule Section Styles */
+.scheduleSection {
+    margin: 20px 8px;
+    border: 1px solid rgba(57, 57, 255, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.01);
+}
+
+.scheduleHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1.5px solid rgba(57, 57, 255, 0.3);
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+}
+
+.scheduleHeader h3 {
+    margin: 0;
+    font-family: "Orbitron", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: white;
+}
+
+.addRoundBtn {
+    background: linear-gradient(90deg, #3939ff, #fe26f4) !important;
+    border: none !important;
+    color: white !important;
+    padding: 8px 16px !important;
+    font-size: 11px !important;
+    font-family: "Orbitron", sans-serif !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+    margin: 0 !important;
+    text-transform: uppercase !important;
+    box-shadow: 0 0 10px rgba(57, 57, 255, 0.2) !important;
+    transition: all 0.3s ease !important;
+}
+
+.addRoundBtn:hover {
+    box-shadow: 0 0 15px rgba(254, 38, 244, 0.4) !important;
+    transform: translateY(-1px) !important;
+    border-radius: 30px !important;
+}
+
+.roundsList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.roundRow {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 15px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.roundField {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.roundField label {
+    margin: 0 0 6px 0 !important;
+}
+
+.roundField input {
+    margin: 0 !important;
+    width: 100% !important;
+}
+
+.readOnlyInput {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border-color: rgba(255, 255, 255, 0.15) !important;
+    color: #ffd700 !important;
+    cursor: not-allowed !important;
+    text-align: center;
+    font-weight: bold;
+}
+
+.removeRoundBtn {
+    background: transparent !important;
+    border: 1.5px solid rgba(255, 40, 40, 0.4) !important;
+    color: #ff4d4d !important;
+    padding: 10px 16px !important;
+    border-radius: 6px !important;
+    font-family: "Orbitron", sans-serif !important;
+    font-size: 11px !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+    cursor: pointer !important;
+    margin: 0 !important;
+    transition: all 0.3s ease !important;
+    box-shadow: none !important;
+}
+
+.removeRoundBtn:hover {
+    background-color: rgba(255, 40, 40, 0.1) !important;
+    border-color: #ff4d4d !important;
+    border-radius: 6px !important;
+    transform: none !important;
+}
+
+.noRoundsText {
+    color: #707385;
+    font-size: 13px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Mobile responsive for rounds list */
+@media (max-width: 768px) {
+    .scheduleSection {
+        margin: 20px 0;
+        padding: 15px 10px;
+    }
+    
+    .roundRow {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+    
+    .roundField {
+        width: 100%;
+    }
+    
+    .removeRoundBtn {
+        width: 100%;
+        text-align: center;
+    }
+}

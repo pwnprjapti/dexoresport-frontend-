@@ -1,0 +1,185 @@
+.loginWrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #06080e;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.loginWrapper::before {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 240, 255, 0.08) 0%, transparent 60%);
+  top: -100px;
+  left: -100px;
+  pointer-events: none;
+}
+
+.loginWrapper::after {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(138, 43, 226, 0.08) 0%, transparent 60%);
+  bottom: -50px;
+  right: -50px;
+  pointer-events: none;
+}
+
+.loginCard {
+  width: 100%;
+  max-width: 440px;
+  background: rgba(13, 17, 30, 0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  border-radius: 16px;
+  padding: 40px 36px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 25px rgba(0, 240, 255, 0.1);
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.brandHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.brandLogo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 12px rgba(0, 240, 255, 0.5));
+}
+
+.brandTitle h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+  color: #fff;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.brandTitle h1 span {
+  color: #00f0ff;
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.6);
+}
+
+.masterTag {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ff3388;
+  background: rgba(255, 0, 119, 0.12);
+  border: 1px solid rgba(255, 0, 119, 0.3);
+  padding: 3px 10px;
+  border-radius: 12px;
+  margin-top: 6px;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.inputGroup label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #94a3b8;
+}
+
+.inputField {
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.inputField:focus {
+  border-color: #00f0ff;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.25);
+}
+
+.errorBanner {
+  background: rgba(255, 51, 102, 0.12);
+  border: 1px solid rgba(255, 51, 102, 0.3);
+  color: #ff3366;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 12.5px;
+  text-align: center;
+}
+
+.submitBtn {
+  background: linear-gradient(135deg, #00f0ff 0%, #0088ff 100%);
+  color: #050811;
+  border: none;
+  padding: 13px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+  transition: all 0.2s;
+  margin-top: 6px;
+}
+
+.submitBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.7);
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.defaultCredentialsBox {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 11.5px;
+  color: #64748b;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.defaultCredentialsBox p {
+  margin: 0;
+  color: #cbd5e1;
+}
+
+.defaultCredentialsBox span {
+  color: #00f0ff;
+  font-family: monospace;
+}

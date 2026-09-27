@@ -1,0 +1,222 @@
+.transactionsContainer {
+    border: 1px solid rgba(57, 57, 255, 0.3);
+    border-radius: 12px;
+    margin: 20px;
+    margin-left: 250px;
+    background-color: #0b0c16;
+    padding: 25px;
+    box-sizing: border-box;
+    box-shadow: 0 0 25px rgba(57, 57, 255, 0.1);
+    font-family: "Exo 2", sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 15px;
+}
+
+.titleArea h1 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+    background: linear-gradient(90deg, #00f0ff, #fe26f4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.titleArea p {
+    color: #a0a3b5;
+    font-size: 14px;
+    margin: 5px 0 0 0;
+}
+
+.filtersArea {
+    margin-bottom: 25px;
+}
+
+.searchBox {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    padding: 10px 15px;
+    width: 360px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.searchBox i {
+    color: #707385;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.searchBox input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 14px;
+    width: 100%;
+    font-family: "Exo 2", sans-serif;
+}
+
+.searchBox:hover,
+.searchBox:focus-within {
+    border-color: #3939ff;
+    box-shadow: 0 0 10px rgba(57, 57, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Horizontal scrolling wrapper for responsive tables */
+.tableWrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    background-color: rgba(255, 255, 255, 0.01);
+}
+
+.txnTable {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    min-width: 750px; /* Forces horizontal scroll on mobile instead of clipping columns */
+}
+
+.txnTable th {
+    padding: 15px;
+    font-family: "Orbitron", sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #00f0ff;
+    background-color: rgba(57, 57, 255, 0.08);
+    border-bottom: 2px solid rgba(57, 57, 255, 0.3);
+}
+
+.txnTable td {
+    padding: 14px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: #d1d4e5;
+    font-size: 13px;
+    vertical-align: middle;
+}
+
+.txnTable tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.txnTable tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.txnIdText {
+    font-family: monospace;
+    font-weight: 600;
+    color: white;
+}
+
+.dateText {
+    color: #a0a3b5;
+}
+
+.descriptionText {
+    font-weight: 500;
+}
+
+.typeText {
+    font-family: "Orbitron", sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #707385;
+}
+
+.depositAmt {
+    color: #00ff59 !important;
+    font-weight: bold;
+    font-family: "Orbitron", sans-serif;
+}
+
+.withdrawAmt {
+    color: #ff0055 !important;
+    font-weight: bold;
+    font-family: "Orbitron", sans-serif;
+}
+
+.statusBadge {
+    font-family: "Orbitron", sans-serif;
+    font-size: 9px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+}
+
+.statusBadge.success {
+    background-color: rgba(0, 255, 89, 0.08);
+    border-color: rgba(0, 255, 89, 0.3);
+    color: #00ff59;
+}
+
+.statusBadge.failed {
+    background-color: rgba(255, 0, 0, 0.08);
+    border-color: rgba(255, 0, 0, 0.3);
+    color: #ff0000;
+}
+
+.noResults {
+    text-align: center;
+    padding: 50px 20px;
+    color: #707385;
+}
+
+.noResults i {
+    font-size: 48px;
+    color: rgba(57, 57, 255, 0.3);
+    margin-bottom: 15px;
+}
+
+.noResults h3 {
+    color: white;
+    margin: 0 0 10px 0;
+    font-family: "Orbitron", sans-serif;
+    text-transform: uppercase;
+}
+
+.noResults p {
+    font-size: 14px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* RESPONSIVE LAYOUT FOR MOBILE DEVICES */
+@media (max-width: 768px) {
+    .transactionsContainer {
+        margin: 15px 0;
+        margin-left: 0;
+        padding: 15px;
+        margin-top: 60px; /* Space for fixed top nav */
+    }
+    
+    .header {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .searchBox {
+        width: 100%;
+    }
+}

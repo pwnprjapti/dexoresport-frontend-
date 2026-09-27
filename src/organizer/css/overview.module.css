@@ -1,0 +1,342 @@
+.overviewContainer {
+    border: 1px solid rgba(57, 57, 255, 0.3);
+    border-radius: 12px;
+    margin: 20px;
+    margin-left: 250px;
+    background-color: #0b0c16;
+    padding: 25px;
+    box-sizing: border-box;
+    box-shadow: 0 0 25px rgba(57, 57, 255, 0.1);
+    font-family: "Exo 2", sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 15px;
+}
+
+.titleArea h1 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+    background: linear-gradient(90deg, #00f0ff, #fe26f4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.titleArea p {
+    color: #a0a3b5;
+    font-size: 14px;
+    margin: 5px 0 0 0;
+}
+
+.btnQuickCreate {
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-family: "Orbitron", sans-serif;
+    font-weight: bold;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: white;
+    background: linear-gradient(90deg, #3939ff, #fe26f4);
+    box-shadow: 0 0 15px rgba(57, 57, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btnQuickCreate:hover {
+    box-shadow: 0 0 20px rgba(254, 38, 244, 0.5);
+    transform: translateY(-1px);
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.statBox {
+    border: 1px solid rgba(57, 57, 255, 0.2);
+    border-radius: 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.01);
+    gap: 15px;
+    box-sizing: border-box;
+}
+
+.statIcon {
+    font-size: 20px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.statContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.statContent span {
+    color: #a0a3b5;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.statContent h3 {
+    margin: 4px 0 0 0;
+    font-family: "Orbitron", sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+.dashboardLayout {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 20px;
+}
+
+.leftCol,
+.rightCol {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.consoleCard {
+    border: 1px solid rgba(57, 57, 255, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.01);
+    box-sizing: border-box;
+}
+
+.consoleCard h3 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin: 0;
+    color: white;
+}
+
+.cardDesc {
+    font-size: 12px;
+    color: #707385;
+    margin: 5px 0 20px 0;
+}
+
+.matchesList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.matchRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.matchInfo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.statusDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.statusDot.live {
+    background-color: #ff0055;
+    box-shadow: 0 0 8px #ff0055;
+    animation: pulse 1.5s infinite;
+}
+
+.statusDot.upcoming {
+    background-color: #00f0ff;
+    box-shadow: 0 0 8px #00f0ff;
+}
+
+.statusDot.scheduled {
+    background-color: #a0a3b5;
+}
+
+.matchInfo h4 {
+    margin: 0;
+    color: white;
+    font-size: 13.5px;
+}
+
+.matchInfo small {
+    color: #707385;
+    font-size: 11px;
+    display: block;
+    margin-top: 2px;
+}
+
+.timeBadge {
+    font-family: "Orbitron", sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.timeBadge.live {
+    background-color: rgba(255, 0, 85, 0.1);
+    border: 1px solid rgba(255, 0, 85, 0.3);
+    color: #ff0055;
+    text-transform: uppercase;
+}
+
+.timeBadge.upcoming,
+.timeBadge.scheduled {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: #d1d4e5;
+}
+
+.slotsList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.slotRow {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.slotLabels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #d1d4e5;
+}
+
+.slotLabels span:first-child {
+    font-weight: 600;
+}
+
+.slotLabels span:last-child {
+    color: #00f0ff;
+    font-family: "Orbitron", sans-serif;
+    font-size: 11px;
+}
+
+.progressBarBg {
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progressBarFill {
+    height: 100%;
+    background: linear-gradient(90deg, #3939ff, #fe26f4);
+    border-radius: 4px;
+    box-shadow: 0 0 8px rgba(254, 38, 244, 0.4);
+}
+
+.activityFeed {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.activityItem {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.activityIcon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1.5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    flex-shrink: 0;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
+}
+
+.activityInfo p {
+    margin: 0;
+    color: #d1d4e5;
+    font-size: 12.5px;
+    line-height: 1.4;
+}
+
+.activityInfo small {
+    color: #707385;
+    font-size: 11px;
+    display: block;
+    margin-top: 3px;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.6; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* RESPONSIVE LAYOUT FOR MOBILE DEVICES */
+@media (max-width: 900px) {
+    .dashboardLayout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .overviewContainer {
+        margin: 15px 0;
+        margin-left: 0;
+        padding: 15px;
+        margin-top: 60px; /* Space for fixed top nav */
+    }
+    
+    .header {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .btnQuickCreate {
+        justify-content: center;
+    }
+    
+    .statsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

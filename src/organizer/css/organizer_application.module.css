@@ -1,0 +1,57 @@
+.container{
+    text-align: center;
+    justify-content: center;
+}
+
+.container span{
+    color:blue;
+}
+
+.container .application{
+    border:1px solid blue;
+    border-radius: 10px;
+    padding:1vw;
+    text-align: left;
+    width:75vw;
+    margin:1vw;
+    margin-left:11vw;
+    background-color: rgb(10, 10, 10);
+}
+
+.application .input input, .application .input select{
+    width:250px;
+    font-size:2vh;
+    padding:1vw 2vw;
+    background-color:rgb(30, 30, 30);
+    border:1px solid gray;
+    border-radius: 5px;
+    margin:0.5vw;
+    color:white;
+}
+
+.application .input select{
+    width:300px;
+}
+
+.application .input textarea{
+    width: 69vw;
+    height:100px;
+    font-size:2vh;
+    padding:1vw 2vw;
+    background-color:rgb(24, 24, 24);
+    border:1px solid gray;
+    border-radius: 5px;
+    margin:0.5vw;
+    color:white;
+}
+
+.application .input button{
+    background-color: blue;
+    color:white;
+    padding:1vw;
+    border-radius: 5px;
+    margin: 1vw;
+    border:none;
+    margin-left:64vw;
+    width:120px;
+}
